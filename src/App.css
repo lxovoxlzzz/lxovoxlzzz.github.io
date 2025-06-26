@@ -1,7 +1,36 @@
 #root {
   width: 100vw;
   margin: 0 auto;
-  text-align: center;
+}
+
+.header--title {
+  animation: slideIn 2.5s ease-out forwards;
+  margin-left: -3.5rem
+}
+
+@keyframes slideIn {
+  0% {
+    left: -100vw;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.face {
+  /* @apply border-2 border-white rounded-full; */
+  animation: 8s linear infinite rotation;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .logo {

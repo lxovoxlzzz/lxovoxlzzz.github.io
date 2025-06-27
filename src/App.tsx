@@ -6,7 +6,7 @@ import funny from './assets/funnyface.png'
 function App() {
   // TODO: 完成後分解
   const [copied, setCopied] = useState(false);
-  const [isFunny, setIsFunny] = useState(false);
+  const [face, setFace] = useState(normal);
 
   const copyEmailToClipboard = () => {
     // TODO: 本番用のメールアドレスに変更
@@ -18,9 +18,9 @@ function App() {
   return (
     <>
       <header className="w-full h-svh content-center">
-        <div className="header--title flex flex-row items-center justify-center relative">
+        <div className="header--title relative flex flex-row items-center justify-center">
           <p className="rotate-[270deg] origin-top text-xl font-bold">U.Ezoe</p>
-          <h1 className="text-9xl font-bold">Portfolio</h1>
+          <h1 className="header--title__main text-9xl font-bold leading-tight">Portfolio</h1>
         </div>
       </header>
       <main>
@@ -34,12 +34,12 @@ function App() {
             <h1 className="mb-16 text-4xl font-bold">About Me</h1>
             <img
               className="face"
-              src={isFunny ? funny : normal}
+              src={face}
               alt="face"
               width={150}
               height={150}
-              onMouseEnter={() => setIsFunny(true)}
-              onMouseLeave={() => setIsFunny(false)}
+              onMouseEnter={() => setFace(funny)}
+              onMouseLeave={() => setFace(normal)}
             />
             <div>
               <h2 className="mt-4 text-xl font-bold">U.Ezoe</h2>

@@ -4,7 +4,7 @@
 }
 
 .header--title {
-  animation: slideIn 2.5s ease-out forwards;
+  animation: slideIn 3s ease-out forwards;
   margin-left: -3.5rem
 }
 
@@ -14,22 +14,35 @@
   }
 
   100% {
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 
 .header--title__main {
-  animation: linearGradient 0s linear forwards;
-  animation-delay: 3s;
+  animation: linearGradient 3s 3s forwards;
 }
 
 /* TODO: グラデーションの色を決める */
 @keyframes linearGradient {
-  from {
+  0% {
     color: inherit
   }
 
-  to {
+  33% {
+    background-image: repeating-linear-gradient(-45deg, #313131 1px, #313131 4px, transparent 3px, transparent 6px);
+    background-clip: text;
+    color: transparent;
+  }
+
+  66% {
+    background-image: repeating-linear-gradient(-45deg, #313131, #924848 10%, #542343 10%);
+    /* background-image: repeating-linear-gradient(-45deg, #313131 1px, #313131 4px, transparent 3px, transparent 6px); */
+    background-clip: text;
+    color: transparent;
+  }
+
+  100% {
     background-image: repeating-linear-gradient(-45deg, #313131, #802a9f 15%, #1b46aa 25%);
     /* background-image: repeating-linear-gradient(-45deg, #313131, #924848 10%, #542343 10%); */
     /* background-image: repeating-linear-gradient(-45deg, #313131 1px, #313131 4px, transparent 3px, transparent 6px); */
@@ -37,6 +50,63 @@
     color: transparent;
   }
 }
+
+.header--arrow {
+  animation: bounce 4s ease-in-out 6s 1 forwards;
+  opacity: 0;
+}
+
+@keyframes bounce {
+  0% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  20%, 50%, 80%, 100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 0.3;
+    transform: translateY(-30px);
+  }
+  60% {
+    opacity: 0.4;
+    transform: translateY(-20px);
+  }
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-bottom: 250px solid #313131;
+  border-right: 150px solid transparent;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 250px solid #313131;
+  border-left: 150px solid transparent;
+}
+
+/* header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 175px;
+  height: 90svh;
+  border-radius: 0 0 0 50px;
+  background: #313131;
+} */
 
 .face {
   animation: 8s linear infinite rotation;

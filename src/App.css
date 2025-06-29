@@ -5,7 +5,6 @@
 
 .header--title {
   animation: slideIn 3s ease-out forwards;
-  margin-left: -3.5rem
 }
 
 @keyframes slideIn {
@@ -82,7 +81,7 @@ header::before {
   left: 0;
   width: 0;
   height: 0;
-  border-bottom: 250px solid #313131;
+  border-bottom: 250px solid rgb(234 179 8 / var(--tw-bg-opacity, 1));
   border-right: 150px solid transparent;
 }
 
@@ -97,16 +96,16 @@ header::after {
   border-left: 150px solid transparent;
 }
 
-/* header::after {
+.main--build::after {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  width: 175px;
-  height: 90svh;
-  border-radius: 0 0 0 50px;
-  background: #313131;
-} */
+  width: 0;
+  height: 0;
+  border-top: 250px solid #d6d6d6;
+  border-left: 150px solid transparent;
+}
 
 .face {
   animation: 8s linear infinite rotation;

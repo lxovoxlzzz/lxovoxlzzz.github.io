@@ -1,32 +1,16 @@
-import { useState } from "react";
+import { useState, useMemo, useCallback } from "react";
 import "./App.css";
+import { PiArrowDownDuotone } from "react-icons/pi";
+import type { PokemonType } from "./types/global";
 import normal from "./assets/normalface.png";
 import funny from "./assets/funnyface.png";
-import { PiArrowDownDuotone } from "react-icons/pi";
-
-// TODO
-type PokemonType = {
-  id: number;
-  name: string;
-  height: number;
-  weight: number;
-  types: {
-    type: {
-      name: string;
-    };
-  }[];
-  sprites: {
-    front_default: string;
-    back_default: string;
-  };
-};
 
 /**
  * pokemonAPIからデータを取得する関数
  * @param url 取得するURL
  * @returns 取得したデータ
  */
-async function fetchDataPokemon<T>(url: string): Promise<T> {
+async function fetchPokemonData<T>(url: string): Promise<T> {
   const res = await fetch(url);
   if (!res.ok) throw new Error("Fetch failed");
   return res.json();
@@ -36,42 +20,123 @@ function App() {
   // TODO: 完成後分解
   const [copied, setCopied] = useState(false);
   const [face, setFace] = useState(normal);
-  const [pokemon, setPokemon] = useState<PokemonType | null>(null);
+  const [pokemonData, setPokemonData] = useState<PokemonType | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   /**
    * TODO: ピカチュウのデータを取得する関数（仮）
    * @returns ピカチュウのデータ
    */
-  const handleClick = async () => {
+  const handleClick = useCallback(async () => {
     setLoading(true);
     setError(null);
     try {
-      const data = await fetchDataPokemon<PokemonType>(
+      const data = await fetchPokemonData<PokemonType>(
         "https://pokeapi.co/api/v2/pokemon/pikachu",
       );
-      setPokemon(data);
+      setPokemonData(data);
+
+      // 音声オブジェクトを作成
+      const audioElement = new Audio(data.cries.latest);
+      audioElement.addEventListener("ended", () => setIsPlaying(false));
+      setAudio(audioElement);
     } catch (err) {
       setError("データの取得に失敗しました");
       console.error(err);
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
+
+  /**
+   * 音声を再生する関数
+   */
+  const playSound = useCallback(() => {
+    if (audio) {
+      audio.play();
+      setIsPlaying(true);
+    }
+  }, [audio]);
+
+  /**
+   * 音声を停止する関数
+   */
+  const stopSound = useCallback(() => {
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
+      setIsPlaying(false);
+    }
+  }, [audio]);
 
   /**
    * TODO: メールアドレスをクリップボードにコピーする
    */
-  const copyEmailToClipboard = () => {
+  const copyEmailToClipboard = useCallback(() => {
     // TODO: 本番用のメールアドレスに変更
     navigator.clipboard
       .writeText("test@gmail.com")
       .then(() => setCopied(true))
       .catch((err) => console.error("copy failed", err));
-  };
+  }, []);
 
-  console.log(pokemon);
+  console.log(pokemonData);
+
+  // TODO: ポケモンデータの表示
+  const pokemonDisplay = useMemo(() => {
+    if (!pokemonData) return null;
+
+    return (
+      <div>
+        <h1 className="text-xl font-bold">{pokemonData.name}</h1>
+        <ul className="flex flex-row gap-4">
+          <li>height: {pokemonData.height}</li>
+          <li>weight: {pokemonData.weight}</li>
+          <li>type: {pokemonData.types[0].type.name}</li>
+          <li>id: {pokemonData.id}</li>
+        </ul>
+        <div className="flex gap-2 mb-4">
+          <button
+            onClick={playSound}
+            disabled={!audio || isPlaying}
+            className="bg-neutral-600 text-neutral-300 px-4 pt-3 pb-2 rounded-md disabled:bg-gray-400"
+          >
+            {isPlaying ? "再生中..." : "鳴き声を再生"}
+          </button>
+          <button
+            onClick={stopSound}
+            disabled={!audio || !isPlaying}
+            className="bg-red-500 text-white px-4 py-2 rounded-md disabled:bg-gray-400"
+          >
+            停止
+          </button>
+        </div>
+        <div className="flex flex-row gap-4 items-center">
+          <img
+            src={pokemonData.sprites.other.showdown.front_default}
+            alt={`${pokemonData.name}'s showdown image`}
+            width={60}
+            height={60}
+          />
+          <img
+            src={pokemonData.sprites.front_default}
+            alt={`${pokemonData.name}'s front image`}
+            width={96}
+            height={96}
+          />
+          <img
+            src={pokemonData.sprites.back_default}
+            alt={`${pokemonData.name}'s back image`}
+            width={96}
+            height={96}
+          />
+        </div>
+      </div>
+    );
+  }, [pokemonData, audio, isPlaying, playSound, stopSound]);
 
   return (
     <>
@@ -97,26 +162,11 @@ function App() {
                 disabled={loading}
                 className="mb-4 text-yellow-500"
               >
-                {loading ? "取得中..." : "ピカチュウを取得"}
+                <p className="pt-1.5">
+                  {loading ? "取得中..." : "ピカチュウを取得"}
+                </p>
               </button>
-              {pokemon && (
-                <div>
-                  <h1 className="text-xl font-bold">{pokemon.name}</h1>
-                  <ul className="flex flex-row gap-4">
-                    <li>height: {pokemon.height}</li>
-                    <li>weight: {pokemon.weight}</li>
-                    <li>type: {pokemon.types[0].type.name}</li>
-                  </ul>
-                  <img
-                    src={pokemon.sprites.front_default}
-                    alt={`${pokemon.name}'s front image`}
-                  />
-                  <img
-                    src={pokemon.sprites.back_default}
-                    alt={`${pokemon.name}'s back image`}
-                  />
-                </div>
-              )}
+              {pokemonDisplay}
               {error && <p style={{ color: "red" }}>{error}</p>}
             </div>
           </section>

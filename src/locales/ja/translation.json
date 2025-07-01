@@ -1,0 +1,12 @@
+{
+  "get_pikachu": "ピカチュウを取得",
+  "get_pokemon": "ポケモンを取得",
+  "input_placeholder": "ポケモン名を入力",
+  "play": "鳴き声を再生",
+  "stop": "停止",
+  "loading": "取得中...",
+  "height": "高さ",
+  "weight": "重さ",
+  "type": "タイプ",
+  "id": "ID"
+}

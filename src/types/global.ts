@@ -1,3 +1,5 @@
+export type LangType = "ja" | "en";
+
 export type PokemonType = {
   id: number;
   name: string;

@@ -4,12 +4,11 @@ import { PiArrowDownDuotone } from "react-icons/pi";
 import PokemonApiDemo from "./components/organisms/pokemonApiDemo";
 import normal from "./assets/normalface.png";
 import funny from "./assets/funnyface.png";
-import { useTranslation } from "react-i18next";
+import LanguageButton from "./components/molecules/languageButton";
 
 function App() {
   const [copied, setCopied] = useState(false);
   const [face, setFace] = useState(normal);
-  const { i18n } = useTranslation();
 
   // メールアドレスコピー関数のみ残す
   const copyEmailToClipboard = () => {
@@ -28,20 +27,7 @@ function App() {
             Portfolio
           </h1>
         </div>
-        <div className="flex flex-row gap-2 justify-center mt-4">
-          <button
-            onClick={() => i18n.changeLanguage("ja")}
-            className={`px-4 pt-2 pb-1 border-2 border-neutral-800 text-sm rounded ${i18n.language === "ja" ? "bg-yellow-400" : "bg-transparent"}`}
-          >
-            日本語
-          </button>
-          <button
-            onClick={() => i18n.changeLanguage("en")}
-            className={`px-4 pt-2 pb-1 border-2 border-neutral-800 text-sm rounded ${i18n.language === "en" ? "bg-yellow-400" : "bg-transparent"}`}
-          >
-            English
-          </button>
-        </div>
+        <LanguageButton />
         <div className="header--arrow absolute bottom-24 inset-x-0 flex flex-col items-center">
           <p>Scroll down</p>
           <PiArrowDownDuotone size={32} />

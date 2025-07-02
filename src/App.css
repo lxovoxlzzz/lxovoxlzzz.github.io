@@ -1,6 +1,7 @@
 #root {
-  width: 100vw;
+  width: 100%;
   margin: 0 auto;
+  min-width: 375px;
 }
 
 .header--title {
@@ -50,8 +51,22 @@
   }
 }
 
+.header--language {
+  animation: appear 2s ease 5s 1 forwards;
+  opacity: 0;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .header--arrow {
-  animation: bounce 4s ease-in-out 6s 1 forwards;
+  animation: bounce 4s ease-in-out 5s 1 forwards;
   opacity: 0;
 }
 
@@ -66,11 +81,11 @@
   }
   40% {
     opacity: 0.3;
-    transform: translateY(-30px);
+    transform: translateY(-25px);
   }
   60% {
     opacity: 0.4;
-    transform: translateY(-20px);
+    transform: translateY(-15px);
   }
 }
 

@@ -89,37 +89,43 @@ export default function PokemonApiDemo() {
     }
   }, [audio]);
 
+  // TODO: 見せ方を考える
   return (
     <div className="mb-4">
-      <h1 className="mb-4 text-2xl font-bold">① Pokemon API Demo</h1>
-      <div className="flex justify-evenly">
+      <h1 className="mb-8 text-2xl font-bold">① Pokemon API</h1>
+      {/* <button
+        onClick={handleGetPikachu}
+        disabled={loading}
+        className="w-40 h-40 pt-2 bg-neutral-800 font-bold text-neutral-300 rounded-full"
+      >
+        {t("get_pikachu")}
+      </button> */}
+      <p>好きなポケモンの名前を英語で入力してください</p>
+      <p>
+        例：ピカチュウ → Pikachu　バンギラス → Blastoise　ミュウツー → Mewtwo
+        ヒトカゲ → Charmander　カイリュー → Charizard　ミュウ → Mew
+      </p>
+      <div className="flex gap-2 items-center my-4">
+        <input
+          type="text"
+          value={pokemonName}
+          onChange={(e) => setPokemonName(e.target.value)}
+          placeholder={t("input_placeholder")}
+          className="w-56 h-10 px-2 pt-2 pb-1 border-2 border-neutral-800 bg-neutral-300 rounded outline-none"
+        />
         <button
-          onClick={handleGetPikachu}
-          disabled={loading}
-          className="w-40 h-40 pt-2 bg-neutral-800 font-bold text-neutral-300 rounded-full"
+          onClick={handleGetPokemonByName}
+          disabled={loading || !pokemonName}
+          className="w-fit h-10 px-4 pt-2 pb-1 text-white rounded bg-purple-500 border-2 border-neutral-800 disabled:bg-neutral-500"
         >
-          {t("get_pikachu")}
+          {t("get_pokemon")}
         </button>
-        <div className="flex gap-2 items-center">
-          <input
-            type="text"
-            value={pokemonName}
-            onChange={(e) => setPokemonName(e.target.value)}
-            placeholder={t("input_placeholder")}
-            className="w-44 h-10 px-2 pt-2 pb-1 border-2 border-neutral-800 bg-neutral-300 rounded outline-none"
-          />
-          <button
-            onClick={handleGetPokemonByName}
-            disabled={loading || !pokemonName}
-            className="w-fit h-10 px-4 pt-2 pb-1 text-white rounded bg-purple-500 border-2 border-neutral-800 disabled:bg-neutral-500"
-          >
-            {t("get_pokemon")}
-          </button>
-        </div>
       </div>
       {pokemonData && (
         <div>
-          <h1 className="text-xl font-bold">{pokemonData.name}</h1>
+          <h1 className="text-xl font-bold">
+            {t("id")} {pokemonData.id}　{pokemonData.name}
+          </h1>
           <ul className="flex flex-row gap-4">
             <li>
               {t("height")}: {pokemonData.height}
@@ -130,18 +136,16 @@ export default function PokemonApiDemo() {
             <li>
               {t("type")}: {pokemonData.types[0].type.name}
             </li>
-            <li>
-              {t("id")}: {pokemonData.id}
-            </li>
           </ul>
+          <p>説明文</p>
           <div className="flex gap-2 mb-4">
             <button
               onClick={isPlaying ? stopSound : playSound}
               disabled={!audio}
               className={
                 isPlaying
-                  ? "bg-red-500 text-white px-4 py-2 rounded-md disabled:bg-gray-400"
-                  : "bg-neutral-600 text-neutral-300 px-4 pt-3 pb-2 rounded-md disabled:bg-gray-400"
+                  ? "bg-red-500 text-white px-4 pt-2 pb-1 rounded-md disabled:bg-gray-400"
+                  : "bg-neutral-600 text-neutral-300 px-4 pt-2 pb-1 rounded-md disabled:bg-gray-400"
               }
             >
               {isPlaying ? t("stop") : t("play")}

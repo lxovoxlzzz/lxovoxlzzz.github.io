@@ -33,10 +33,10 @@ function App() {
           <PiArrowDownDuotone size={32} />
         </div>
       </header>
-      <main className="relative">
+      <main className="relative w-full">
         <article className="main--build h-svh bg-yellow-500">
           <section className="max-w-5xl mx-auto pt-36 pb-44">
-            <h1 className="mb-16 text-4xl font-bold">What I Can Build</h1>
+            <h1 className="mb-16 text-4xl font-bold">Demos</h1>
             <PokemonApiDemo />
           </section>
         </article>
@@ -84,7 +84,7 @@ function App() {
           </section>
         </article>
       </main>
-      <footer className="h-20 text-center content-center bg-neutral-800 text-neutral-300">
+      <footer className="w-full h-20 text-center content-center bg-neutral-800 text-neutral-300">
         <p>© 2025 U.Ezoe</p>
       </footer>
     </>

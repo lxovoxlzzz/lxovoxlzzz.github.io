@@ -20,7 +20,7 @@ const LanguageButton = () => {
   ] as const;
 
   return (
-    <div className="flex flex-row gap-2 justify-center mt-4 transition-opacity duration-700">
+    <div className="header--language flex flex-row gap-2 justify-center mt-4 transition-opacity duration-700">
       {langs.map(({ lang, label }) => (
         <LangButton key={lang} lang={lang} label={label} />
       ))}

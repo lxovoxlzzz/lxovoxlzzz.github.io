@@ -13,6 +13,17 @@ async function fetchPokemonData<T>(url: string): Promise<T> {
   return res.json();
 }
 
+const pokemonList = [
+  { jaName: "ピカチュウ", enName: "Pikachu" },
+  { jaName: "イーブイ", enName: "Eevee" },
+  { jaName: "ポリゴン", enName: "Porygon" },
+  { jaName: "バタフリー", enName: "Butterfree" },
+  { jaName: "ラプラス", enName: "Lapras" },
+  { jaName: "ミュウ", enName: "Mew" },
+  { jaName: "カビゴン", enName: "Snorlax" },
+  { jaName: "ミニリュウ", enName: "Dratini" },
+];
+
 export default function PokemonApiDemo() {
   const { t, i18n } = useTranslation();
   const [pokemonData, setPokemonData] = useState<PokemonType | null>(null);
@@ -22,6 +33,7 @@ export default function PokemonApiDemo() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [pokemonName, setPokemonName] = useState("");
 
+  console.log(pokemonData);
   /**
    * ピカチュウを取得する関数
    * @returns ピカチュウのデータ
@@ -100,11 +112,11 @@ export default function PokemonApiDemo() {
       >
         {t("get_pikachu")}
       </button> */}
-      <p>好きなポケモンの名前を英語で入力してください</p>
-      <p>
-        例：ピカチュウ → Pikachu　バンギラス → Blastoise　ミュウツー → Mewtwo
-        ヒトカゲ → Charmander　カイリュー → Charizard　ミュウ → Mew
-      </p>
+      <p>{t("input_favorite_pokemon")}</p>
+      {/* 日本語のみ表示 */}
+      {i18n.language === "ja" && (
+        <p className="text-sm">例：ピカチュウ → Pikachu</p>
+      )}
       <div className="flex gap-2 items-center my-4">
         <input
           type="text"
@@ -121,20 +133,50 @@ export default function PokemonApiDemo() {
           {t("get_pokemon")}
         </button>
       </div>
+      {/* 日本語のみ表示 */}
+      {i18n.language === "ja" && (
+        <p className="text-sm">
+          ⭐︎英語名が分からない方は以下をクリックでも入力できます
+        </p>
+      )}
+      <div className="flex flex-row gap-4 mb-4">
+        {pokemonList.map((pokemon) => (
+          <button
+            key={pokemon.enName}
+            type="button"
+            onClick={() => setPokemonName(pokemon.enName)}
+            className="text-sm text-blue-600 underline hover:text-blue-800 cursor-pointer bg-transparent border-none p-0 m-0"
+            style={{ display: "block", textAlign: "left" }}
+          >
+            {i18n.language === "ja" ? pokemon.jaName : pokemon.enName}
+          </button>
+        ))}
+      </div>
+
+      {/* ポケモンの情報を表示 */}
       {pokemonData && (
-        <div>
+        <div className="w-fit bg-neutral-300 border-2 border-neutral-800 rounded-md p-4">
           <h1 className="text-xl font-bold">
-            {t("id")} {pokemonData.id}　{pokemonData.name}
+            <span className="text-sm">{t("id")}:</span>
+            <span className="">{pokemonData.id}</span>
+            <span className="ml-2 text-3xl">{pokemonData.name}</span>
           </h1>
           <ul className="flex flex-row gap-4">
             <li>
-              {t("height")}: {pokemonData.height}
+              {t("height")}:
+              <span className="ml-2 font-bold">{pokemonData.height / 10}m</span>
             </li>
             <li>
-              {t("weight")}: {pokemonData.weight}
+              {t("weight")}:
+              <span className="ml-2 font-bold">
+                {pokemonData.weight / 100}kg
+              </span>
             </li>
             <li>
-              {t("type")}: {pokemonData.types[0].type.name}
+              {t("type")}:
+              <span className="ml-2 font-bold">
+                {pokemonData.types.map((t) => t.type.name).join(" / ")}
+              </span>
             </li>
           </ul>
           <p>説明文</p>

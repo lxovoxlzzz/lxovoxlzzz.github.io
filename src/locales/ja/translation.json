@@ -1,4 +1,5 @@
 {
+  "input_favorite_pokemon": "好きなポケモンの名前を英語で入力してください（APIが英語のみ対応のため）",
   "get_pikachu": "ピカチュウを取得",
   "get_pokemon": "ポケモンを取得",
   "input_placeholder": "ポケモン名を入力",

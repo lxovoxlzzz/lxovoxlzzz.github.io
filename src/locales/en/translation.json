@@ -1,4 +1,5 @@
 {
+  "input_favorite_pokemon": "Enter the name of your favorite Pokemon in English",
   "get_pikachu": "Get Pikachu",
   "get_pokemon": "Get Pokemon",
   "input_placeholder": "Enter Pokemon name",

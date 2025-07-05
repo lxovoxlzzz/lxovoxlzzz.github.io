@@ -23,4 +23,7 @@ export type PokemonType = {
       };
     };
   };
+  species: {
+    url: string;
+  };
 };

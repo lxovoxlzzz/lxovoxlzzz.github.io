@@ -32,8 +32,31 @@ export default function PokemonApiDemo() {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [pokemonName, setPokemonName] = useState("");
+  const [flavorText, setFlavorText] = useState<string>("");
 
   console.log(pokemonData);
+
+  /**
+   * speciesデータを取得する関数
+   */
+  const fetchSpeciesData = useCallback(async (speciesUrl: string) => {
+    try {
+      const response = await fetch(speciesUrl);
+      const data = await response.json();
+
+      // 現在の言語に応じて適切な言語のflavor_textを取得
+      const targetLanguage = i18n.language === "ja" ? "ja-Hrkt" : "en";
+      const flavorEntry = data.flavor_text_entries.find(
+        (entry: any) => entry.language.name === targetLanguage,
+      );
+
+      return flavorEntry ? flavorEntry.flavor_text : "";
+    } catch (error) {
+      console.error("Species data fetch failed:", error);
+      return "";
+    }
+  }, []);
+
   /**
    * ピカチュウを取得する関数
    * @returns ピカチュウのデータ
@@ -46,6 +69,11 @@ export default function PokemonApiDemo() {
         "https://pokeapi.co/api/v2/pokemon/pikachu",
       );
       setPokemonData(data);
+
+      // speciesデータも取得
+      const flavor = await fetchSpeciesData(data.species.url);
+      setFlavorText(flavor);
+
       const audioElement = new Audio(data.cries.latest);
       audioElement.addEventListener("ended", () => setIsPlaying(false));
       setAudio(audioElement);
@@ -55,7 +83,7 @@ export default function PokemonApiDemo() {
     } finally {
       setLoading(false);
     }
-  }, [t]);
+  }, [t, fetchSpeciesData]);
 
   /**
    * 入力されたポケモン名で取得する関数
@@ -69,6 +97,11 @@ export default function PokemonApiDemo() {
         `https://pokeapi.co/api/v2/pokemon/${pokemonName.toLowerCase()}`,
       );
       setPokemonData(data);
+
+      // speciesデータも取得
+      const flavor = await fetchSpeciesData(data.species.url);
+      setFlavorText(flavor);
+
       const audioElement = new Audio(data.cries.latest);
       audioElement.addEventListener("ended", () => setIsPlaying(false));
       setAudio(audioElement);
@@ -78,7 +111,7 @@ export default function PokemonApiDemo() {
     } finally {
       setLoading(false);
     }
-  }, [pokemonName, t]);
+  }, [pokemonName, t, fetchSpeciesData]);
 
   /**
    * 鳴き声を再生する
@@ -155,7 +188,15 @@ export default function PokemonApiDemo() {
 
       {/* ポケモンの情報を表示 */}
       {pokemonData && (
-        <div className="w-fit bg-neutral-300 border-2 border-neutral-800 rounded-md p-4">
+        <div className="max-w-96 bg-neutral-200 border-2 border-neutral-800 rounded-md p-4">
+          <div className="h-24 flex items-center justify-center">
+            <img
+              src={pokemonData.sprites.other.showdown.front_default}
+              alt={`${pokemonData.name}'s showdown image`}
+              width={60}
+              height={60}
+            />
+          </div>
           <h1 className="text-xl font-bold">
             <span className="text-sm">{t("id")}:</span>
             <span className="">{pokemonData.id}</span>
@@ -179,8 +220,13 @@ export default function PokemonApiDemo() {
               </span>
             </li>
           </ul>
-          <p>説明文</p>
-          <div className="flex gap-2 mb-4">
+          {flavorText && (
+            <>
+              <div className="border-t border-neutral-400 my-4"></div>
+              <p>{flavorText}</p>
+            </>
+          )}
+          <div className="flex gap-2 mt-4">
             <button
               onClick={isPlaying ? stopSound : playSound}
               disabled={!audio}
@@ -193,25 +239,25 @@ export default function PokemonApiDemo() {
               {isPlaying ? t("stop") : t("play")}
             </button>
           </div>
-          <div className="flex flex-row gap-4 items-center">
-            <img
-              src={pokemonData.sprites.other.showdown.front_default}
-              alt={`${pokemonData.name}'s showdown image`}
-              width={60}
-              height={60}
-            />
-            <img
-              src={pokemonData.sprites.front_default}
-              alt={`${pokemonData.name}'s front image`}
-              width={96}
-              height={96}
-            />
-            <img
-              src={pokemonData.sprites.back_default}
-              alt={`${pokemonData.name}'s back image`}
-              width={96}
-              height={96}
-            />
+          <div className="flex flex-row gap-4 items-center justify-center">
+            <div className="flex flex-col content-center">
+              <img
+                src={pokemonData.sprites.front_default}
+                alt={`${pokemonData.name}'s front image`}
+                width={120}
+                height={120}
+              />
+              <p className="text-center text-sm">front</p>
+            </div>
+            <div className="flex flex-col content-center">
+              <img
+                src={pokemonData.sprites.back_default}
+                alt={`${pokemonData.name}'s back image`}
+                width={120}
+                height={120}
+              />
+              <p className="text-center text-sm">back</p>
+            </div>
           </div>
         </div>
       )}

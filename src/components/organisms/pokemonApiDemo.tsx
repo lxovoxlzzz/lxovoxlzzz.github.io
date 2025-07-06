@@ -1,6 +1,8 @@
 import { useState, useCallback } from "react";
 import type { PokemonType } from "../../types/global";
 import { useTranslation } from "react-i18next";
+import { HiMiniSpeakerWave } from "react-icons/hi2";
+import { HiMiniSpeakerXMark } from "react-icons/hi2";
 
 /**
  * pokemonAPIからデータを取得する関数
@@ -187,9 +189,11 @@ export default function PokemonApiDemo() {
       </div>
 
       {/* ポケモンの情報を表示 */}
+      {loading && <p>{t("loading")}</p>}
+      {error && <p style={{ color: "red" }}>{error}</p>}
       {pokemonData && (
-        <div className="max-w-96 bg-neutral-200 border-2 border-neutral-800 rounded-md p-4">
-          <div className="h-24 flex items-center justify-center">
+        <div className="relative max-w-96 bg-neutral-300 border-2 border-neutral-800 rounded-md p-4">
+          <div className="py-10 flex items-center justify-center">
             <img
               src={pokemonData.sprites.other.showdown.front_default}
               alt={`${pokemonData.name}'s showdown image`}
@@ -197,9 +201,22 @@ export default function PokemonApiDemo() {
               height={60}
             />
           </div>
-          <h1 className="text-xl font-bold">
-            <span className="text-sm">{t("id")}:</span>
-            <span className="">{pokemonData.id}</span>
+          <div className="absolute top-4 right-4">
+            <button
+              onClick={isPlaying ? stopSound : playSound}
+              disabled={!audio}
+              className={
+                isPlaying
+                  ? "bg-red-500 text-white px-3 py-2.5 rounded-md disabled:bg-gray-400"
+                  : "bg-neutral-600 text-neutral-300 px-3 py-2.5 rounded-md disabled:bg-gray-400"
+              }
+            >
+              {isPlaying ? <HiMiniSpeakerXMark /> : <HiMiniSpeakerWave />}
+            </button>
+          </div>
+          <h1 className="font-bold">
+            <span className="text-sm">{t("id")}</span>
+            <span className="text-xl">{pokemonData.id}</span>
             <span className="ml-2 text-3xl">{pokemonData.name}</span>
           </h1>
           <ul className="flex flex-row gap-4">
@@ -226,19 +243,6 @@ export default function PokemonApiDemo() {
               <p>{flavorText}</p>
             </>
           )}
-          <div className="flex gap-2 mt-4">
-            <button
-              onClick={isPlaying ? stopSound : playSound}
-              disabled={!audio}
-              className={
-                isPlaying
-                  ? "bg-red-500 text-white px-4 pt-2 pb-1 rounded-md disabled:bg-gray-400"
-                  : "bg-neutral-600 text-neutral-300 px-4 pt-2 pb-1 rounded-md disabled:bg-gray-400"
-              }
-            >
-              {isPlaying ? t("stop") : t("play")}
-            </button>
-          </div>
           <div className="flex flex-row gap-4 items-center justify-center">
             <div className="flex flex-col content-center">
               <img
@@ -261,8 +265,6 @@ export default function PokemonApiDemo() {
           </div>
         </div>
       )}
-      {loading && <p>{t("loading")}</p>}
-      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
 }

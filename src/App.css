@@ -111,7 +111,7 @@ header::after {
   border-left: 150px solid transparent;
 }
 
-.main--build::after {
+.main--demos::after {
   content: "";
   position: absolute;
   top: 0;

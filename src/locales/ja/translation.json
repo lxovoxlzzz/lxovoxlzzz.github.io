@@ -1,5 +1,5 @@
 {
-  "input_favorite_pokemon": "好きなポケモンの名前を英語で入力してください",
+  "input_favorite_pokemon": "好きなポケモンのidか名前を英語で入力してください",
   "get_pikachu": "ピカチュウを取得",
   "get_pokemon": "ポケモンを取得",
   "input_placeholder": "ポケモン名を入力",
@@ -7,5 +7,6 @@
   "height": "高さ",
   "weight": "重さ",
   "type": "タイプ",
-  "id": "No."
+  "id": "No.",
+  "error_fetch": "データの取得に失敗しました"
 }

@@ -34,7 +34,7 @@ function App() {
         </div>
       </header>
       <main className="relative w-full">
-        <article className="main--demos px-4 bg-yellow-500">
+        <article className="min-h-svh px-4 bg-cyan-600">
           <section className="max-w-5xl mx-auto pt-36 pb-44">
             <h1 className="mb-16 text-4xl font-bold">Demos</h1>
             <PokemonApiDemo />

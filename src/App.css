@@ -111,17 +111,6 @@ header::after {
   border-left: 150px solid transparent;
 }
 
-.main--demos::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 0;
-  border-top: 250px solid #d6d6d6;
-  border-left: 150px solid transparent;
-}
-
 .face {
   animation: 8s linear infinite rotation;
 }

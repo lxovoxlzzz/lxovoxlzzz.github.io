@@ -6,7 +6,7 @@ const LangButton = ({ lang, label }: { lang: LangType; label: string }) => {
   return (
     <button
       onClick={() => i18n.changeLanguage(lang)}
-      className={`px-4 pt-2 pb-1 border-2 border-neutral-800 text-sm rounded ${i18n.language === lang ? "bg-yellow-400" : "bg-transparent"}`}
+      className={`px-4 pt-2 pb-1 border-2 border-neutral-800 text-sm rounded ${i18n.language === lang ? "bg-yellow-500" : "bg-transparent"}`}
     >
       {label}
     </button>

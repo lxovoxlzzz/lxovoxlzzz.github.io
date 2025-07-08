@@ -1,5 +1,5 @@
 {
-  "input_favorite_pokemon": "好きなポケモンのidか名前を英語で入力してください",
+  "input_favorite_pokemon": "好きなポケモンの図鑑番号か名前を英語で入力してください",
   "get_pikachu": "ピカチュウを取得",
   "get_pokemon": "ポケモンを取得",
   "input_placeholder": "ポケモン名を入力",

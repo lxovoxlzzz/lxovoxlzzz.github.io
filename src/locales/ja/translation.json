@@ -1,12 +1,12 @@
 {
-  "input_favorite_pokemon": "好きなポケモンの図鑑番号か名前を英語で入力してください",
-  "get_pikachu": "ピカチュウを取得",
+  "input_favorite_pokemon": "好きなポケモンの図鑑番号か名前を入力してください",
+  "pickup": "よく知らない？ここから選んでも入力できるよ。",
   "get_pokemon": "ポケモンを取得",
   "input_placeholder": "ポケモン名を入力",
   "loading": "取得中...",
-  "height": "高さ",
-  "weight": "重さ",
+  "height": "たかさ",
+  "weight": "おもさ",
   "type": "タイプ",
   "id": "No.",
-  "error_fetch": "データの取得に失敗しました"
+  "error_fetch": "ポケモンが見つかりませんでした。\n名前に間違いがないか確認してね。"
 }

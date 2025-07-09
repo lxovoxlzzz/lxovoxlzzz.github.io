@@ -1,6 +1,6 @@
 {
   "input_favorite_pokemon": "Enter the Pokedex number or name of your favorite Pokemon",
-  "get_pikachu": "Get Pikachu",
+  "pickup": "Don't know much? You can choose and enter it here.",
   "get_pokemon": "Get Pokemon",
   "input_placeholder": "Enter Pokemon name",
   "loading": "Loading...",
@@ -8,5 +8,5 @@
   "weight": "Weight",
   "type": "Type",
   "id": "No.",
-  "error_fetch": "Failed to fetch data"
+  "error_fetch": "Pokémon not found.\nMake sure the name is correct."
 }

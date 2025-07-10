@@ -199,7 +199,7 @@ export default function PokemonApiDemo() {
         </div>
 
         {/* ポケモンの情報を表示 */}
-        <div className="relative basis-1/2 max-w-96 bg-neutral-200 border-2 border-neutral-800 rounded-md p-4 min-h-64 flex flex-col justify-center items-center">
+        {/* <div className="relative basis-1/2 max-w-96 bg-neutral-200 border-2 border-neutral-800 rounded-md p-4 min-h-64 flex flex-col justify-center items-center">
           {loading ? (
             <p>{t("loading")}</p>
           ) : error ? (
@@ -284,9 +284,9 @@ export default function PokemonApiDemo() {
               </div>
             </>
           ) : null}
-        </div>
+        </div> */}
         {/* ポケモンの情報を表示 */}
-        <div className="relative basis-1/2 max-w-96 bg-neutral-200 border-2 border-neutral-800 rounded-md p-4 min-h-64 flex flex-col justify-center items-center">
+        <div className="relative basis-1/2 max-w-96 px-4 pt-16 pb-4 min-h-64 flex flex-col justify-center items-center bg-neutral-200 border-2 border-neutral-800 rounded-md">
           {loading ? (
             <p>{t("loading")}</p>
           ) : error ? (
@@ -296,19 +296,19 @@ export default function PokemonApiDemo() {
           ) : pokemonData ? (
             <>
               <div className="w-full flex flex-row">
-                <div className="basis-1/2 py-10 flex flex-col items-center justify-center">
+                <div className="basis-1/2 flex flex-col items-center justify-center">
                   <img
                     src={pokemonData.sprites.other.showdown.front_default}
                     alt={`${pokemonData.name}'s showdown image`}
                     width={60}
                     height={60}
                   />
-                  <p className="mt-4 font-fj">
+                  <p className="mt-6 font-fj">
                     <span className="text-sm">{t("id")}</span>
                     <span className="font-fj text-xl">{pokemonData.id}</span>
                   </p>
                 </div>
-                <div className="basis-1/2">
+                <div className="basis-1/2 flex flex-col justify-center">
                   <div className="absolute top-4 right-4">
                     <button
                       onClick={isPlaying ? stopSound : playSound}
@@ -326,16 +326,18 @@ export default function PokemonApiDemo() {
                       )}
                     </button>
                   </div>
-                  <h1>{speciesData?.pokemonName}</h1>
-                  <h2 className="">{speciesData?.pokemonGenre}</h2>
-                  <ul className="font-fj">
-                    <li>
+                  <h1 className="text-xl font-bold">
+                    {speciesData?.pokemonName}
+                  </h1>
+                  <h2 className="text-sm">{speciesData?.pokemonGenre}</h2>
+                  <ul className="font-fj mt-2 text-sm">
+                    <li className="mb-1">
                       {t("height")}
                       <span className="ml-4 font-bold">
                         {pokemonData.height / 10}m
                       </span>
                     </li>
-                    <li>
+                    <li className="mb-1">
                       {t("weight")}
                       <span className="ml-4 font-bold">
                         {pokemonData.weight / 100}kg
@@ -351,8 +353,8 @@ export default function PokemonApiDemo() {
                 </div>
               </div>
               {speciesData && (
-                <div className="border-t border-neutral-400 mt-4">
-                  <p className="mt-4">{speciesData.flavorText}</p>
+                <div className="border-t border-neutral-400 mt-8">
+                  <p className="mt-8">{speciesData.flavorText}</p>
                 </div>
               )}
               <div className="flex flex-row gap-4 items-center justify-center">

@@ -8,5 +8,6 @@
   "weight": "Weight",
   "type": "Type",
   "id": "No.",
-  "error_fetch": "Pokémon not found.\nMake sure the name is correct."
+  "no_description": "No description",
+  "error_fetch": "Sorry!\nPokémon not found."
 }

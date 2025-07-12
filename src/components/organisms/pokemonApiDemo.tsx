@@ -145,7 +145,7 @@ export default function PokemonApiDemo() {
   }, [audio]);
 
   return (
-    <div className="mb-4">
+    <section className="mb-28">
       <h1 className="mb-8 text-2xl font-bold">① Poke API</h1>
       <div className="flex flex-row gap-4">
         {/* ポケモン名の入力・リスト表示 */}
@@ -177,6 +177,6 @@ export default function PokemonApiDemo() {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

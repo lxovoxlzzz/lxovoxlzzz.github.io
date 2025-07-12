@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import { PiArrowDownDuotone } from "react-icons/pi";
 import PokemonApiDemo from "./components/organisms/pokemonApiDemo";
+import NasaApi from "@/components/organisms/nasaApi";
 import normal from "./assets/normalface.png";
 import funny from "./assets/funnyface.png";
 import LanguageButton from "./components/molecules/languageButton";
@@ -33,12 +34,11 @@ function App() {
           <PiArrowDownDuotone size={32} />
         </div>
       </header>
-      <main className="relative w-full">
-        <article className="min-h-svh px-4 bg-yellow-500">
-          <section className="max-w-5xl mx-auto pt-36 pb-44">
-            <h1 className="mb-16 text-4xl font-bold">Demos</h1>
-            <PokemonApiDemo />
-          </section>
+      <main className="relative w-full min-h-svh bg-yellow-500">
+        <article className="max-w-5xl mx-auto pt-36 pb-44">
+          <h1 className="mb-16 text-4xl font-bold">Demos</h1>
+          <PokemonApiDemo />
+          <NasaApi />
         </article>
         <article className="h-svh bg-neutral-800 text-neutral-300">
           <section className="max-w-5xl mx-auto pt-36 pb-44">

@@ -1,3 +1,6 @@
+/**
+ * Pokemon
+ */
 export type NameEntry = {
   language: { name: string };
   name: string;
@@ -53,3 +56,17 @@ export type PokemonDataType = {
 };
 
 export type NameMappingType = { [japanese: string]: string };
+
+/**
+ * NASA
+ */
+export type NasaDataType = {
+  copyright: string;
+  date: string;
+  explanation: string;
+  hdurl: string;
+  media_type: string;
+  service_version: string;
+  title: string;
+  url: string;
+};

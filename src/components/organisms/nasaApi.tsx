@@ -1,0 +1,59 @@
+import { useState, useEffect, useCallback } from "react";
+import { useTranslation } from "react-i18next";
+
+import type { NasaDataType } from "@/types/demo";
+
+async function fetchNasaData<T>(url: string): Promise<T> {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("Fetch failed");
+  return res.json();
+}
+
+export default function PokemonApiDemo() {
+  const { t } = useTranslation();
+  const [nasaData, setNasaData] = useState<NasaDataType | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  // TODO: 最後に消す
+  console.log(nasaData);
+
+  useEffect(() => {
+    handleGetNasaData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const handleGetNasaData = useCallback(
+    async () => {
+      setLoading(true);
+      setError(null);
+      try {
+        const data = await fetchNasaData<NasaDataType>(
+          `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`,
+        );
+        setNasaData(data);
+      } catch (err) {
+        setError(t("error_fetch"));
+        console.error(err);
+      } finally {
+        setLoading(false);
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [],
+  );
+
+  return (
+    <section className="mb-28">
+      <h1 className="mb-8 text-2xl font-bold">② NASA API</h1>
+      <p>{nasaData?.copyright}</p>
+      <p>{nasaData?.date}</p>
+      <p>{nasaData?.explanation}</p>
+      <p>{nasaData?.hdurl}</p>
+      <p>{nasaData?.media_type}</p>
+      <p>{nasaData?.service_version}</p>
+      <p>{nasaData?.title}</p>
+      <p>{nasaData?.url}</p>
+    </section>
+  );
+}

@@ -70,3 +70,8 @@ export type NasaDataType = {
   title: string;
   url: string;
 };
+
+export type FoxDataType = {
+  image: string;
+  link: string;
+};

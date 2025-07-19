@@ -3,6 +3,7 @@ import "./App.css";
 import { PiArrowDownDuotone } from "react-icons/pi";
 import PokemonApiDemo from "./components/organisms/pokemonApiDemo";
 import NasaApi from "@/components/organisms/nasaApi";
+import FoxApi from "./components/organisms/foxApi";
 import normal from "./assets/normalface.png";
 import funny from "./assets/funnyface.png";
 import LanguageButton from "./components/molecules/languageButton";
@@ -39,6 +40,7 @@ function App() {
           <h1 className="mb-16 text-4xl font-bold">Demos</h1>
           <PokemonApiDemo />
           <NasaApi />
+          <FoxApi />
         </article>
         <article className="h-svh bg-neutral-800 text-neutral-300">
           <section className="max-w-5xl mx-auto pt-36 pb-44">

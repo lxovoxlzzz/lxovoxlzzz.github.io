@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./App.css";
 import { PiArrowDownDuotone } from "react-icons/pi";
-import PokemonApiDemo from "./components/organisms/pokemonApiDemo";
+import PokemonApi from "@/components/organisms/pokemonApi";
 import NasaApi from "@/components/organisms/nasaApi";
-import FoxApi from "./components/organisms/foxApi";
-import normal from "./assets/normalface.png";
-import funny from "./assets/funnyface.png";
+import FoxApi from "@/components/organisms/foxApi";
+import normal from "@/assets/normalface.png";
+import funny from "@/assets/funnyface.png";
 import LanguageButton from "./components/molecules/languageButton";
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
       <main className="relative w-full min-h-svh bg-yellow-500">
         <article className="max-w-5xl mx-auto pt-36 pb-44">
           <h1 className="mb-16 text-4xl font-bold">Demos</h1>
-          <PokemonApiDemo />
+          <PokemonApi />
           <NasaApi />
           <FoxApi />
         </article>

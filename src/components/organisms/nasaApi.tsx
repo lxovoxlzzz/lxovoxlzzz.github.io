@@ -1,15 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
 import { useTranslation } from "react-i18next";
-
+import { fetchApiData } from "@/utils/api";
 import type { NasaDataType } from "@/types/demo";
 
-async function fetchNasaData<T>(url: string): Promise<T> {
-  const res = await fetch(url);
-  if (!res.ok) throw new Error("Fetch failed");
-  return res.json();
-}
-
-export default function PokemonApiDemo() {
+export default function NasaApiDemo() {
   const { t } = useTranslation();
   const [nasaData, setNasaData] = useState<NasaDataType | null>(null);
   const [loading, setLoading] = useState(false);
@@ -28,7 +22,7 @@ export default function PokemonApiDemo() {
       setLoading(true);
       setError(null);
       try {
-        const data = await fetchNasaData<NasaDataType>(
+        const data = await fetchApiData<NasaDataType>(
           `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`,
         );
         setNasaData(data);

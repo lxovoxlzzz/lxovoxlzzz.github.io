@@ -6,7 +6,7 @@ import NasaApi from "@/components/organisms/nasaApi";
 import FoxApi from "@/components/organisms/foxApi";
 import normal from "@/assets/normalface.png";
 import funny from "@/assets/funnyface.png";
-import LanguageButton from "./components/molecules/languageButton";
+import LanguageButton from "@/components/molecules/languageButton";
 
 function App() {
   const [copied, setCopied] = useState(false);

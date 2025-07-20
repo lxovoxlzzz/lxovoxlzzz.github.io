@@ -9,8 +9,8 @@ import type {
 } from "@/types/demo";
 import { fetchApiData } from "@/utils/api";
 import pokemonNameMapJson from "@/data/pokemon-name-map.json";
-import PokemonDetailCard from "../molecules/PokemonDetailCard";
-import PokemonInputArea from "../molecules/PokemonInputArea";
+import PokemonDetailCard from "@/components/molecules/PokemonDetailCard";
+import PokemonInputArea from "@/components/molecules/PokemonInputArea";
 
 const pokemonNameMap = pokemonNameMapJson as Record<string, string>;
 

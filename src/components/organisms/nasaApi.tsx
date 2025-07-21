@@ -39,30 +39,68 @@ export default function NasaApiDemo() {
 
   return (
     <section className="mb-28">
-      <h1 className="mb-8 text-2xl font-bold">② NASA API</h1>
-      {loading && <p>Loading...</p>}
-      {error && <p>{error}</p>}
-      {nasaData && (
-        <>
-          <p>{nasaData.copyright}</p>
-          <p>{nasaData.date}</p>
-          <p>{nasaData.explanation}</p>
-          <p>{nasaData.hdurl}</p>
-          <p>{nasaData.media_type}</p>
-          <p>{nasaData.service_version}</p>
-          <p>{nasaData.title}</p>
-          <p>{nasaData.url}</p>
-          <p className="text-sm text-blue-600 underline hover:text-blue-800 border-none">
-            <a
-              href="https://api.nasa.gov/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              API: Courtesy of NASA
-            </a>
-          </p>
-        </>
-      )}
+      <h1 className="mb-8 text-2xl font-bold">2. NASA API</h1>
+      <p className="mb-4">{t("nasa_text")}</p>
+      <div className="flex flex-row gap-4">
+        <div>
+          {loading && <p>Loading...</p>}
+          {error && <p>{error}</p>}
+          {nasaData && (
+            <>
+              {nasaData.media_type === "image" && (
+                <img
+                  src={nasaData.url}
+                  alt={t("nasa_text")}
+                  className="max-w-md mb-4"
+                />
+              )}
+              {nasaData.media_type === "video" && (
+                <video
+                  src={nasaData.url}
+                  poster={nasaData.thumbnail_url}
+                  controls
+                  className="max-w-md mb-4"
+                />
+              )}
+            </>
+          )}
+        </div>
+        <div>
+          {nasaData && (
+            <>
+              <ul>
+                <li>
+                  <span className="mr-2 font-bold">Title:</span>
+                  {nasaData.title}
+                </li>
+                <li>
+                  <span className="mr-2 font-bold">Date:</span>
+                  {nasaData.date}
+                </li>
+                <li>
+                  <span className="mr-2 font-bold">Explanation:</span>
+                  {nasaData.explanation}
+                </li>
+                {nasaData.copyright && (
+                  <li>
+                    <span className="mr-2 font-bold">CopyRight:</span>
+                    {nasaData.copyright}
+                  </li>
+                )}
+                <li className="mt-4 text-sm text-blue-600 underline hover:text-blue-800 border-none">
+                  <a
+                    href="https://api.nasa.gov/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    API: Courtesy of NASA
+                  </a>
+                </li>
+              </ul>
+            </>
+          )}
+        </div>
+      </div>
     </section>
   );
 }

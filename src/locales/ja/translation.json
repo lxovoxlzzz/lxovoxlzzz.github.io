@@ -10,4 +10,5 @@
   "id": "No.",
   "no_description": "せつめいは　ありません",
   "error_fetch": "ざんねん！\nポケモンが　みつかりません。"
+  "nasa_text": "「今日の天文写真」を取得するAPIです",
 }

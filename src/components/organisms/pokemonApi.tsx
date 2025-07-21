@@ -19,7 +19,7 @@ const pokemonNameMap = pokemonNameMapJson as Record<string, string>;
  */
 
 export default function PokemonApi() {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation(undefined, { keyPrefix: "poke" });
   const [pokemonData, setPokemonData] = useState<PokemonDataType | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -27,9 +27,6 @@ export default function PokemonApi() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [pokemonIDName, setPokemonIDName] = useState("");
   const [speciesData, setSpeciesData] = useState<SpeciesDataType | null>(null);
-
-  // TODO: 最後に消す
-  console.log(pokemonData);
 
   // 画面表示時にピカチュウのデータを自動取得
   useEffect(() => {
@@ -142,7 +139,7 @@ export default function PokemonApi() {
 
   return (
     <section className="mb-28">
-      <h1 className="mb-8 text-2xl font-bold">① Poke API</h1>
+      <h1 className="mb-8 text-2xl font-bold">1. Poke API</h1>
       <div className="flex flex-row gap-4">
         {/* ポケモン名の入力・リスト表示 */}
         <PokemonInputArea

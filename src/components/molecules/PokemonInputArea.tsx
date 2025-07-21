@@ -8,14 +8,26 @@ interface Props {
 }
 
 const pokemonList = [
-  { jaName: "ピカチュウ", enName: "Pikachu" },
   { jaName: "イーブイ", enName: "Eevee" },
+  { jaName: "メタモン", enName: "ditto" },
   { jaName: "ポリゴン", enName: "Porygon" },
   { jaName: "バタフリー", enName: "Butterfree" },
   { jaName: "ラプラス", enName: "Lapras" },
   { jaName: "ミュウ", enName: "Mew" },
   { jaName: "カビゴン", enName: "Snorlax" },
   { jaName: "ミニリュウ", enName: "Dratini" },
+  { jaName: "ロコン", enName: "vulpix" },
+  { jaName: "コダック", enName: "psyduck" },
+  { jaName: "ガーディ", enName: "growlithe" },
+  { jaName: "ウツドン", enName: "weepinbell" },
+  { jaName: "カモネギ", enName: "farfetchd" },
+  { jaName: "ゲンガー", enName: "gengar" },
+  { jaName: "カラカラ", enName: "cubone" },
+  { jaName: "ヒトデマン", enName: "staryu" },
+  { jaName: "デンリュウ", enName: "ampharos" },
+  { jaName: "デリバード", enName: "delibird" },
+  { jaName: "ポリゴン２", enName: "porygon2" },
+  { jaName: "アブソル", enName: "absol" },
 ];
 
 export default function PokemonInputArea({
@@ -24,7 +36,7 @@ export default function PokemonInputArea({
   handleGetPokemonData,
   loading,
 }: Props) {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation(undefined, { keyPrefix: "poke" });
   return (
     <div className="basis-1/2">
       <p>{t("input_favorite_pokemon")}</p>

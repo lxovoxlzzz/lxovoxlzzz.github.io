@@ -1,14 +1,16 @@
 {
-  "input_favorite_pokemon": "好きなポケモンの図鑑番号か名前を入力してね",
-  "pickup": "よく知らない？ここから選んでも入力できマス",
-  "get_pokemon": "ポケモンをみる",
-  "input_placeholder": "ポケモン名を入力",
-  "loading": "取得中...",
-  "height": "たかさ",
-  "weight": "おもさ",
-  "type": "タイプ",
-  "id": "No.",
-  "no_description": "せつめいは　ありません",
-  "error_fetch": "ざんねん！\nポケモンが　みつかりません。"
+  "poke": {
+    "input_favorite_pokemon": "好きなポケモンの図鑑番号か名前を入力してください",
+    "pickup": "よく知らない？ここから選んでも入力できます",
+    "get_pokemon": "ポケモンをみる",
+    "input_placeholder": "ポケモン名を入力",
+    "loading": "取得中...",
+    "height": "たかさ",
+    "weight": "おもさ",
+    "type": "タイプ",
+    "id": "No.",
+    "no_description": "せつめいは　ありません",
+    "error_fetch": "ざんねん！\nポケモンが　みつかりません。"
+  },
   "nasa_text": "「今日の天文写真」を取得するAPIです",
 }

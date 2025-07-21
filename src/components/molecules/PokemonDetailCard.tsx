@@ -20,7 +20,7 @@ export default function PokemonDetailCard({
   playSound,
   stopSound,
 }: Props) {
-  const { t } = useTranslation();
+  const { t } = useTranslation(undefined, { keyPrefix: "poke" });
   console.log(speciesData);
   return (
     <>

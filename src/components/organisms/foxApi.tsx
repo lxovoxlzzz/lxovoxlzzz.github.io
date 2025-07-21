@@ -36,12 +36,13 @@ export default function FoxApiDemo() {
 
   return (
     <section className="mb-28">
-      <h1 className="mb-8 text-2xl font-bold">② Fox API</h1>
+      <h1 className="mb-8 text-2xl font-bold">3. Fox API</h1>
+      <p className="mb-4">{t("fox_text")}</p>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {foxData && (
         <div>
-          <img src={foxData.image} alt="fox" className="max-w-xs mb-4" />
+          <img src={foxData.image} alt="fox" className="max-w-md mb-4" />
           <p>
             <a
               href={foxData.link}

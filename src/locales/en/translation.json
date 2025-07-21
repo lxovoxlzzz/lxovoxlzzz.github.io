@@ -13,4 +13,5 @@
     "error_fetch": "Sorry!\nPokémon not found."
   },
   "nasa_text": "API to retrieve \"Todays Astronomy Picture of the Day\"",
+  "fox_text": "It is a healing API that only retrieves a random fox image"
 }

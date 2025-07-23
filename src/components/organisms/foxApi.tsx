@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { fetchApiData } from "@/utils/api";
 import type { FoxDataType } from "@/types/demo";
@@ -14,25 +14,21 @@ export default function FoxApiDemo() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleGetFoxData = useCallback(
-    async () => {
-      setLoading(true);
-      setError(null);
-      try {
-        const data = await fetchApiData<FoxDataType>(
-          `https://randomfox.ca/floof`,
-        );
-        setFoxData(data);
-      } catch (err) {
-        setError(t("error_fetch"));
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
-  );
+  const handleGetFoxData = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await fetchApiData<FoxDataType>(
+        `https://randomfox.ca/floof`,
+      );
+      setFoxData(data);
+    } catch (err) {
+      setError(t("error_fetch"));
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section className="mb-28">

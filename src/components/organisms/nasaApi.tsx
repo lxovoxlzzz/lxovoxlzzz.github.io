@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { fetchApiData } from "@/utils/api";
 import type { NasaDataType } from "@/types/demo";
@@ -17,25 +17,21 @@ export default function NasaApiDemo() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleGetNasaData = useCallback(
-    async () => {
-      setLoading(true);
-      setError(null);
-      try {
-        const data = await fetchApiData<NasaDataType>(
-          `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`,
-        );
-        setNasaData(data);
-      } catch (err) {
-        setError(t("error_fetch"));
-        console.error(err);
-      } finally {
-        setLoading(false);
-      }
-    },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
-  );
+  const handleGetNasaData = async () => {
+    setLoading(true);
+    setError(null);
+    try {
+      const data = await fetchApiData<NasaDataType>(
+        `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`,
+      );
+      setNasaData(data);
+    } catch (err) {
+      setError(t("error_fetch"));
+      console.error(err);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <section className="mb-28">

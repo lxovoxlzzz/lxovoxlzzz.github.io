@@ -14,6 +14,9 @@ export default function FoxApiDemo() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  /**
+   * Fox apiからデータを取得する処理
+   */
   const handleGetFoxData = async () => {
     setLoading(true);
     setError(null);

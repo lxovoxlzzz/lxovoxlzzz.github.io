@@ -6,6 +6,7 @@ import FoxApi from "@/components/organisms/foxApi";
 import normal from "@/assets/normalface.png";
 import funny from "@/assets/funnyface.png";
 import Header from "@/components/organisms/header";
+import Footer from "@/components/organisms/footer";
 
 function App() {
   const [copied, setCopied] = useState(false);
@@ -73,9 +74,7 @@ function App() {
           </section>
         </article>
       </main>
-      <footer className="w-full h-20 text-center content-center bg-neutral-800 text-neutral-300">
-        <small>© 2025 U.Ezoe</small>
-      </footer>
+      <Footer />
     </>
   );
 }

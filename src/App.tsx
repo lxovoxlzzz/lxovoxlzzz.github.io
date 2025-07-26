@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import { PiArrowDownDuotone } from "react-icons/pi";
 import PokemonApi from "@/components/organisms/pokemonApi";
 import NasaApi from "@/components/organisms/nasaApi";
 import FoxApi from "@/components/organisms/foxApi";
 import normal from "@/assets/normalface.png";
 import funny from "@/assets/funnyface.png";
-import LanguageButton from "@/components/molecules/languageButton";
+import Header from "@/components/organisms/header";
 
 function App() {
   const [copied, setCopied] = useState(false);
@@ -22,19 +21,7 @@ function App() {
 
   return (
     <>
-      <header className="relative w-full h-svh content-center">
-        <div className="header--title relative flex flex-row items-center justify-center ml-[-1.5rem]">
-          <p className="rotate-[270deg] origin-top text-xl font-bold">U.Ezoe</p>
-          <h1 className="header--title__main text-9xl font-bold leading-tight">
-            Portfolio
-          </h1>
-        </div>
-        <LanguageButton />
-        <div className="header--arrow absolute bottom-24 inset-x-0 flex flex-col items-center">
-          <p>Scroll down</p>
-          <PiArrowDownDuotone size={32} />
-        </div>
-      </header>
+      <Header />
       <main className="relative w-full min-h-svh bg-yellow-500">
         <article className="max-w-5xl mx-auto pt-36 pb-44">
           <h1 className="mb-16 text-4xl font-bold">Demos</h1>

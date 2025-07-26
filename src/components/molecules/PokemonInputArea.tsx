@@ -7,29 +7,6 @@ interface Props {
   loading: boolean;
 }
 
-const pokemonList = [
-  { jaName: "イーブイ", enName: "Eevee" },
-  { jaName: "メタモン", enName: "ditto" },
-  { jaName: "ポリゴン", enName: "Porygon" },
-  { jaName: "バタフリー", enName: "Butterfree" },
-  { jaName: "ラプラス", enName: "Lapras" },
-  { jaName: "ミュウ", enName: "Mew" },
-  { jaName: "カビゴン", enName: "Snorlax" },
-  { jaName: "ミニリュウ", enName: "Dratini" },
-  { jaName: "ロコン", enName: "vulpix" },
-  { jaName: "コダック", enName: "psyduck" },
-  { jaName: "ガーディ", enName: "growlithe" },
-  { jaName: "ウツドン", enName: "weepinbell" },
-  { jaName: "カモネギ", enName: "farfetchd" },
-  { jaName: "ゲンガー", enName: "gengar" },
-  { jaName: "カラカラ", enName: "cubone" },
-  { jaName: "ヒトデマン", enName: "staryu" },
-  { jaName: "デンリュウ", enName: "ampharos" },
-  { jaName: "デリバード", enName: "delibird" },
-  { jaName: "ポリゴン２", enName: "porygon2" },
-  { jaName: "アブソル", enName: "absol" },
-];
-
 export default function PokemonInputArea({
   pokemonIDName,
   setPokemonIDName,
@@ -86,3 +63,26 @@ export default function PokemonInputArea({
     </div>
   );
 }
+
+const pokemonList = [
+  { jaName: "イーブイ", enName: "Eevee" },
+  { jaName: "メタモン", enName: "ditto" },
+  { jaName: "ポリゴン", enName: "Porygon" },
+  { jaName: "バタフリー", enName: "Butterfree" },
+  { jaName: "ラプラス", enName: "Lapras" },
+  { jaName: "ミュウ", enName: "Mew" },
+  { jaName: "カビゴン", enName: "Snorlax" },
+  { jaName: "ミニリュウ", enName: "Dratini" },
+  { jaName: "ロコン", enName: "vulpix" },
+  { jaName: "コダック", enName: "psyduck" },
+  { jaName: "ガーディ", enName: "growlithe" },
+  { jaName: "ウツドン", enName: "weepinbell" },
+  { jaName: "カモネギ", enName: "farfetchd" },
+  { jaName: "ゲンガー", enName: "gengar" },
+  { jaName: "カラカラ", enName: "cubone" },
+  { jaName: "ヒトデマン", enName: "staryu" },
+  { jaName: "デンリュウ", enName: "ampharos" },
+  { jaName: "デリバード", enName: "delibird" },
+  { jaName: "ポリゴン２", enName: "porygon2" },
+  { jaName: "アブソル", enName: "absol" },
+];

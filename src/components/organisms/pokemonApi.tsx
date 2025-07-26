@@ -14,10 +14,6 @@ import PokemonInputArea from "@/components/molecules/PokemonInputArea";
 
 const pokemonNameMap = pokemonNameMapJson as Record<string, string>;
 
-/**
- * pokemonAPIからデータを取得する関数
- */
-
 export default function PokemonApi() {
   const { t, i18n } = useTranslation(undefined, { keyPrefix: "poke" });
   const [pokemonData, setPokemonData] = useState<PokemonDataType | null>(null);

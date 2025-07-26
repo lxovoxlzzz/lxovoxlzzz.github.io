@@ -9,14 +9,14 @@ export default function NasaApiDemo() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  // TODO: 最後に消す
-  console.log(nasaData);
-
   useEffect(() => {
     handleGetNasaData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  /**
+   * Nasa apiからデータを取得する処理
+   */
   const handleGetNasaData = async () => {
     setLoading(true);
     setError(null);

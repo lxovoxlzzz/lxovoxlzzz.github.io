@@ -42,12 +42,12 @@ export default function NasaApiDemo() {
           {loading && <p>Loading...</p>}
           {error && <p>{error}</p>}
           {nasaData && (
-            <>
+            <div className="border-4 border-neutral-800">
               {nasaData.media_type === "image" && (
                 <img
                   src={nasaData.url}
                   alt={t("nasa_text")}
-                  className="max-w-md mb-4"
+                  className="max-w-md"
                 />
               )}
               {nasaData.media_type === "video" && (
@@ -55,10 +55,10 @@ export default function NasaApiDemo() {
                   src={nasaData.url}
                   poster={nasaData.thumbnail_url}
                   controls
-                  className="max-w-md mb-4"
+                  className="max-w-md"
                 />
               )}
-            </>
+            </div>
           )}
         </div>
         <div>

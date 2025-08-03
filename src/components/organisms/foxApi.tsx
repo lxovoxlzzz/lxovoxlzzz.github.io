@@ -41,7 +41,11 @@ export default function FoxApiDemo() {
       {error && <p>{error}</p>}
       {foxData && (
         <div>
-          <img src={foxData.image} alt="fox" className="max-w-md mb-4" />
+          <img
+            src={foxData.image}
+            alt="fox"
+            className="max-w-md mb-4 border-4 border-neutral-800"
+          />
           <p>
             <a
               href={foxData.link}

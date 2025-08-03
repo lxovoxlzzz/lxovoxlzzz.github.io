@@ -45,14 +45,14 @@ export default function PokemonDetailCard({
         </div>
         <div className="basis-1/2 flex flex-col justify-center">
           {/* 鳴き声再生・停止ボタン */}
-          <div className="absolute top-4 right-4">
+          <div className="absolute top-5 right-5">
             <button
               onClick={isPlaying ? stopSound : playSound}
               disabled={!audio}
               className={
                 isPlaying
-                  ? "bg-red-500 text-white px-3 py-2.5 rounded-md disabled:bg-gray-400"
-                  : "bg-neutral-600 text-neutral-300 px-3 py-2.5 rounded-md disabled:bg-gray-400"
+                  ? "bg-rose-700 text-white px-3 py-2.5 aspect-square rounded-full disabled:bg-gray-400"
+                  : "bg-cyan-700 text-neutral-300 px-3 py-2.5 aspect-square rounded-full disabled:bg-gray-400"
               }
             >
               {isPlaying ? <HiMiniSpeakerXMark /> : <HiMiniSpeakerWave />}

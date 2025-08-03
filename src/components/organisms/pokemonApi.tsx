@@ -24,7 +24,7 @@ export default function PokemonApi() {
   const [pokemonIDName, setPokemonIDName] = useState("");
   const [speciesData, setSpeciesData] = useState<SpeciesDataType | null>(null);
 
-  // 画面表示時にピカチュウのデータを自動取得
+  // 初期表示時にピカチュウのデータを自動取得
   useEffect(() => {
     handleGetPokemonData("pikachu");
     // eslint-disable-next-line react-hooks/exhaustive-deps

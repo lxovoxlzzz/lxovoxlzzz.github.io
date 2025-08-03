@@ -1,4 +1,7 @@
 {
+  "demo": {
+    "description": "Since most of my work has been for BtoB services and services that are not generally available, I have no achievements to show.\nTherefore, I have created demos using APIs that I like."
+  },
   "poke": {
     "input_favorite_pokemon": "Enter the Pokedex number or name of your favorite Pokemon",
     "pickup": "Don't know much? You can choose and enter it here.",

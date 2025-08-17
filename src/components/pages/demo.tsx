@@ -8,7 +8,7 @@ export default function Demo() {
   return (
     <article className="max-w-5xl mx-auto pt-36 pb-44">
       <h1 className="mb-16 text-4xl font-bold">Demos</h1>
-      <p className="mb-16">
+      <p className="mb-16 whitespace-pre">
         {t("demo.description")}
       </p>
       <PokemonApi />

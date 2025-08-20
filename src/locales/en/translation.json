@@ -15,6 +15,52 @@
     "no_description": "No description",
     "error_fetch": "Sorry!\nPokémon not found."
   },
+  "about": {
+    "introduction": {
+      "expertise": {
+        "title": "Expertise",
+        "list": {
+          "1": "Design (Web, DTP)",
+          "2": "React / TypeScript / HTML / CSS"
+        }
+      },
+      "areas_of_interest": {
+        "title": "Areas of Interest",
+        "list": {
+          "1": "AI",
+          "2": "Psychology (Certified Behavioral Psychologist)"
+        }
+      },
+      "background": {
+        "title": "Background",
+        "list": {
+          "1": "Around 8 years of experience at TV stations and production companies, handling web direction, design, and coding (including DTP design).",
+          "2": "Developed an interest in programming; studied Java on weekdays and PHP/JavaScript on weekends at coding schools.",
+          "3": "Worked for about 2 years at a system development company, covering frontend, backend, and system design, before becoming a freelancer."
+        }
+      },
+      "personality": {
+        "title": "Personality",
+        "list": {
+          "1": "INFJ / HSP / Empath",
+          "2": "Prefers simplicity and clarity; dislikes meaningless conventions or wasted effort.",
+          "3": "Strong desire to make the world a better place where everyone can be happy."
+        }
+      }
+    },
+    "thoughts": {
+      "title": "What's on my mind",
+      "list": {
+        "1": "The recent progress in AI has been remarkable.\nI enjoy talking with it every day, almost like chatting with a knowledgeable friend.",
+        "2": "And soon, a time will come when system development can be done without programmers, as long as AI exists.\nRight now, many programmers may feel anxious about losing their jobs.",
+        "3": "So, what are the things AI cannot do?\nIf humans evolve to complement those areas,\nwouldn't that be the right direction?\nThat's how I see it.",
+        "4": "What AI struggles with is understanding \"sensations and emotions that are difficult to put into words\" and \"the backgrounds of different cultures.\"\nWhen it comes to the feel or discomfort of UI/UX that can only be judged through human eyes and senses, I believe it ultimately has to be adjusted by humans.",
+        "5": "In the past, I aimed to become a full-stack engineer.\nHowever, since the backend is easier to formalize into language and is not directly visible to humans,\nI feel it is more likely to be taken over by AI in the long run.",
+        "6": "The direction I am aiming for now is:\n\"Working together with AI, complementing each other’s limitations, and combining our strengths to create something better.\"\nWith that in mind, I am currently sharpening my skills in design and frontend development.",
+        "7": "As my ultimate life goal, I want to work from anywhere in the world I love, without being tied to one location."
+      }
+    }
+  },
   "nasa_text": "API to retrieve \"Todays Astronomy Picture of the Day\"",
   "fox_text": "It is a healing API that only retrieves a random fox image"
 }

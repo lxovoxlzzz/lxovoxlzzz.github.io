@@ -1,12 +1,16 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import { useTranslation } from "react-i18next";
+import { type IntroductionType } from "@/types/about"
 import normal from "@/assets/normalface.png";
 import funny from "@/assets/funnyface.png";
 
 export default function About() {
-  const [face, setFace] = useState(normal);
+  const { t, i18n } = useTranslation();
+  const [face, setFace] = useState<string>(normal);
+  const colon = i18n.language === "ja" ? "：" : " :";
 
   return (
-    <article className="h-svh bg-neutral-800 text-neutral-300">
+    <article className="bg-neutral-800 text-neutral-300 text-[15px]">
       <section className="max-w-5xl mx-auto pt-36 pb-44">
         <h1 className="mb-16 text-4xl font-bold">About Me</h1>
         <img
@@ -20,14 +24,41 @@ export default function About() {
         />
         <div>
           <h2 className="mt-4 text-xl font-bold">U.Ezoe</h2>
-          <p className="">
-            Freelance Designer (8 yrs) & Front-end Developer (4 yrs)
-          </p>
-          <dl className="mt-4">
-            <dt className="font-bold">title</dt>
-            <dd>content</dd>
-            <dt className="mt-4 font-bold">title</dt>
-            <dd>content</dd>
+          <p>Freelance Designer (8 yrs) / Front-end Developer (4 yrs)</p>
+          <dl className="mt-16">
+            {Object.values(
+              t("about.introduction", {
+                returnObjects: true,
+              }),
+            ).map((item: IntroductionType) => (
+              <React.Fragment key={item.title}>
+                <dt className="font-bold mt-6">{item.title}{colon}</dt>
+                <dd>
+                  <ul className="ml-4">
+                    {Object.values(item.list).map((innerItem, index: number) => {
+                      const inner = innerItem ? String(innerItem) : "";
+                      return (
+                        <li key={index} className="list-disc">
+                          {inner}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </dd>
+              </React.Fragment>
+            ))}
+          </dl>
+          <dl className="mt-16">
+            <dt className="font-bold">{t("about.thoughts.title")}{colon}</dt>
+            {Object.values(
+              t("about.thoughts.list", {
+                returnObjects: true,
+              }),
+            ).map((item: string) => (
+              <dd key={item} className="mb-4 whitespace-pre">
+                {item}
+              </dd>
+            ))}
           </dl>
         </div>
       </section>

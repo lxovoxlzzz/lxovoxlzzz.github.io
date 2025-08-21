@@ -1,42 +1,40 @@
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { fetchApiData } from "@/utils/api";
-import type { FoxDataType } from "@/types/demo";
+import { useCallback, useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import type { FoxDataType } from '@/types/demo'
+import { fetchApiData } from '@/utils/api'
 
 export default function FoxApiDemo() {
-  const { t } = useTranslation();
-  const [foxData, setFoxData] = useState<FoxDataType | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const { t } = useTranslation()
+  const [foxData, setFoxData] = useState<FoxDataType | null>(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies(handleGetFoxData): suppress dependency handleGetFoxData
   useEffect(() => {
-    handleGetFoxData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    handleGetFoxData()
+  }, [])
 
   /**
    * Fox apiからデータを取得する処理
    */
-  const handleGetFoxData = async () => {
-    setLoading(true);
-    setError(null);
+  const handleGetFoxData = useCallback(async () => {
+    setLoading(true)
+    setError(null)
     try {
-      const data = await fetchApiData<FoxDataType>(
-        `https://randomfox.ca/floof`,
-      );
-      setFoxData(data);
+      const data = await fetchApiData<FoxDataType>(`https://randomfox.ca/floof`)
+      setFoxData(data)
     } catch (err) {
-      setError(t("error_fetch"));
-      console.error(err);
+      setError(t('error_fetch'))
+      console.error(err)
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }, [t])
 
   return (
     <section className="mb-28">
       <h1 className="mb-8 text-2xl font-bold">3. Fox API</h1>
-      <p className="mb-4">{t("fox_text")}</p>
+      <p className="mb-4">{t('fox_text')}</p>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {foxData && (
@@ -59,5 +57,5 @@ export default function FoxApiDemo() {
         </div>
       )}
     </section>
-  );
+  )
 }

@@ -1,56 +1,56 @@
-import { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
-import { fetchApiData } from "@/utils/api";
-import type { NasaDataType } from "@/types/demo";
+import { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import type { NasaDataType } from '@/types/demo'
+import { fetchApiData } from '@/utils/api'
 
 export default function NasaApiDemo() {
-  const { t } = useTranslation();
-  const [nasaData, setNasaData] = useState<NasaDataType | null>(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const { t } = useTranslation()
+  const [nasaData, setNasaData] = useState<NasaDataType | null>(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies(handleGetNasaData): suppress dependency handleGetNasaData
   useEffect(() => {
-    handleGetNasaData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+    handleGetNasaData()
+  }, [])
 
   /**
    * Nasa apiからデータを取得する処理
    */
   const handleGetNasaData = async () => {
-    setLoading(true);
-    setError(null);
+    setLoading(true)
+    setError(null)
     try {
       const data = await fetchApiData<NasaDataType>(
         `https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY`,
-      );
-      setNasaData(data);
+      )
+      setNasaData(data)
     } catch (err) {
-      setError(t("error_fetch"));
-      console.error(err);
+      setError(t('error_fetch'))
+      console.error(err)
     } finally {
-      setLoading(false);
+      setLoading(false)
     }
-  };
+  }
 
   return (
     <section className="mb-28">
       <h1 className="mb-8 text-2xl font-bold">2. NASA API</h1>
-      <p className="mb-4">{t("nasa_text")}</p>
+      <p className="mb-4">{t('nasa_text')}</p>
       <div className="flex flex-row gap-4">
         <div>
           {loading && <p>Loading...</p>}
           {error && <p>{error}</p>}
           {nasaData && (
             <div className="border-4 border-neutral-800">
-              {nasaData.media_type === "image" && (
+              {nasaData.media_type === 'image' && (
                 <img
                   src={nasaData.url}
-                  alt={t("nasa_text")}
+                  alt={t('nasa_text')}
                   className="max-w-md"
                 />
               )}
-              {nasaData.media_type === "video" && (
+              {nasaData.media_type === 'video' && (
                 <video
                   src={nasaData.url}
                   poster={nasaData.thumbnail_url}
@@ -98,5 +98,5 @@ export default function NasaApiDemo() {
         </div>
       </div>
     </section>
-  );
+  )
 }

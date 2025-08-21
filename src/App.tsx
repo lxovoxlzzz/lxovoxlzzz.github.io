@@ -1,9 +1,9 @@
-import "./App.css";
-import Header from "@/components/organisms/header";
-import Demo from "@/components/pages/demo";
-import About from "@/components/pages/about";
-import Contact from "@/components/pages/contact";
-import Footer from "@/components/organisms/footer";
+import './App.css'
+import Footer from '@/components/organisms/footer'
+import Header from '@/components/organisms/header'
+import About from '@/components/pages/about'
+import Contact from '@/components/pages/contact'
+import Demo from '@/components/pages/demo'
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
       </main>
       <Footer />
     </>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -35,10 +35,10 @@ export default function About() {
                 <dt className="font-bold mt-6">{item.title}{colon}</dt>
                 <dd>
                   <ul className="ml-4">
-                    {Object.values(item.list).map((innerItem, index: number) => {
-                      const inner = innerItem ? String(innerItem) : "";
+                    {Object.entries(item.list).map(([key, value]) => {
+                      const inner = value ? String(value) : ''
                       return (
-                        <li key={index} className="list-disc">
+                        <li key={key} className="list-disc">
                           {inner}
                         </li>
                       );

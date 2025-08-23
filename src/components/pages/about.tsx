@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
-import { type IntroductionType } from "@/types/about"
-import normal from "@/assets/normalface.png";
-import funny from "@/assets/funnyface.png";
+import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import funny from '@/assets/funnyface.png'
+import normal from '@/assets/normalface.png'
+import type { IntroductionType } from '@/types/about'
 
 export default function About() {
-  const { t, i18n } = useTranslation();
-  const [face, setFace] = useState<string>(normal);
-  const colon = i18n.language === "ja" ? "：" : " :";
+  const { t, i18n } = useTranslation()
+  const [face, setFace] = useState<string>(normal)
+  const colon = i18n.language === 'ja' ? '：' : ' :'
 
   return (
     <article className="bg-neutral-800 text-neutral-300 text-[15px]">
@@ -27,12 +27,15 @@ export default function About() {
           <p>Freelance Designer (8 yrs) / Front-end Developer (4 yrs)</p>
           <dl className="mt-16">
             {Object.values(
-              t("about.introduction", {
+              t('about.introduction', {
                 returnObjects: true,
               }),
             ).map((item: IntroductionType) => (
               <React.Fragment key={item.title}>
-                <dt className="font-bold mt-6">{item.title}{colon}</dt>
+                <dt className="font-bold mt-6">
+                  {item.title}
+                  {colon}
+                </dt>
                 <dd>
                   <ul className="ml-4">
                     {Object.entries(item.list).map(([key, value]) => {
@@ -41,7 +44,7 @@ export default function About() {
                         <li key={key} className="list-disc">
                           {inner}
                         </li>
-                      );
+                      )
                     })}
                   </ul>
                 </dd>
@@ -49,9 +52,12 @@ export default function About() {
             ))}
           </dl>
           <dl className="mt-16">
-            <dt className="font-bold">{t("about.thoughts.title")}{colon}</dt>
+            <dt className="font-bold">
+              {t('about.thoughts.title')}
+              {colon}
+            </dt>
             {Object.values(
-              t("about.thoughts.list", {
+              t('about.thoughts.list', {
                 returnObjects: true,
               }),
             ).map((item: string) => (
@@ -63,5 +69,5 @@ export default function About() {
         </div>
       </section>
     </article>
-  );
+  )
 }

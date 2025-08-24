@@ -19,7 +19,6 @@ export default function FoxApiDemo() {
    */
   const handleGetFoxData = useCallback(async () => {
     setLoading(true)
-    setError(null)
     try {
       const data = await fetchApiData<FoxDataType>(`https://randomfox.ca/floof`)
       setFoxData(data)

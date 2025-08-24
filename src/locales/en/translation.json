@@ -1,19 +1,22 @@
 {
   "demo": {
-    "description": "Since most of my work has been for BtoB services and services that are not generally available, I have no achievements to show.\nTherefore, I have created demos using APIs that I like."
-  },
-  "poke": {
-    "input_favorite_pokemon": "Enter the Pokedex number or name of your favorite Pokemon",
-    "pickup": "Don't know much? You can choose and enter it here.",
-    "get_pokemon": "Get Pokemon",
-    "input_placeholder": "Enter Pokemon name",
-    "loading": "Loading...",
-    "height": "Height",
-    "weight": "Weight",
-    "type": "Type",
-    "id": "No.",
-    "no_description": "No description",
-    "error_fetch": "Sorry!\nPokémon not found."
+    "description": "Since most of my work has been for BtoB services and services that are not generally available, I have no achievements to show.\nTherefore, I have created demos using APIs that I like.",
+    "poke": {
+      "input_favorite_pokemon": "Enter the Pokedex number or name of your favorite Pokemon",
+      "pickup": "Don't know much? You can choose and enter it here.",
+      "get_pokemon": "Get Pokemon",
+      "input_placeholder": "Enter Pokemon name",
+      "loading": "Loading...",
+      "height": "Height",
+      "weight": "Weight",
+      "type": "Type",
+      "id": "No.",
+      "no_description": "No description",
+      "error_fetch": "Sorry!\nPokémon not found."
+    },
+    "nasa_text": "API to retrieve \"Todays Astronomy Picture of the Day\"",
+    "fox_text": "It is a healing API that only retrieves a random fox image",
+    "error_fetch": "Failed to retrieve data"
   },
   "about": {
     "introduction": {
@@ -34,17 +37,16 @@
       "background": {
         "title": "Background",
         "list": {
-          "1": "Around 8 years of experience at TV stations and production companies, handling web direction, design, and coding (including DTP design).",
-          "2": "Developed an interest in programming; studied Java on weekdays and PHP/JavaScript on weekends at coding schools.",
-          "3": "Worked for about 2 years at a system development company, covering frontend, backend, and system design, before becoming a freelancer."
+          "1": "After working for a major telecommunications company, I became interested in overseas experiences and worked at restaurants and a permaculture instructor's farm in Canada.",
+          "2": "After returning to Japan, worked as a web director/designer/coder at a TV station and consulting company.",
+          "3": "Worked in design and development at a systems development company, then became a freelancer."
         }
       },
       "personality": {
         "title": "Personality",
         "list": {
           "1": "INFJ / HSP / Empath",
-          "2": "Prefers simplicity and clarity; dislikes meaningless conventions or wasted effort.",
-          "3": "Strong desire to make the world a better place where everyone can be happy."
+          "2": "Prefers simplicity and clarity; dislikes meaningless conventions or wasted effort."
         }
       }
     },
@@ -61,6 +63,7 @@
       }
     }
   },
-  "nasa_text": "API to retrieve \"Todays Astronomy Picture of the Day\"",
-  "fox_text": "It is a healing API that only retrieves a random fox image"
+  "contact": {
+    "message": "To contact me, please copy my email address from the button below"
+  }
 }

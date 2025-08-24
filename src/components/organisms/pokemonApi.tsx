@@ -25,6 +25,8 @@ export default function PokemonApi() {
   const [speciesData, setSpeciesData] = useState<SpeciesDataType | null>(null)
 
   // 初期表示時にピカチュウのデータを自動取得
+  // biome-ignore lint/correctness/useExhaustiveDependencies(handleGetPokemonData): suppress dependency handleGetPokemonData
+  // biome-ignore lint/correctness/useExhaustiveDependencies(i18n.language): suppress dependency i18n.language
   useEffect(() => {
     handleGetPokemonData('pikachu')
   }, [i18n.language])

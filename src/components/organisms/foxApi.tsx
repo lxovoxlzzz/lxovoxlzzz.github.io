@@ -4,7 +4,7 @@ import type { FoxDataType } from '@/types/demo'
 import { fetchApiData } from '@/utils/api'
 
 export default function FoxApiDemo() {
-  const { t } = useTranslation()
+  const { t } = useTranslation('translation', { keyPrefix: 'demo' })
   const [foxData, setFoxData] = useState<FoxDataType | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)

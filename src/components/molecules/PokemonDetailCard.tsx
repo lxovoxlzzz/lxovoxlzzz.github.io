@@ -1,15 +1,15 @@
-import { useTranslation } from "react-i18next";
-import type { PokemonDataType, SpeciesDataType } from "@/types/demo";
-import { HiMiniSpeakerWave, HiMiniSpeakerXMark } from "react-icons/hi2";
-import noImage from "@/assets/no_image.svg";
+import { useTranslation } from 'react-i18next'
+import { HiMiniSpeakerWave, HiMiniSpeakerXMark } from 'react-icons/hi2'
+import noImage from '@/assets/no_image.svg'
+import type { PokemonDataType, SpeciesDataType } from '@/types/demo'
 
 interface Props {
-  pokemonData: PokemonDataType;
-  speciesData: SpeciesDataType | null;
-  audio: HTMLAudioElement | null;
-  isPlaying: boolean;
-  playSound: () => void;
-  stopSound: () => void;
+  pokemonData: PokemonDataType
+  speciesData: SpeciesDataType | null
+  audio: HTMLAudioElement | null
+  isPlaying: boolean
+  playSound: () => void
+  stopSound: () => void
 }
 
 export default function PokemonDetailCard({
@@ -20,8 +20,8 @@ export default function PokemonDetailCard({
   playSound,
   stopSound,
 }: Props) {
-  const { t } = useTranslation(undefined, { keyPrefix: "poke" });
-  console.log(speciesData);
+  const { t } = useTranslation('translation', { keyPrefix: 'demo.poke' })
+
   return (
     <>
       <div className="w-full flex flex-row pt-10">
@@ -39,7 +39,7 @@ export default function PokemonDetailCard({
           )}
           {/* 図鑑番号 */}
           <p className="mt-6 font-fj">
-            <span className="text-sm">{t("id")}</span>
+            <span className="text-sm">{t('id')}</span>
             <span className="font-fj text-xl">{pokemonData.id}</span>
           </p>
         </div>
@@ -47,12 +47,13 @@ export default function PokemonDetailCard({
           {/* 鳴き声再生・停止ボタン */}
           <div className="absolute top-5 right-5">
             <button
+              type="button"
               onClick={isPlaying ? stopSound : playSound}
               disabled={!audio}
               className={
                 isPlaying
-                  ? "bg-rose-700 text-white px-3 py-2.5 aspect-square rounded-full disabled:bg-gray-400"
-                  : "bg-cyan-700 text-neutral-300 px-3 py-2.5 aspect-square rounded-full disabled:bg-gray-400"
+                  ? 'bg-rose-700 text-white px-3 py-2.5 aspect-square rounded-full disabled:bg-gray-400'
+                  : 'bg-cyan-700 text-neutral-300 px-3 py-2.5 aspect-square rounded-full disabled:bg-gray-400'
               }
             >
               {isPlaying ? <HiMiniSpeakerXMark /> : <HiMiniSpeakerWave />}
@@ -63,19 +64,19 @@ export default function PokemonDetailCard({
           <h2 className="text-sm">{speciesData?.pokemonGenre}</h2>
           <ul className="font-fj mt-2 text-sm">
             <li className="mb-1">
-              {t("height")}
+              {t('height')}
               <span className="ml-4 font-bold">{pokemonData.height / 10}m</span>
             </li>
             <li className="mb-1">
-              {t("weight")}
+              {t('weight')}
               <span className="ml-4 font-bold">
                 {pokemonData.weight / 100}kg
               </span>
             </li>
             <li>
-              {t("type")}
+              {t('type')}
               <span className="ml-4 font-bold">
-                {pokemonData.types.map((t) => t.type.name).join(" / ")}
+                {pokemonData.types.map((t) => t.type.name).join(' / ')}
               </span>
             </li>
           </ul>
@@ -86,7 +87,7 @@ export default function PokemonDetailCard({
         <p className="mt-8">
           {speciesData?.flavorText.length
             ? speciesData.flavorText
-            : t("no_description")}
+            : t('no_description')}
         </p>
       </div>
       {/* ポケモンの前後画像 */}
@@ -119,5 +120,5 @@ export default function PokemonDetailCard({
         </div>
       </div>
     </>
-  );
+  )
 }

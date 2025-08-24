@@ -1,5 +1,5 @@
-import { PiArrowDownDuotone } from "react-icons/pi";
-import LanguageButton from "@/components/molecules/languageButton";
+import { PiArrowDownDuotone } from 'react-icons/pi'
+import LanguageButton from '@/components/molecules/languageButton'
 
 export default function Header() {
   return (
@@ -16,5 +16,5 @@ export default function Header() {
         <PiArrowDownDuotone size={32} />
       </div>
     </header>
-  );
+  )
 }

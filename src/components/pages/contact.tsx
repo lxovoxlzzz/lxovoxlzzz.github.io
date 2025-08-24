@@ -1,31 +1,32 @@
-import { useState } from "react";
+import { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 
 export default function Contact() {
-  const [copied, setCopied] = useState(false);
+  const { t } = useTranslation()
+  const [copied, setCopied] = useState(false)
+  const [error, setError] = useState('')
 
   // TODO: メールアドレスコピー関数のみ残す
   const copyEmailToClipboard = () => {
     navigator.clipboard
-      .writeText("test@gmail.com")
+      .writeText('test@gmail.com')
       .then(() => setCopied(true))
-      .catch((err) => console.error("copy failed", err));
-  };
+      .catch(() => setError('Copy failed...'))
+  }
 
   return (
     <article className="w-full bg-neutral-300">
       <section className="max-w-5xl mx-auto pt-36 pb-44">
         <h1 className="mb-16 text-4xl font-bold">Contact</h1>
-        <p>ご連絡の際は、以下のボタンからメールアドレスをコピーしてください</p>
-        <p className="mb-8">
-          To contact me, please copy my email address from the button below
-        </p>
+        <p className="mb-8">{t('contact.message')}👇</p>
         <button
+          type="button"
           onClick={copyEmailToClipboard}
-          className="bg-neutral-800 text-neutral-300 px-8 py-4 rounded-md"
+          className={`text-neutral-300 px-8 py-3 rounded-md ${error ? 'bg-red-700' : 'bg-neutral-800'}`}
         >
-          {copied ? "Copied!" : "Copy email address"}
+          {error ? error : copied ? 'Copied 🎉' : 'Copy email address'}
         </button>
       </section>
     </article>
-  );
+  )
 }

@@ -15,7 +15,7 @@ import { fetchApiData } from '@/utils/api'
 const pokemonNameMap = pokemonNameMapJson as Record<string, string>
 
 export default function PokemonApi() {
-  const { t, i18n } = useTranslation(undefined, { keyPrefix: 'poke' })
+  const { t, i18n } = useTranslation('translation', { keyPrefix: 'demo.poke' })
   const [pokemonData, setPokemonData] = useState<PokemonDataType | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -60,6 +60,8 @@ export default function PokemonApi() {
           (entry) => entry.language.name === targetLanguage,
         )
 
+        setError(null)
+
         return {
           flavorText: flavorEntry ? flavorEntry.flavor_text : '',
           pokemonGenre: pokemonGenreEntry ? pokemonGenreEntry.genus : '',
@@ -86,20 +88,23 @@ export default function PokemonApi() {
       let targetIDName = name ?? pokemonIDName
       if (!targetIDName) return
 
+      setLoading(true)
+
       // 日本語UIのときだけ日本語→英語変換
       if (i18n.language === 'ja' && pokemonNameMap[targetIDName]) {
         targetIDName = pokemonNameMap[targetIDName]
       }
 
-      setLoading(true)
-      setError(null)
       try {
+        // pokemonのデータを取得
         const data = await fetchApiData<PokemonDataType>(
           `https://pokeapi.co/api/v2/pokemon/${targetIDName.toLowerCase()}`,
         )
         setPokemonData(data)
+        // speciesを取得
         const species = await fetchSpeciesData(data.species.url)
         setSpeciesData(species)
+        // audioをセット
         const audioElement = new Audio(data.cries.latest)
         audioElement.addEventListener('ended', () => setIsPlaying(false))
         setAudio(audioElement)

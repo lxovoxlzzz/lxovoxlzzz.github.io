@@ -4,7 +4,6 @@ import Header from '@/components/organisms/header'
 import About from '@/components/pages/about'
 import Contact from '@/components/pages/contact'
 import Demo from '@/components/pages/demo'
-import { Toaster } from '@/components/ui/toaster'
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
         <Demo />
         <About />
         <Contact />
-        <Toaster />
       </main>
       <Footer />
     </>

@@ -46,7 +46,7 @@ export default function NasaApiDemo() {
                 <img
                   src={nasaData.url}
                   alt={t('nasa_text')}
-                  className="max-w-md"
+                  className="max-w-md w-full"
                 />
               )}
               {nasaData.media_type === 'video' && (
@@ -54,7 +54,7 @@ export default function NasaApiDemo() {
                   src={nasaData.url}
                   poster={nasaData.thumbnail_url}
                   controls
-                  className="max-w-md"
+                  className="max-w-md w-full"
                 />
               )}
             </div>

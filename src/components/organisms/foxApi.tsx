@@ -41,7 +41,7 @@ export default function FoxApiDemo() {
           <img
             src={foxData.image}
             alt="fox"
-            className="max-w-md mb-4 border-4 border-neutral-800"
+            className="max-w-md w-full mb-4 border-4 border-neutral-800"
           />
           <p>
             <a

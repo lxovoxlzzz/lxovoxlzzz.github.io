@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Header />
-      <main className="relative w-full min-h-svh bg-yellow-500">
+      <main className="relative w-full min-h-svh">
         <Demo />
         <About />
         <Contact />

@@ -6,9 +6,9 @@ import PokemonApi from '@/components/organisms/pokemonApi'
 export default function Demo() {
   const { t } = useTranslation()
   return (
-    <article className="max-w-5xl mx-auto pt-36 pb-44">
+    <article className="pt-36 pb-44 px-4 bg-yellow-500">
       <h1 className="mb-16 text-4xl font-bold">Demos</h1>
-      <p className="mb-16 whitespace-pre">{t('demo.description')}</p>
+      <p className="mb-16 whitespace-pre-wrap">{t('demo.description')}</p>
       <PokemonApi />
       <NasaApi />
       <FoxApi />

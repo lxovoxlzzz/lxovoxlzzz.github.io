@@ -11,7 +11,7 @@ export default function About() {
 
   return (
     <article className="bg-neutral-800 text-neutral-300 text-[15px]">
-      <section className="max-w-5xl mx-auto pt-36 pb-44">
+      <section className="pt-36 pb-44 px-4">
         <h1 className="mb-16 text-4xl font-bold">About Me</h1>
         <img
           className="face"
@@ -61,7 +61,7 @@ export default function About() {
                 returnObjects: true,
               }),
             ).map((item: string) => (
-              <dd key={item} className="mb-4 whitespace-pre">
+              <dd key={item} className="mb-4 whitespace-pre-wrap">
                 {item}
               </dd>
             ))}

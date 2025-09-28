@@ -143,7 +143,7 @@ export default function PokemonApi() {
   return (
     <section className="mb-28">
       <h1 className="mb-8 text-2xl font-bold">1. Poke API</h1>
-      <div className="flex flex-row gap-4">
+      <div className="flex flex-col justify-between gap-6 lg:flex-row lg:gap-0">
         {/* ポケモン名の入力・リスト表示 */}
         <PokemonInputArea
           pokemonIDorName={pokemonIDorName}
@@ -152,11 +152,11 @@ export default function PokemonApi() {
           loading={loading}
         />
         {/* ポケモンデータのカード表示 */}
-        <div className="relative basis-1/2 max-w-96 min-h-96 p-6 flex flex-col justify-center items-center bg-neutral-200 border-2 border-neutral-800 rounded-md">
+        <div className="relative basis-1/2 max-w-96 min-h-96 p-6 flex flex-col justify-center items-center bg-neutral-200 border-2 border-neutral-800 rounded-md lg:mx-auto">
           {loading ? (
             <p>loading...</p>
           ) : error ? (
-            <div className="text-center text-red-600 font-bold whitespace-pre">
+            <div className="text-center text-red-600 font-bold whitespace-pre-wrap">
               {error}
             </div>
           ) : (

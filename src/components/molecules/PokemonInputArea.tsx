@@ -27,7 +27,7 @@ export default function PokemonInputArea({
             setPokemonIDorName(e.target.value)
           }
           placeholder={t('input_placeholder')}
-          className="w-56 h-10 px-2 pt-2 pb-1 border-2 border-neutral-800 bg-neutral-300 rounded outline-none"
+          className="max-w-56 min-w-[13rem] h-10 px-2 pt-2 pb-1 border-2 border-neutral-800 bg-neutral-300 rounded outline-none"
           onKeyDown={(e) => {
             if (
               e.key === 'Enter' &&

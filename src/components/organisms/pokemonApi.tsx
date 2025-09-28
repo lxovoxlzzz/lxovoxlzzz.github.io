@@ -21,7 +21,7 @@ export default function PokemonApi() {
   const [error, setError] = useState<string | null>(null)
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null)
   const [isPlaying, setIsPlaying] = useState(false)
-  const [pokemonIDName, setPokemonIDName] = useState('')
+  const [pokemonIDorName, setPokemonIDorName] = useState('')
   const [speciesData, setSpeciesData] = useState<SpeciesDataType | null>(null)
 
   // 初期表示時にピカチュウのデータを自動取得
@@ -85,7 +85,8 @@ export default function PokemonApi() {
    */
   const handleGetPokemonData = useCallback(
     async (name?: string) => {
-      let targetIDName = name ?? pokemonIDName
+      let targetIDName = name ?? pokemonIDorName
+
       if (!targetIDName) return
 
       setLoading(true)
@@ -115,7 +116,7 @@ export default function PokemonApi() {
         setLoading(false)
       }
     },
-    [pokemonIDName, t, fetchSpeciesData, i18n.language],
+    [pokemonIDorName, t, fetchSpeciesData, i18n.language],
   )
 
   /**
@@ -145,8 +146,8 @@ export default function PokemonApi() {
       <div className="flex flex-row gap-4">
         {/* ポケモン名の入力・リスト表示 */}
         <PokemonInputArea
-          pokemonIDName={pokemonIDName}
-          setPokemonIDName={setPokemonIDName}
+          pokemonIDorName={pokemonIDorName}
+          setPokemonIDorName={setPokemonIDorName}
           handleGetPokemonData={handleGetPokemonData}
           loading={loading}
         />

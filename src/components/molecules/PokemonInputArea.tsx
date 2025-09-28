@@ -1,15 +1,15 @@
 import { useTranslation } from 'react-i18next'
 
 interface Props {
-  pokemonIDName: string
-  setPokemonIDName: (name: string) => void
+  pokemonIDorName: string
+  setPokemonIDorName: (name: string) => void
   handleGetPokemonData: () => void
   loading: boolean
 }
 
 export default function PokemonInputArea({
-  pokemonIDName,
-  setPokemonIDName,
+  pokemonIDorName,
+  setPokemonIDorName,
   handleGetPokemonData,
   loading,
 }: Props) {
@@ -21,9 +21,10 @@ export default function PokemonInputArea({
       <div className="flex gap-2 items-center my-4">
         <input
           type="text"
-          value={pokemonIDName}
+          name="pokemonIDorName"
+          value={pokemonIDorName}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
-            setPokemonIDName(e.target.value)
+            setPokemonIDorName(e.target.value)
           }
           placeholder={t('input_placeholder')}
           className="w-56 h-10 px-2 pt-2 pb-1 border-2 border-neutral-800 bg-neutral-300 rounded outline-none"
@@ -32,7 +33,7 @@ export default function PokemonInputArea({
               e.key === 'Enter' &&
               !e.nativeEvent.isComposing &&
               !loading &&
-              pokemonIDName
+              pokemonIDorName
             ) {
               handleGetPokemonData()
             }
@@ -41,7 +42,7 @@ export default function PokemonInputArea({
         <button
           type="button"
           onClick={() => handleGetPokemonData()}
-          disabled={loading || !pokemonIDName}
+          disabled={loading || !pokemonIDorName}
           className="w-fit px-4 pt-2 pb-1 text-white rounded bg-purple-500 border-2 border-neutral-800 disabled:bg-neutral-500"
         >
           {t('get_pokemon')}
@@ -55,7 +56,7 @@ export default function PokemonInputArea({
           <button
             key={pokemon.enName}
             type="button"
-            onClick={() => setPokemonIDName(pokemonName)}
+            onClick={() => setPokemonIDorName(pokemonName)}
             className="mr-4 text-sm text-blue-600 underline hover:text-blue-800 cursor-pointer bg-transparent border-none"
           >
             {pokemonName}

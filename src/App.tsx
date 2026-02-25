@@ -1,4 +1,3 @@
-import './App.css'
 import Footer from '@/components/organisms/footer'
 import Header from '@/components/organisms/header'
 import About from '@/components/pages/about'

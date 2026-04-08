@@ -1,21 +1,13 @@
-import Footer from '@/components/organisms/footer'
-import Header from '@/components/organisms/header'
-import About from '@/components/pages/about'
-import Contact from '@/components/pages/contact'
-import Demo from '@/components/pages/demo'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Home from '@/pages/home'
 
 function App() {
   return (
-    <>
-      <Header />
-      <main className="relative w-full min-h-svh">
-        <Demo />
-        <About />
-        <Contact />
-      </main>
-      <Footer />
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
-
 export default App

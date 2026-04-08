@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react'
-import path from 'path'
+import path, { resolve } from 'path'
 import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
@@ -14,6 +14,14 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
+    },
+  },
+  build: {
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        three: resolve(__dirname, 'src/pages/three/index.html'),
+      },
     },
   },
 })

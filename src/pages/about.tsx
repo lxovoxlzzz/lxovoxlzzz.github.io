@@ -10,8 +10,8 @@ export default function About() {
   const colon = i18n.language === 'ja' ? '：' : ' :'
 
   return (
-    <article className="bg-neutral-800 text-neutral-300 text-[15px]">
-      <section className="pt-36 pb-44 px-4">
+    <article className="py-44 bg-neutral-800 text-neutral-300">
+      <section className="w-full max-w-4xl px-6 place-self-center">
         <h1 className="mb-16 text-4xl font-bold">About Me</h1>
         <img
           className="face"
@@ -23,7 +23,7 @@ export default function About() {
           onMouseLeave={() => setFace(normal)}
         />
         <div>
-          <h2 className="mt-4 text-xl font-bold">U.Ezoe</h2>
+          <h2 className="mt-4 text-xl font-bold">S.U.Ezoe</h2>
           <p>Freelance Designer (8 yrs) / Front-end Developer (4 yrs)</p>
           <dl className="mt-16">
             {Object.values(

@@ -15,8 +15,8 @@ export default function Contact() {
   }
 
   return (
-    <article className="w-full bg-neutral-300">
-      <section className="pt-36 pb-44 px-4">
+    <article className="py-44 bg-neutral-300">
+      <section className="w-full max-w-4xl px-6 place-self-center">
         <h1 className="mb-16 text-4xl font-bold">Contact</h1>
         <p className="mb-8">{t('contact.message')}👇</p>
         <button

@@ -1,4 +1,4 @@
-# U.Ezoe Portfolio
+# S.U.Ezoe Portfolio
 
 This project is my personal portfolio site.
 I am currently working hard on it!

@@ -1,4 +1,5 @@
 import { useTranslation } from 'react-i18next'
+import Button from '@/components/ui/Button'
 
 interface Props {
   pokemonIDorName: string
@@ -27,7 +28,7 @@ export default function PokemonInputArea({
             setPokemonIDorName(e.target.value)
           }
           placeholder={t('input_placeholder')}
-          className="max-w-56 min-w-[13rem] h-10 px-2 pt-2 pb-1 border-2 border-neutral-800 bg-neutral-300 rounded outline-none"
+          className="w-full max-w-56 min-w-[13rem] h-10 px-2 pt-2 pb-1 border-2 border-neutral-800 bg-neutral-300 rounded outline-none"
           onKeyDown={(e) => {
             if (
               e.key === 'Enter' &&
@@ -39,14 +40,15 @@ export default function PokemonInputArea({
             }
           }}
         />
-        <button
-          type="button"
+        <Button
+          label={t('search')}
           onClick={() => handleGetPokemonData()}
           disabled={loading || !pokemonIDorName}
-          className="w-fit px-4 pt-2 pb-1 text-white rounded bg-purple-500 border-2 border-neutral-800 disabled:bg-neutral-500"
-        >
-          {t('get_pokemon')}
-        </button>
+          width="w-fit"
+          bgColor="bg-purple-500"
+          textColor="text-white"
+          borderColor="border-neutral-800"
+        />
       </div>
       <p className="text-sm">{t('pickup')}</p>
       {pokemonList.map((pokemon) => {
@@ -57,7 +59,7 @@ export default function PokemonInputArea({
             key={pokemon.enName}
             type="button"
             onClick={() => setPokemonIDorName(pokemonName)}
-            className="mr-4 text-sm text-blue-600 underline hover:text-blue-800 cursor-pointer bg-transparent border-none"
+            className="mr-4 text-sm text-blue-600 underline cursor-pointer hover:text-blue-800 bg-transparent border-none"
           >
             {pokemonName}
           </button>

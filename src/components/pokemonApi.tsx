@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import PokemonDetailCard from '@/components/molecules/PokemonDetailCard'
-import PokemonInputArea from '@/components/molecules/PokemonInputArea'
+import PokemonDetailCard from '@/components/ui/PokemonDetailCard'
+import PokemonInputArea from '@/components/ui/PokemonInputArea'
 import pokemonNameMapJson from '@/data/pokemon-name-map.json'
 import type {
   FlavorTextEntryType,
@@ -41,7 +41,7 @@ export default function PokemonApi() {
         const response = await fetch(speciesUrl)
         const data = await response.json()
 
-        const targetLanguage = i18n.language === 'ja' ? 'ja-Hrkt' : 'en'
+        const targetLanguage = i18n.language === 'ja' ? 'ja-hrkt' : 'en'
 
         const flavorEntries: FlavorTextEntryType[] = data.flavor_text_entries
         const genera: GenusEntryType[] = data.genera
@@ -101,9 +101,11 @@ export default function PokemonApi() {
         const data = await fetchApiData<PokemonDataType>(
           `https://pokeapi.co/api/v2/pokemon/${targetIDName.toLowerCase()}`,
         )
+        console.log(data)
         setPokemonData(data)
         // speciesを取得
         const species = await fetchSpeciesData(data.species.url)
+        console.log(species)
         setSpeciesData(species)
         // audioをセット
         const audioElement = new Audio(data.cries.latest)
@@ -143,6 +145,7 @@ export default function PokemonApi() {
   return (
     <section className="mb-28">
       <h1 className="mb-8 text-2xl font-bold">1. Poke API</h1>
+      <p className="mb-16 whitespace-pre-wrap">{t('description')}</p>
       <div className="flex flex-col justify-between gap-6 lg:flex-row lg:gap-0">
         {/* ポケモン名の入力・リスト表示 */}
         <PokemonInputArea

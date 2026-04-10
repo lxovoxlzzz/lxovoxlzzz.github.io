@@ -53,7 +53,7 @@ export default function PokemonDetailCard({
               className={
                 isPlaying
                   ? 'bg-rose-700 text-white px-3 py-2.5 aspect-square rounded-full disabled:bg-gray-400'
-                  : 'bg-cyan-700 text-neutral-300 px-3 py-2.5 aspect-square rounded-full disabled:bg-gray-400'
+                  : 'bg-cyan-700 text-neutral-300 px-3 py-2.5 aspect-square rounded-full cursor-pointer hover:opacity-80 disabled:bg-gray-400'
               }
             >
               {isPlaying ? <HiMiniSpeakerXMark /> : <HiMiniSpeakerWave />}

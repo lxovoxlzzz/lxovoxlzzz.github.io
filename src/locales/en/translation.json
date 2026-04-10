@@ -1,11 +1,12 @@
 {
   "demo": {
-    "description": "Since most of my work has been for BtoB services and services that are not generally available, I have no achievements to show.\nTherefore, I have created demos using APIs that I like.",
+    "description": "My previous projects mainly involved B2B services and system development that wasn't publicly available, so I don't have any publicly available work to share.\nTherefore, I'm sharing demos using publicly available APIs and systems I developed personally.",
     "poke": {
+      "description": "This is a demo that uses the Pokemon API and is styled like a Pokemon card.\nWhen you enter the Pokedex number or name, it displays information such as the image, height, weight, and type of that Pokemon.\nPlease be careful as pressing the speaker icon will play a sound.",
       "input_favorite_pokemon": "Enter the Pokedex number or name of your favorite Pokemon",
       "pickup": "Don't know much? You can choose and enter it here.",
-      "get_pokemon": "Get Pokemon",
-      "input_placeholder": "Enter Pokemon name",
+      "search": "Search",
+      "input_placeholder": "Enter name or Pokedex number",
       "loading": "Loading...",
       "height": "Height",
       "weight": "Weight",
@@ -14,32 +15,45 @@
       "no_description": "No description",
       "error_fetch": "Sorry!\nPokémon not found."
     },
+    "three": {
+      "description": "A demo that creates a 3D model with Tinker Cad and displays it from any angle with Three.js.\nIt's still a while away from completion because creating the 3D model takes time, but it will eventually look like a jungle.",
+      "button": "Go to Three.js page"
+    },
+    "sabbatical": {
+      "description": "This is a sabbatical management app.\nI will continue to improve the functionality in the future.\nYou need to register your email address to use it, so an image is posted.",
+      "button": "Go to Sabbatical APP",
+      "tech": "Tech stack: React, TypeScript, Next.js, Supabase, Vercel"
+    },
     "nasa_text": "API to retrieve \"Todays Astronomy Picture of the Day\"",
     "fox_text": "It is a healing API that only retrieves a random fox image",
     "error_fetch": "Failed to retrieve data"
   },
   "about": {
+    "background": {
+      "title": "Background",
+      "list": {
+        "1": "Originally from Fukuoka.\nAfter graduating from school, I joined a major telecommunications company.",
+        "2": "I wanted to develop my skills, so I attended a web design school that interested me.\nLater, I worked at a television station and consulting company, handling direction, design, and coding.",
+        "3": "I became interested in the wider world and studied in Canada for a year.",
+        "4": "As I had more opportunities to work with CMS and jQuery, I wanted to expand my programming skills, so I studied Java and PHP at a school and joined a systems development company.",
+        "5": "After several years, I became a freelancer."
+      }
+    },
     "introduction": {
       "expertise": {
         "title": "Expertise",
         "list": {
-          "1": "Design (Web, DTP)",
-          "2": "React / TypeScript / HTML / CSS"
+          "1": "Screen Design",
+          "2": "User Interface / Graphic Design (Web, DTP)",
+          "3": "React / TypeScript / HTML / CSS"
         }
       },
       "areas_of_interest": {
         "title": "Areas of Interest",
         "list": {
-          "1": "AI",
-          "2": "Psychology (Certified Behavioral Psychologist)"
-        }
-      },
-      "background": {
-        "title": "Background",
-        "list": {
-          "1": "After working for a major telecommunications company, I became interested in overseas experiences and worked at restaurants and a permaculture instructor's farm in Canada.",
-          "2": "After returning to Japan, worked as a web director/designer/coder at a TV station and consulting company.",
-          "3": "Worked in design and development at a systems development company, then became a freelancer."
+          "1": "Psychology ≒ People",
+          "2": "Information Security, AI",
+          "3": "Living things, nature, architecture, art...so many things👀"
         }
       },
       "personality": {
@@ -54,12 +68,11 @@
       "title": "What's on my mind",
       "list": {
         "1": "The recent progress in AI has been remarkable.\nI enjoy talking with it every day, almost like chatting with a knowledgeable friend.",
-        "2": "And soon, a time will come when system development can be done without programmers, as long as AI exists.\nRight now, many programmers may feel anxious about losing their jobs.",
-        "3": "So, what are the things AI cannot do?\nIf humans evolve to complement those areas,\nwouldn't that be the right direction?\nThat's how I see it.",
-        "4": "What AI struggles with is understanding \"sensations and emotions that are difficult to put into words\" and \"the backgrounds of different cultures.\"\nWhen it comes to the feel or discomfort of UI/UX that can only be judged through human eyes and senses, I believe it ultimately has to be adjusted by humans.",
-        "5": "In the past, I aimed to become a full-stack engineer.\nHowever, since the backend is easier to formalize into language and is not directly visible to humans,\nI feel it is more likely to be taken over by AI in the long run.",
-        "6": "The direction I am aiming for now is:\n\"Working together with AI, complementing each other’s limitations, and combining our strengths to create something better.\"\nWith that in mind, I am currently sharpening my skills in design and frontend development.",
-        "7": "As my ultimate life goal, I want to work from anywhere in the world I love, without being tied to one location."
+        "2": "And perhaps, with AI, we'll enter an era where system development can be done without programmers.",
+        "3": "So, what can't AI do? Wouldn't it be better if humans evolved to compensate for those shortcomings?",
+        "4": "What AI struggles with is understanding 'human feelings and emotions that are difficult to put into words' and 'different cultural backgrounds.' I believe that the feel and awkwardness of UI and UX, which can only be understood through human eyes and senses, ultimately have to be adjusted by humans.",
+        "5": "Previously, I aspired to be a full-stack engineer. However, I believe that the backend, which is easier to articulate and invisible to humans, is more of an area where AI excels and is likely to be replaced in the future.",
+        "6": "My future goal is to 'develop better things by complementing each other's weaknesses with AI and combining our strengths.' To that end, I'm learning more about AI while honing my front-end skills."
       }
     }
   },

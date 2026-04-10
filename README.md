@@ -10,3 +10,4 @@ I am currently working hard on it!
 - Vite
 - GitHub Pages
 - Tailwind CSS
+- Three.js

@@ -7,14 +7,14 @@ const LangButton = ({ lang, label }: { lang: LangType; label: string }) => {
     <button
       type="button"
       onClick={() => i18n.changeLanguage(lang)}
-      className={`px-4 pt-2 pb-1 border-2 border-neutral-800 text-sm rounded ${i18n.language === lang ? 'bg-yellow-500' : 'bg-transparent'}`}
+      className={`px-4 pt-2 pb-1 border-2 border-neutral-800 text-sm rounded cursor-pointer hover:opacity-80 ${i18n.language === lang ? 'bg-yellow-500' : 'bg-transparent'}`}
     >
       {label}
     </button>
   )
 }
 
-const LanguageButton = () => {
+export default function LanguageButton() {
   const langs = [
     { lang: 'ja', label: '日本語' },
     { lang: 'en', label: 'English' },
@@ -28,5 +28,3 @@ const LanguageButton = () => {
     </div>
   )
 }
-
-export default LanguageButton

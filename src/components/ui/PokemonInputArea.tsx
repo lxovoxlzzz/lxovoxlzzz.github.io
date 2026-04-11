@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import Button from '@/components/ui/Button'
+import { MY_FAV_POKEMON_LIST } from '@/const/poke'
 
 interface Props {
   pokemonIDorName: string
@@ -51,7 +52,7 @@ export default function PokemonInputArea({
         />
       </div>
       <p className="text-sm">{t('pickup')}</p>
-      {pokemonList.map((pokemon) => {
+      {MY_FAV_POKEMON_LIST.map((pokemon) => {
         const pokemonName =
           i18n.language === 'ja' ? pokemon.jaName : pokemon.enName
         return (
@@ -68,26 +69,3 @@ export default function PokemonInputArea({
     </div>
   )
 }
-
-const pokemonList = [
-  { jaName: 'イーブイ', enName: 'Eevee' },
-  { jaName: 'メタモン', enName: 'ditto' },
-  { jaName: 'ポリゴン', enName: 'Porygon' },
-  { jaName: 'バタフリー', enName: 'Butterfree' },
-  { jaName: 'ラプラス', enName: 'Lapras' },
-  { jaName: 'ミュウ', enName: 'Mew' },
-  { jaName: 'カビゴン', enName: 'Snorlax' },
-  { jaName: 'ミニリュウ', enName: 'Dratini' },
-  { jaName: 'ロコン', enName: 'vulpix' },
-  { jaName: 'コダック', enName: 'psyduck' },
-  { jaName: 'ガーディ', enName: 'growlithe' },
-  { jaName: 'ウツドン', enName: 'weepinbell' },
-  { jaName: 'カモネギ', enName: 'farfetchd' },
-  { jaName: 'ゲンガー', enName: 'gengar' },
-  { jaName: 'カラカラ', enName: 'cubone' },
-  { jaName: 'ヒトデマン', enName: 'staryu' },
-  { jaName: 'デンリュウ', enName: 'ampharos' },
-  { jaName: 'デリバード', enName: 'delibird' },
-  { jaName: 'ポリゴン２', enName: 'porygon2' },
-  { jaName: 'アブソル', enName: 'absol' },
-]

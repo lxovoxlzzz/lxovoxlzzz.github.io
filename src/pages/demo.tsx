@@ -11,10 +11,10 @@ export default function Demo() {
       <div className="w-full max-w-4xl px-6 place-self-center">
         <h1 className="mb-8 text-4xl font-bold">Demos</h1>
         <p className="mb-16 whitespace-pre-wrap">{t('demo.description')}</p>
-        {/* <PokemonApi />
+        <PokemonApi />
         <ThreeJS />
         <Sabbatical />
-        <FoxApi /> */}
+        <FoxApi />
       </div>
     </section>
   )

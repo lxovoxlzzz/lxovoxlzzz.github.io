@@ -17,11 +17,11 @@ body {
 }
 
 @keyframes slideIn {
-  0% {
+  from {
     left: -100vw;
   }
 
-  100% {
+  to {
     left: 50%;
     transform: translateX(-50%);
   }
@@ -31,7 +31,6 @@ body {
   animation: linearGradient 3s 3s forwards;
 }
 
-/* TODO: グラデーションの色を決める */
 @keyframes linearGradient {
   0% {
     color: inherit;
@@ -57,6 +56,12 @@ body {
       #313131 3px,
       #313131 7px
     );
+    /* background-image: repeating-conic-gradient(
+      #fecf00 0%,
+      #802a9f 20%,
+      #802a9f 70%,
+      #1b46aa 100%
+    ); */
     background-clip: text;
     color: transparent;
   }
@@ -79,10 +84,10 @@ body {
 }
 
 @keyframes appear {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 1;
   }
 }
@@ -137,15 +142,15 @@ header::after {
 }
 
 .face {
-  animation: 8s linear infinite rotation;
+  animation: rotation 8s linear infinite;
 }
 
 @keyframes rotation {
-  0% {
+  from {
     transform: rotate(0);
   }
 
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }

@@ -1,6 +1,6 @@
 {
   "demo": {
-    "description": "My previous projects mainly involved B2B services and system development that wasn't publicly available, so I don't have any publicly available work to share.\nTherefore, I'm sharing demos using publicly available APIs and systems I developed personally.",
+    "description": "My previous projects mainly involved B2B services and system development that wasn't publicly available, so I don't have any publicly available track record. Therefore, I've included demos using publicly available APIs and some of the projects I've developed personally.",
     "poke": {
       "description": "This is a demo that uses the Pokemon API and is styled like a Pokemon card.\nWhen you enter the Pokedex number or name, it displays information such as the image, height, weight, and type of that Pokemon.\nPlease be careful as pressing the speaker icon will play a sound.",
       "input_favorite_pokemon": "Enter the Pokedex number or name of your favorite Pokemon",
@@ -16,11 +16,11 @@
       "error_fetch": "Sorry!\nPokémon not found."
     },
     "three": {
-      "description": "A demo that creates a 3D model with Tinker Cad and displays it from any angle with Three.js.\nIt's still a while away from completion because creating the 3D model takes time, but it will eventually look like a jungle.",
+      "description": "A demo that creates a 3D model with Tinker Cad and displays it from any angle with Three.js.\nThe 3D models will be updated periodically.",
       "button": "Go to Three.js page"
     },
     "sabbatical": {
-      "description": "This is a sabbatical management app.\nI will continue to improve the functionality in the future.\nYou need to register your email address to use it, so an image is posted.",
+      "description": "This is a sabbatical management app.\nI will continue to add features in the future.\nYou need to register your email address to use it, so an image is posted.\n*Deleting your account will physically remove it from the database.",
       "button": "Go to Sabbatical APP",
       "tech": "Tech stack: React, TypeScript, Next.js, Supabase, Vercel"
     },
@@ -36,7 +36,8 @@
         "2": "I wanted to develop my skills, so I attended a web design school that interested me.\nLater, I worked at a television station and consulting company, handling direction, design, and coding.",
         "3": "I became interested in the wider world and studied in Canada for a year.",
         "4": "As I had more opportunities to work with CMS and jQuery, I wanted to expand my programming skills, so I studied Java and PHP at a school and joined a systems development company.",
-        "5": "After several years, I became a freelancer."
+        "5": "I primarily handle web development using React, and I hone my skills through daily, rigorous code reviews from the CTO.",
+        "6": "After several years, I became a freelancer."
       }
     },
     "introduction": {
@@ -53,14 +54,15 @@
         "list": {
           "1": "Psychology ≒ People",
           "2": "Information Security, AI",
-          "3": "Living things, nature, architecture, art...so many things👀"
+          "3": "Living things, nature, architecture, art...so many things"
         }
       },
       "personality": {
         "title": "Personality",
         "list": {
           "1": "INFJ / HSP / Empath",
-          "2": "Prefers simplicity and clarity; dislikes meaningless conventions or wasted effort."
+          "2": "Prefers simplicity and clarity; dislikes meaningless conventions or wasted effort.",
+          "3": "Common feedback I receive from clients includes comments like, 'You have keen insight and are reliable,' and 'You're a great help in bringing the team together.'"
         }
       }
     },
@@ -71,12 +73,12 @@
         "2": "And perhaps, with AI, we'll enter an era where system development can be done without programmers.",
         "3": "So, what can't AI do? Wouldn't it be better if humans evolved to compensate for those shortcomings?",
         "4": "What AI struggles with is understanding 'human feelings and emotions that are difficult to put into words' and 'different cultural backgrounds.' I believe that the feel and awkwardness of UI and UX, which can only be understood through human eyes and senses, ultimately have to be adjusted by humans.",
-        "5": "Previously, I aspired to be a full-stack engineer. However, I believe that the backend, which is easier to articulate and invisible to humans, is more of an area where AI excels and is likely to be replaced in the future.",
-        "6": "My future goal is to 'develop better things by complementing each other's weaknesses with AI and combining our strengths.' To that end, I'm learning more about AI while honing my front-end skills."
+        "5": "Previously, I aspired to be a full-stack engineer. However, I believe that the backend, which is easier to articulate and invisible to humans, is more of an area where AI excels and is likely to be replaced in the future(There will probably be mixed opinions on this).",
+        "6": "My future goal is to 'By having AI and I complement each other's weaknesses and combine our strengths, we can develop something better.' I'm studying and honing my skills every day with that goal in mind."
       }
     }
   },
   "contact": {
-    "message": "To contact me, please copy my email address from the button below"
+    "message": "To contact me, please click the button below.\nThis will copy my email address to your clipboard."
   }
 }

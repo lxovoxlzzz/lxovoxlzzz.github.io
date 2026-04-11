@@ -28,9 +28,10 @@ export default function Button({
     : `${bgColor ? `${bgColor}` : 'bg-transparent'} cursor-pointer`
   const textColorStyles = textColor ? `${textColor}` : 'text-black'
   const borderStyles = borderColor ? `border-2 ${borderColor}` : 'border-none'
-  const animationStyles = animation
-    ? 'transition-all duration-300 ease-in-out hover:-translate-y-[2px] hover:shadow-md'
-    : ''
+  const animationStyles =
+    disabled || !animation
+      ? ''
+      : 'transition-all duration-300 ease-in-out hover:-translate-y-[2px] hover:shadow-md'
 
   return (
     <button

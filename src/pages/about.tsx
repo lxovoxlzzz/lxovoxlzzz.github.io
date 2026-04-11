@@ -11,8 +11,8 @@ export default function About() {
   const colon = i18n.language === 'ja' ? '：' : ' :'
 
   return (
-    <article className="py-32 md:py-44 bg-neutral-800 text-neutral-300">
-      <section className="w-full max-w-4xl px-6 place-self-center">
+    <section className="py-32 md:py-44 bg-neutral-800 text-neutral-300">
+      <div className="w-full max-w-4xl px-6 place-self-center">
         <h1 className="mb-16 text-4xl font-bold">About Me</h1>
         <img
           className="face"
@@ -90,7 +90,7 @@ export default function About() {
             </dd>
           </dl>
         </div>
-      </section>
-    </article>
+      </div>
+    </section>
   )
 }

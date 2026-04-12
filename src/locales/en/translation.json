@@ -54,7 +54,7 @@
         "list": {
           "1": "Psychology ≒ People",
           "2": "Information Security, AI",
-          "3": "Living things, nature, architecture, art...so many things"
+          "3": "Living things, nature, architecture, art... and so many things"
         }
       },
       "personality": {
@@ -73,8 +73,7 @@
         "2": "And perhaps, with AI, we'll enter an era where system development can be done without programmers.",
         "3": "So, what can't AI do? Wouldn't it be better if humans evolved to compensate for those shortcomings?",
         "4": "What AI struggles with is understanding 'human feelings and emotions that are difficult to put into words' and 'different cultural backgrounds.' I believe that the feel and awkwardness of UI and UX, which can only be understood through human eyes and senses, ultimately have to be adjusted by humans.",
-        "5": "Previously, I aspired to be a full-stack engineer. However, I believe that the backend, which is easier to articulate and invisible to humans, is more of an area where AI excels and is likely to be replaced in the future(There will probably be mixed opinions on this).",
-        "6": "My future goal is to 'By having AI and I complement each other's weaknesses and combine our strengths, we can develop something better.' I'm studying and honing my skills every day with that goal in mind."
+        "5": "My future goal is to develop better products by having AI and I complement each other's weaknesses and combine our strengths. To achieve this, I want to continue learning broadly and improving my skills, while keeping my main focus on front-end development."
       }
     }
   },

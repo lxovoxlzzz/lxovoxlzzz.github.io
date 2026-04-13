@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import Button from '@/components/ui/Button'
 
@@ -6,6 +6,35 @@ export default function Contact() {
   const { t } = useTranslation()
   const [copied, setCopied] = useState(false)
   const [error, setError] = useState('')
+
+  const [imageState, setImageState] = useState<'idle' | 'in' | 'out'>('idle')
+  const sectionRef = useRef<HTMLElement>(null)
+  const hasTriggered = useRef(false)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasTriggered.current) {
+          hasTriggered.current = true
+          setImageState('in')
+
+          // Wait for 1s slide in + 3s display = 4000ms
+          setTimeout(() => {
+            setImageState('out')
+          }, 4000)
+        }
+      },
+      { threshold: 0.3 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [])
 
   /**
    * メールアドレスをクリップボードにコピー
@@ -19,7 +48,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="py-32 md:py-44 bg-neutral-300">
+    <section ref={sectionRef} className="py-32 md:py-44 bg-neutral-300">
       <div className="w-full max-w-4xl px-6 place-self-center">
         <h1 className="mb-8 text-4xl font-bold">Contact</h1>
         <p className="mb-8 whitespace-pre-wrap">{t('contact.message')}</p>
@@ -33,6 +62,14 @@ export default function Contact() {
           borderColor={error ? 'border-red-700' : 'border-neutral-800'}
         />
       </div>
+      <img
+        src="/birdhead.png"
+        alt="Bird Head"
+        width="850"
+        height="607"
+        className={`fixed top-1/2 z-50 w-[750px] h-auto transition-all duration-1000 ease-in-out pointer-events-none transform translate-x-1/2 -translate-y-1/2 ${imageState === 'in' ? 'right-1/5' : '-right-full'
+          }`}
+      />
     </section>
   )
 }

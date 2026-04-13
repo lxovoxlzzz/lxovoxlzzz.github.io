@@ -20,7 +20,7 @@
       "button": "Go to Three.js page"
     },
     "sabbatical": {
-      "description": "サバティカルタイムをマネージメントするアプリ。\n今後も機能追加していきます。\nメールアドレスを登録しなければ使えませんのでイメージを貼っています。\n※アカウント削除するとDBから物理削除されます",
+      "description": "サバティカルタイムをマネージメントするアプリ。\n今後も機能追加していきます。\nメールアドレスを登録しなければ使えませんのでイメージを貼っています。",
       "button": "Go to Sabbatical APP",
       "tech": "技術スタック：React, TypeScript, Next.js, Supabase, Vercel"
     },

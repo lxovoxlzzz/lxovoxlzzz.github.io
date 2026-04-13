@@ -20,7 +20,7 @@
       "button": "Go to Three.js page"
     },
     "sabbatical": {
-      "description": "This is a sabbatical management app.\nI will continue to add features in the future.\nYou need to register your email address to use it, so an image is posted.\n*Deleting your account will physically remove it from the database.",
+      "description": "This is a sabbatical management app.\nI will continue to add features in the future.\nYou need to register your email address to use it, so an image is posted.",
       "button": "Go to Sabbatical APP",
       "tech": "Tech stack: React, TypeScript, Next.js, Supabase, Vercel"
     },

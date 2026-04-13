@@ -45,7 +45,7 @@ export default function PokemonDetailCard({
         </div>
         <div className="basis-1/2 flex flex-col justify-center">
           {/* 鳴き声再生・停止ボタン */}
-          <div className="absolute top-5 right-5">
+          <div className="absolute top-4 md:top-5 right-4 md:right-5">
             <button
               type="button"
               onClick={isPlaying ? stopSound : playSound}

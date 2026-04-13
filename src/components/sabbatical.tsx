@@ -17,23 +17,23 @@ export default function Sabbatical() {
       >
         <Button
           label={t('demo.sabbatical.button')}
-          onClick={() => {}}
+          onClick={() => { }}
           width="w-52"
           height="h-12"
           bgColor="bg-gray-900"
           textColor="text-white"
         />
       </a>
-      <div className="flex flex-col md:flex-row gap-4 my-4">
+      <div className="flex flex-col sm:flex-row gap-4 my-4">
         <img
           src="/sabbatical/sabbatical-main-image.png"
           alt="Sabbatical App Main Image"
-          className="object-cover w-sm h-sm"
+          className="object-cover w-full sm:w-[49%] lg:w-sm h-sm"
         />
         <img
           src="/sabbatical/sabbatical-input-image.png"
           alt="Sabbatical App Input Image"
-          className="object-cover w-sm h-sm"
+          className="object-cover w-full sm:w-[49%] lg:w-sm h-sm"
         />
       </div>
       <p className="mt-4 whitespace-pre-wrap">{t('demo.sabbatical.tech')}</p>

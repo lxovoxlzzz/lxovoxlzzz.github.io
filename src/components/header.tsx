@@ -9,7 +9,7 @@ export default function Header() {
         <p className="rotate-[270deg] origin-top text-xl font-bold">
           {SITE_NAME}
         </p>
-        <h1 className="header--title__main text-7xl lg:text-9xl font-bold !leading-tight">
+        <h1 className="header--title__main text-7xl sm:text-8xl md:text-9xl font-bold !leading-tight">
           Portfolio
         </h1>
       </div>

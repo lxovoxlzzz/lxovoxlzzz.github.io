@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Button from '@/components/ui/Button'
 
 export default function Sabbatical() {
   const { t } = useTranslation()
+  const [expandedImage, setExpandedImage] = useState<string | null>(null)
 
   return (
     <section className="mb-28">
@@ -28,15 +30,44 @@ export default function Sabbatical() {
         <img
           src="/sabbatical/sabbatical-main-image.png"
           alt="Sabbatical App Main Image"
-          className="object-cover w-full sm:w-[49%] lg:w-sm h-sm"
+          className="object-cover w-full sm:w-[49%] lg:w-sm h-sm cursor-pointer transition-opacity hover:opacity-90"
+          onClick={() => setExpandedImage('/sabbatical/sabbatical-main-image.png')}
         />
         <img
           src="/sabbatical/sabbatical-input-image.png"
           alt="Sabbatical App Input Image"
-          className="object-cover w-full sm:w-[49%] lg:w-sm h-sm"
+          className="object-cover w-full sm:w-[49%] lg:w-sm h-sm cursor-pointer transition-opacity hover:opacity-90"
+          onClick={() => setExpandedImage('/sabbatical/sabbatical-input-image.png')}
         />
       </div>
       <p className="mt-4 whitespace-pre-wrap">{t('demo.sabbatical.tech')}</p>
+
+      {expandedImage && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center max-w-full bg-black/70 p-4"
+          onClick={() => setExpandedImage(null)}
+        >
+          <div
+            className="relative max-w-full md:max-w-[90%] max-h-full flex items-center justify-center"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="absolute -top-12 right-0 sm:-right-12 sm:top-0 p-2 text-white hover:text-gray-300 transition-colors cursor-pointer"
+              onClick={() => setExpandedImage(null)}
+              aria-label="Close"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <img
+              src={expandedImage}
+              alt="Expanded view"
+              className="max-w-full max-h-[85vh] object-contain rounded-md shadow-2xl"
+            />
+          </div>
+        </div>
+      )}
     </section>
   )
 }

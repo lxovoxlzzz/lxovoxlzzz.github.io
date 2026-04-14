@@ -6,6 +6,7 @@ interface buttonType {
   bgColor?: string
   textColor?: string
   borderColor?: string
+  style?: string
   animation?: boolean
   disabled?: boolean
 }
@@ -18,6 +19,7 @@ export default function Button({
   bgColor,
   textColor,
   borderColor,
+  style,
   animation = true,
   disabled = false,
 }: buttonType) {
@@ -38,7 +40,7 @@ export default function Button({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`px-4 pt-2 pb-1 rounded ${widthStyles} ${heightStyles} ${bgColorStyles} ${textColorStyles} ${borderStyles} ${animationStyles}`}
+      className={`px-4 pt-2 pb-1 rounded ${widthStyles} ${heightStyles} ${bgColorStyles} ${textColorStyles} ${borderStyles} ${animationStyles} ${style}`}
     >
       {label}
     </button>

@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import Button from '@/components/ui/Button'
 import { MY_FAV_POKEMON_LIST } from '@/const/poke'
+import { RiArrowDownDoubleFill } from "react-icons/ri"
 
 interface Props {
   pokemonIDorName: string
@@ -20,7 +21,12 @@ export default function PokemonInputArea({
   return (
     <div className="basis-1/2">
       <p>{t('input_favorite_pokemon')}</p>
-      <div className="flex gap-2 items-center my-4">
+      <p className="flex items-center justify-center gap-2 w-80 mt-0 sm:mt-2">
+        <RiArrowDownDoubleFill size={24} className="mr-1" />
+        <RiArrowDownDoubleFill size={24} className="mr-1" />
+        <RiArrowDownDoubleFill size={24} />
+      </p>
+      <div className="flex gap-2 items-center w-80 my-4">
         <input
           type="text"
           name="pokemonIDorName"
@@ -29,7 +35,7 @@ export default function PokemonInputArea({
             setPokemonIDorName(e.target.value)
           }
           placeholder={t('input_placeholder')}
-          className="w-full max-w-56 min-w-[13rem] h-10 px-2 pt-2 pb-1 border-2 border-neutral-800 bg-neutral-300 rounded outline-none"
+          className="w-full h-10 px-2 pt-2 pb-1 border-2 border-neutral-800 bg-neutral-300 rounded outline-none"
           onKeyDown={(e) => {
             if (
               e.key === 'Enter' &&
@@ -49,6 +55,7 @@ export default function PokemonInputArea({
           bgColor="bg-purple-500"
           textColor="text-white"
           borderColor="border-neutral-800"
+          style="whitespace-nowrap"
         />
       </div>
       <p className="text-sm">{t('pickup')}</p>

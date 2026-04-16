@@ -37,25 +37,21 @@ body {
   }
 
   33% {
-    background-image: repeating-linear-gradient(
-      -45deg,
-      transparent,
-      transparent 4px,
-      #8e8e8e 4px,
-      #8e8e8e 10px
-    );
+    background-image: repeating-linear-gradient(-45deg,
+        transparent,
+        transparent 4px,
+        #8e8e8e 4px,
+        #8e8e8e 10px);
     background-clip: text;
     color: transparent;
   }
 
   66% {
-    background-image: repeating-linear-gradient(
-      45deg,
-      transparent,
-      transparent 3px,
-      #313131 3px,
-      #313131 7px
-    );
+    background-image: repeating-linear-gradient(45deg,
+        transparent,
+        transparent 3px,
+        #313131 3px,
+        #313131 7px);
     /* background-image: repeating-conic-gradient(
       #fecf00 0%,
       #802a9f 20%,
@@ -67,12 +63,10 @@ body {
   }
 
   100% {
-    background-image: repeating-linear-gradient(
-      -45deg,
-      #313131,
-      #802a9f 15%,
-      #1b46aa 25%
-    );
+    background-image: repeating-linear-gradient(-45deg,
+        #313131,
+        #802a9f 15%,
+        #1b46aa 25%);
     background-clip: text;
     color: transparent;
   }
@@ -87,6 +81,7 @@ body {
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
@@ -102,6 +97,7 @@ body {
     opacity: 0.3;
     transform: translateY(0);
   }
+
   20%,
   50%,
   80%,
@@ -109,10 +105,12 @@ body {
     opacity: 0.3;
     transform: translateY(0);
   }
+
   40% {
     opacity: 0.3;
     transform: translateY(-25px);
   }
+
   60% {
     opacity: 0.4;
     transform: translateY(-15px);

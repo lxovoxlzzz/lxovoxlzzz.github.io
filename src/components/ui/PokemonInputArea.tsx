@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react"
 import { useTranslation } from 'react-i18next'
 import Button from '@/components/ui/Button'
 import { MY_FAV_POKEMON_LIST } from '@/const/poke'
@@ -17,14 +18,34 @@ export default function PokemonInputArea({
   loading,
 }: Props) {
   const { t, i18n } = useTranslation('translation', { keyPrefix: 'demo.poke' })
+  const [isInView, setIsInView] = useState(false);
+  const animationRef = useRef<HTMLDivElement>(null);
+
+  // 表示されたらアローダウンのアニメーションを発火
+  useEffect(() => {
+    const target = animationRef.current;
+    if (!target) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsInView(true)
+          observer.disconnect(); // 1回だけ
+        }
+      },
+      { threshold: 0.2 });
+    observer.observe(target)
+
+    return () => observer.disconnect()
+  }, [])
 
   return (
-    <div className="basis-1/2">
+    <div ref={animationRef} className="basis-1/2">
       <p>{t('input_favorite_pokemon')}</p>
       <p className="flex items-center justify-center gap-2 w-80 mt-0 sm:mt-2">
-        <RiArrowDownDoubleFill size={24} className="mr-1" />
-        <RiArrowDownDoubleFill size={24} className="mr-1" />
-        <RiArrowDownDoubleFill size={24} />
+        <span className={isInView ? "arrow-pop1" : ""}><RiArrowDownDoubleFill size={24} className="mr-1" /></span>
+        <span className={isInView ? "arrow-pop2" : ""}><RiArrowDownDoubleFill size={24} className="mr-1" /></span>
+        <span className={isInView ? "arrow-pop3" : ""}><RiArrowDownDoubleFill size={24} /></span>
       </p>
       <div className="flex gap-2 items-center w-80 my-4">
         <input

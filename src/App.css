@@ -152,3 +152,32 @@ header::after {
     transform: rotate(360deg);
   }
 }
+
+.arrow-pop1 {
+  animation: pop 0.8s ease 3;
+
+}
+
+.arrow-pop2 {
+  animation: pop 0.8s ease 3;
+  animation-delay: 0.2s;
+}
+
+.arrow-pop3 {
+  animation: pop 0.8s ease 3;
+  animation-delay: 0.4s;
+}
+
+@keyframes pop {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

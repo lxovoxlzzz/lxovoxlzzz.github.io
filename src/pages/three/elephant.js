@@ -1,6 +1,7 @@
 import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
+import starsTexture from '@/assets/three/textures/stars.jpg'
 
 export default function elephant() {
   const canvas = document.querySelector('#c')
@@ -22,7 +23,7 @@ export default function elephant() {
   const groundColor = 0x5b5968 // dark gray
 
   const loader = new THREE.TextureLoader()
-  scene.background = loader.load('/three/textures/stars.jpg')
+  scene.background = loader.load(starsTexture)
 
   {
     const planeSize = 20
@@ -54,7 +55,7 @@ export default function elephant() {
 
   {
     const gltfLoader = new GLTFLoader()
-    const url = '/three/models/elephant.glb'
+    const url = '/src/assets/three/models/elephant.glb'
     gltfLoader.load(url, (gltf) => {
       const root = gltf.scene
       root.scale.set(30, 30, 30) // object size

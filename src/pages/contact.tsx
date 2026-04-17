@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import Button from '@/components/ui/Button'
+import birdHeadImage from '@/assets/birdhead.png'
 
 export default function Contact() {
   const { t } = useTranslation()
@@ -63,7 +64,7 @@ export default function Contact() {
         />
       </div>
       <img
-        src="/birdhead.png"
+        src={birdHeadImage}
         alt="Bird Head"
         width="850"
         height="607"

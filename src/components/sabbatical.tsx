@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import Button from '@/components/ui/Button'
+import mainImage from '@/assets/sabbatical/sabbatical-main-image.png'
+import inputImage from '@/assets/sabbatical/sabbatical-input-image.png'
 
 export default function Sabbatical() {
   const { t } = useTranslation()
@@ -28,16 +30,16 @@ export default function Sabbatical() {
       </a>
       <div className="flex flex-col sm:flex-row gap-4 my-4">
         <img
-          src="/sabbatical/sabbatical-main-image.png"
+          src={mainImage}
           alt="Sabbatical App Main Image"
           className="object-cover w-full sm:w-[49%] lg:w-sm h-sm cursor-pointer transition-opacity hover:opacity-90"
-          onClick={() => setExpandedImage('/sabbatical/sabbatical-main-image.png')}
+          onClick={() => setExpandedImage(mainImage)}
         />
         <img
-          src="/sabbatical/sabbatical-input-image.png"
+          src={inputImage}
           alt="Sabbatical App Input Image"
           className="object-cover w-full sm:w-[49%] lg:w-sm h-sm cursor-pointer transition-opacity hover:opacity-90"
-          onClick={() => setExpandedImage('/sabbatical/sabbatical-input-image.png')}
+          onClick={() => setExpandedImage(inputImage)}
         />
       </div>
       <p className="mt-4 whitespace-pre-wrap">{t('demo.sabbatical.tech')}</p>

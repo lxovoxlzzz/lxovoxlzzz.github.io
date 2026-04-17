@@ -47,7 +47,7 @@ export default function PokemonInputArea({
         <span className={isInView ? "arrow-pop2" : ""}><RiArrowDownDoubleFill size={24} className="mr-1" /></span>
         <span className={isInView ? "arrow-pop3" : ""}><RiArrowDownDoubleFill size={24} /></span>
       </p>
-      <div className="flex gap-2 items-center w-80 my-4">
+      <div className="flex gap-2 items-center w-80 h-10 my-4">
         <input
           type="text"
           name="pokemonIDorName"
@@ -56,7 +56,7 @@ export default function PokemonInputArea({
             setPokemonIDorName(e.target.value)
           }
           placeholder={t('input_placeholder')}
-          className="w-full h-10 px-2 pt-2 pb-1 border-2 border-neutral-800 bg-neutral-300 rounded outline-none"
+          className="w-full h-full px-2 border-2 border-neutral-800 bg-neutral-300 rounded outline-none"
           onKeyDown={(e) => {
             if (
               e.key === 'Enter' &&
@@ -73,6 +73,7 @@ export default function PokemonInputArea({
           onClick={() => handleGetPokemonData()}
           disabled={loading || !pokemonIDorName}
           width="w-fit"
+          height="h-full"
           bgColor="bg-purple-500"
           textColor="text-white"
           borderColor="border-neutral-800"

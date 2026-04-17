@@ -155,7 +155,7 @@ export default function PokemonApi() {
           loading={loading}
         />
         {/* ポケモンデータのカード表示 */}
-        <div className="relative basis-1/2 max-w-96 min-h-96 p-6 flex flex-col justify-center items-center bg-neutral-200 border-2 border-neutral-800 rounded-md lg:mx-auto">
+        <div className="relative basis-1/2 max-w-96 min-h-[495px] p-6 flex flex-col justify-center items-center bg-neutral-200 border-2 border-neutral-800 rounded-md lg:mx-auto">
           {loading ? (
             <p>loading...</p>
           ) : error ? (

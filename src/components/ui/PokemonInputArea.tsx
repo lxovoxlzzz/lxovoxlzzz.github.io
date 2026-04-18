@@ -56,7 +56,7 @@ export default function PokemonInputArea({
             setPokemonIDorName(e.target.value)
           }
           placeholder={t('input_placeholder')}
-          className="w-full h-full px-2 border-2 border-neutral-800 bg-neutral-300 rounded outline-none"
+          className="w-full h-full px-2 pt-1 border-2 border-neutral-800 bg-neutral-300 rounded outline-none"
           onKeyDown={(e) => {
             if (
               e.key === 'Enter' &&
@@ -77,7 +77,7 @@ export default function PokemonInputArea({
           bgColor="bg-purple-500"
           textColor="text-white"
           borderColor="border-neutral-800"
-          style="whitespace-nowrap"
+          style="pt-1 whitespace-nowrap"
         />
       </div>
       <p className="text-sm">{t('pickup')}</p>

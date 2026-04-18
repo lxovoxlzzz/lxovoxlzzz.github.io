@@ -3,7 +3,7 @@
     "description": "My previous projects mainly involved B2B services and system development that wasn't publicly available, so I don't have any publicly available track record. Therefore, I've included demos using publicly available APIs and some of the projects I've developed personally.",
     "poke": {
       "description": "This is a demo that uses the Pokemon API and is styled like a Pokédex.\nWhen you enter the Pokedex number or name, it displays information such as the image, height, weight, and type of that Pokemon.\nPlease be careful as pressing the speaker icon will play a sound.",
-      "input_favorite_pokemon": "Enter the Pokedex number or name of your favorite Pokemon",
+      "input_favorite_pokemon": "Enter the name or Pokedex number of your favorite Pokemon",
       "pickup": "Don't know much? You can choose and enter it here.",
       "search": "Search",
       "input_placeholder": "Enter name or Pokedex number",

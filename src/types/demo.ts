@@ -1,5 +1,5 @@
 /**
- * Pokemon
+ * Pokemon API
  */
 export type NameEntry = {
   language: { name: string };
@@ -58,20 +58,8 @@ export type PokemonDataType = {
 export type NameMappingType = { [japanese: string]: string };
 
 /**
- * NASA
+ * Fox API
  */
-export type NasaDataType = {
-  copyright?: string;
-  date: string;
-  explanation: string;
-  hdurl: string;
-  media_type: string;
-  service_version: string;
-  title: string;
-  url: string;
-  thumbnail_url?: string;
-};
-
 export type FoxDataType = {
   image: string;
   link: string;

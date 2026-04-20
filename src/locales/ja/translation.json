@@ -24,7 +24,6 @@
       "button": "Go to Sabbatical APP",
       "tech": "技術スタック：React, TypeScript, Next.js, Supabase, Vercel"
     },
-    "nasa_text": "「今日の天文写真」を取得するAPIです",
     "fox_text": "ランダムにキツネの画像を取得するだけの癒しAPI",
     "error_fetch": "データの取得に失敗しました"
   },

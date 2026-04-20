@@ -24,7 +24,6 @@
       "button": "Go to Sabbatical APP",
       "tech": "Tech stack: React, TypeScript, Next.js, Supabase, Vercel"
     },
-    "nasa_text": "API to retrieve \"Todays Astronomy Picture of the Day\"",
     "fox_text": "It is a healing API that only retrieves a random fox image",
     "error_fetch": "Failed to retrieve data"
   },

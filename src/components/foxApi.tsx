@@ -22,7 +22,6 @@ export default function FoxApi() {
     try {
       const data = await fetchApiData<FoxDataType>(`https://randomfox.ca/floof`)
       setFoxData(data)
-      console.log('data', data)
     } catch (err) {
       setError(t('error_fetch'))
       console.error(err)

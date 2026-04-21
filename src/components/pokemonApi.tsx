@@ -101,11 +101,9 @@ export default function PokemonApi() {
         const data = await fetchApiData<PokemonDataType>(
           `https://pokeapi.co/api/v2/pokemon/${targetIDName.toLowerCase()}`,
         )
-        console.log(data)
         setPokemonData(data)
         // speciesを取得
         const species = await fetchSpeciesData(data.species.url)
-        console.log(species)
         setSpeciesData(species)
         // audioをセット
         const audioElement = new Audio(data.cries.latest)

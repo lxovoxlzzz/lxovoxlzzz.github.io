@@ -4,7 +4,7 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import starsTexture from '@/assets/three/textures/stars.jpg'
 
 export default function elephant() {
-  const canvas = document.querySelector('#c')
+  const canvas = document.getElementById('elephant')
   const renderer = new THREE.WebGLRenderer({ antialias: true, canvas })
 
   const fov = 45

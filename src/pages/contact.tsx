@@ -12,6 +12,9 @@ export default function Contact() {
   const sectionRef = useRef<HTMLElement>(null)
   const hasTriggered = useRef(false)
 
+  /**
+   * 画面に入ったら鳥をスライドイン
+   */
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {

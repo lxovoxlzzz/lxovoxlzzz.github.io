@@ -21,6 +21,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         three: resolve(__dirname, 'src/pages/three/index.html'),
+        wordbook: resolve(__dirname, 'wordbook.html'),
       },
     },
   },

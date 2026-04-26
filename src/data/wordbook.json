@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "word": "curious",
+    "meaning": "好奇心が強い、知りたがりの",
+    "example": "She is curious about how things work."
+  },
+  {
+    "id": 2,
+    "word": "resilient",
+    "meaning": "立ち直りが早い、弾力性のある",
+    "example": "He stayed resilient after the difficult exam."
+  },
+  {
+    "id": 3,
+    "word": "vivid",
+    "meaning": "鮮やかな、いきいきした",
+    "example": "I have a vivid memory of that summer day."
+  }
+]

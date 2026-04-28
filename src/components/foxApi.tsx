@@ -46,7 +46,7 @@ export default function FoxApi() {
           <p>
             <a
               href={foxData.link}
-              className="text-sm text-blue-600 underline hover:text-blue-800 border-none"
+              className="text-sm underline text-blue-700 hover:text-teal-600 border-none"
               target="_blank"
               rel="noopener noreferrer"
             >

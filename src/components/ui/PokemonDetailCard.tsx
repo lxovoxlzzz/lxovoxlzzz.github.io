@@ -50,6 +50,7 @@ export default function PokemonDetailCard({
               type="button"
               onClick={isPlaying ? stopSound : playSound}
               disabled={!audio}
+              aria-label="Toggle sound"
               className={
                 isPlaying
                   ? 'bg-rose-700 text-white px-3 py-2.5 aspect-square rounded-full disabled:bg-gray-400'

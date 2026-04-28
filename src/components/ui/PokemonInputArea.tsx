@@ -51,6 +51,7 @@ export default function PokemonInputArea({
         <input
           type="text"
           name="pokemonIDorName"
+          aria-label={t('input_placeholder')}
           value={pokemonIDorName}
           onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
             setPokemonIDorName(e.target.value)

@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import inputImage from '@/assets/sabbatical/sabbatical-input-image.png'
-import mainImage from '@/assets/sabbatical/sabbatical-main-image.png'
+import inputImage from '@/assets/sabbatical/input-image.png'
+import inputThumb from '@/assets/sabbatical/input-image-thumb.webp'
+import mainImage from '@/assets/sabbatical/main-image.png'
+import mainThumb from '@/assets/sabbatical/main-image-thumb.webp'
 import Button from '@/components/ui/Button'
 
 export default function Sabbatical() {
@@ -30,18 +32,20 @@ export default function Sabbatical() {
       </a>
       <div className="flex flex-col sm:flex-row gap-4 my-4">
         <img
-          src={mainImage}
+          src={mainThumb}
           width={1300}
           height={1125}
+          loading="lazy"
           alt="Sabbatical App Main Image"
           className="object-cover w-full sm:w-[49%] lg:w-sm h-sm cursor-pointer transition-opacity hover:opacity-90"
           onClick={() => setExpandedImage(mainImage)}
           onKeyDown={() => setExpandedImage(mainImage)}
         />
         <img
-          src={inputImage}
+          src={inputThumb}
           width={1300}
           height={1317}
+          loading="lazy"
           alt="Sabbatical App Input Image"
           className="object-cover w-full sm:w-[49%] lg:w-sm h-sm cursor-pointer transition-opacity hover:opacity-90"
           onClick={() => setExpandedImage(inputImage)}

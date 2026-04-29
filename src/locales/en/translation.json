@@ -25,6 +25,7 @@
       "tech": "Tech stack: React, TypeScript, Next.js, Supabase, Vercel"
     },
     "fox_text": "It is a healing API that only retrieves a random fox image",
+    "fox_loading": "Looking for a fox...",
     "error_fetch": "Failed to retrieve data"
   },
   "about": {

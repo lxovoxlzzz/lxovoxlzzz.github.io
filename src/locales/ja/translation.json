@@ -25,6 +25,7 @@
       "tech": "技術スタック：React, TypeScript, Next.js, Supabase, Vercel"
     },
     "fox_text": "ランダムにキツネの画像を取得するだけの癒しAPI",
+    "fox_loading": "キツネを探しています...",
     "error_fetch": "データの取得に失敗しました"
   },
   "about": {

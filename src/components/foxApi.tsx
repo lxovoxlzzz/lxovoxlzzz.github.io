@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { FoxDataType } from '@/types/demo'
 import { fetchApiData } from '@/utils/api'
@@ -8,11 +8,30 @@ export default function FoxApi() {
   const [foxData, setFoxData] = useState<FoxDataType | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [hasFetched, setHasFetched] = useState(false)
+  const sectionRef = useRef<HTMLElement>(null)
 
   // biome-ignore lint/correctness/useExhaustiveDependencies(handleGetFoxImage): suppress dependency handleGetFoxImage
   useEffect(() => {
-    handleGetFoxImage()
-  }, [])
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !hasFetched) {
+          handleGetFoxImage()
+          setHasFetched(true)
+          observer.disconnect()
+        }
+      },
+      { rootMargin: '300px' }, // 画面に入る300px手前で取得を開始する
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => {
+      observer.disconnect()
+    }
+  }, [hasFetched])
 
   /**
    * randomfox apiからデータを取得
@@ -31,10 +50,10 @@ export default function FoxApi() {
   }
 
   return (
-    <section className="mb-28">
+    <section ref={sectionRef} className="mb-28">
       <h1 className="mb-8 text-2xl font-bold">4. Fox API</h1>
       <p className="mb-4">{t('fox_text')}</p>
-      {loading && <p>Loading...</p>}
+      {loading && <p className="mt-8 animate-pulse">{t('fox_loading')}</p>}
       {error && <p>{error}</p>}
       {foxData && (
         <div>

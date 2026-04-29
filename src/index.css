@@ -9,7 +9,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: #242424;
+  color: oklch(21% 0.006 285.885);
   background-color: #d6d6d6;
 
   font-synthesis: none;

@@ -28,7 +28,7 @@ export default function Contact() {
           }, 4000)
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.3 },
     )
 
     if (sectionRef.current) {
@@ -52,7 +52,10 @@ export default function Contact() {
   }
 
   return (
-    <section ref={sectionRef} className="py-32 md:py-44 bg-neutral-300">
+    <section
+      ref={sectionRef}
+      className="py-32 md:py-44 text-zinc-900 bg-neutral-300"
+    >
       <div className="w-full max-w-4xl px-6 place-self-center">
         <h1 className="mb-8 text-4xl font-bold">Contact</h1>
         <p className="mb-8 whitespace-pre-wrap">{t('contact.message')}</p>
@@ -71,8 +74,9 @@ export default function Contact() {
         alt="Bird Head"
         width="850"
         height="607"
-        className={`fixed top-1/2 z-50 w-[750px] h-auto transition-all duration-1000 ease-in-out pointer-events-none transform translate-x-1/2 -translate-y-1/2 ${imageState === 'in' ? 'right-1/5' : '-right-full'
-          }`}
+        className={`fixed top-1/2 z-50 w-[750px] h-auto transition-all duration-1000 ease-in-out pointer-events-none transform translate-x-1/2 -translate-y-1/2 ${
+          imageState === 'in' ? 'right-1/5' : '-right-full'
+        }`}
       />
     </section>
   )

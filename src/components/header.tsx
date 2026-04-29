@@ -6,7 +6,7 @@ export default function Header() {
   return (
     <header className="relative w-full h-svh content-center">
       <div className="header--title relative flex flex-row items-center justify-center ml-[-1.5rem]">
-        <p className="rotate-[270deg] origin-top text-xl font-bold">
+        <p className="rotate-[270deg] origin-top text-xl text-zinc-900 font-bold">
           {SITE_NAME}
         </p>
         <h1 className="header--title__main text-7xl sm:text-8xl md:text-9xl font-bold !leading-tight">

@@ -19,8 +19,8 @@ export default function Flashcard({
   onNext,
 }: FlashcardProps) {
   return (
-    <div className="flex flex-col items-center">
-      <div className="w-80 h-96 [perspective:1000px]">
+    <div className="flex flex-col items-center w-full">
+      <div className="w-full h-80 [perspective:1000px]">
         <div
           className={`relative w-full h-full transition-all duration-500 [transform-style:preserve-3d] ${isFlipped ? '[transform:rotateY(180deg)]' : ''}`}
         >
@@ -65,7 +65,7 @@ export default function Flashcard({
           <button
             type="button"
             onClick={onFlip}
-            className="px-8 py-3 bg-slate-600 hover:bg-slate-700 text-white rounded-full font-medium transition-colors shadow-lg active:scale-95 transform duration-150 cursor-pointer"
+            className="px-8 pt-3 pb-2 bg-sky-900 hover:bg-sky-800 text-white rounded-full font-medium transition-colors shadow-lg active:scale-95 transform duration-150 cursor-pointer"
           >
             めくる
           </button>
@@ -76,7 +76,7 @@ export default function Flashcard({
               e.stopPropagation()
               onNext()
             }}
-            className="px-8 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full font-medium transition-colors shadow-lg active:scale-95 transform duration-150 flex items-center gap-2 cursor-pointer"
+            className="px-8 pt-3 pb-2 bg-sky-900 hover:bg-sky-800 text-white rounded-full font-medium transition-colors shadow-lg active:scale-95 transform duration-150 flex items-center gap-2 cursor-pointer"
           >
             次の単語へ
             <svg

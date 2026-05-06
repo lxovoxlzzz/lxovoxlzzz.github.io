@@ -43,13 +43,15 @@ export default function Home() {
   const currentWord = words[currentIndex]
 
   return (
-    <div className="min-h-screen bg-slate-100 flex flex-col items-center justify-center p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-slate-900">
       <header className="absolute top-0 left-0 w-full p-6 flex justify-between items-center text-slate-400">
         <h1 className="font-semibold tracking-wide text-sm uppercase">
           Wordbook
         </h1>
         <div className="font-mono text-sm">
-          <span className="text-slate-800 font-bold">{currentIndex + 1}</span>
+          <span className="text-sky-700 font-bold text-xl">
+            {currentIndex + 1}
+          </span>
           <span className="mx-1">/</span>
           {words.length}
         </div>

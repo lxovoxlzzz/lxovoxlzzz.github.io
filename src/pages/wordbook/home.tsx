@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { SITE_NAME } from '@/const/globals'
 import WordbookCard from '@/components/wordbookCard'
-import wordsData from '@/data/wordbook.json'
+import wordsData from '@/data/wordbook/toeic.json'
 
 interface Word {
   id: number
@@ -49,7 +49,7 @@ export default function Home() {
           Wordbook
         </h1>
         <div className="font-mono text-sm">
-          <span className="text-sky-700 font-bold text-xl">
+          <span className="text-sky-300 font-bold text-xl">
             {currentIndex + 1}
           </span>
           <span className="mx-1">/</span>

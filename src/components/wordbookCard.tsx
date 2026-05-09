@@ -29,7 +29,6 @@ export default function Flashcard({
             <h2 className="text-4xl font-bold text-slate-800 tracking-tight">
               {word.word}
             </h2>
-            <p className="mt-4 text-slate-400 text-sm">Tap to flip</p>
           </div>
 
           {/* Back */}

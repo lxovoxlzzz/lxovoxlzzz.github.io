@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "word": "arrange",
+    "meaning": "手配する、整える",
+    "example": "Please arrange the meeting for next Monday."
+  },
+  {
+    "id": 2,
+    "word": "available",
+    "meaning": "利用できる、都合がつく",
+    "example": "The manager is available after 3 p.m."
+  },
+  {
+    "id": 3,
+    "word": "budget",
+    "meaning": "予算",
+    "example": "We need to stay within the budget."
+  },
+  {
+    "id": 4,
+    "word": "confirm",
+    "meaning": "確認する、確定する",
+    "example": "Please confirm your reservation by email."
+  },
+  {
+    "id": 5,
+    "word": "customer",
+    "meaning": "顧客",
+    "example": "The customer asked for a refund."
+  },
+  {
+    "id": 6,
+    "word": "delay",
+    "meaning": "遅らせる、遅れ",
+    "example": "The flight was delayed بسبب bad weather."
+  },
+  {
+    "id": 7,
+    "word": "employee",
+    "meaning": "従業員",
+    "example": "Every employee must attend the training."
+  },
+  {
+    "id": 8,
+    "word": "equipment",
+    "meaning": "機器、設備",
+    "example": "This equipment is used in the office."
+  },
+  {
+    "id": 9,
+    "word": "invoice",
+    "meaning": "請求書",
+    "example": "The invoice will be sent tomorrow."
+  },
+  {
+    "id": 10,
+    "word": "reservation",
+    "meaning": "予約",
+    "example": "I made a reservation for two people."
+  },
+  {
+    "id": 11,
+    "word": "require",
+    "meaning": "必要とする、要求する",
+    "example": "This position requires strong communication skills."
+  },
+  {
+    "id": 12,
+    "word": "survey",
+    "meaning": "調査",
+    "example": "We conducted a survey about customer satisfaction."
+  },
+  {
+    "id": 13,
+    "word": "supply",
+    "meaning": "供給する、備品",
+    "example": "The company supplies office materials."
+  },
+  {
+    "id": 14,
+    "word": "purchase",
+    "meaning": "購入する、購入",
+    "example": "You can purchase tickets online."
+  },
+  {
+    "id": 15,
+    "word": "recommend",
+    "meaning": "勧める、推薦する",
+    "example": "I recommend this restaurant."
+  },
+  {
+    "id": 16,
+    "word": "prepare",
+    "meaning": "準備する",
+    "example": "She prepared a report for the meeting."
+  },
+  {
+    "id": 17,
+    "word": "notice",
+    "meaning": "気づく、掲示、通知",
+    "example": "Please read the notice on the wall."
+  },
+  {
+    "id": 18,
+    "word": "shipment",
+    "meaning": "出荷、発送",
+    "example": "The shipment arrived this morning."
+  },
+  {
+    "id": 19,
+    "word": "increase",
+    "meaning": "増える、増やす",
+    "example": "Sales increased last quarter."
+  },
+  {
+    "id": 20,
+    "word": "reduce",
+    "meaning": "減らす",
+    "example": "We need to reduce costs."
+  },
+  {
+    "id": 21,
+    "word": "manage",
+    "meaning": "管理する、経営する",
+    "example": "She manages a team of ten people."
+  },
+  {
+    "id": 22,
+    "word": "support",
+    "meaning": "支援する、支える",
+    "example": "The staff supports new employees."
+  },
+  {
+    "id": 23,
+    "word": "improve",
+    "meaning": "改善する、向上する",
+    "example": "We want to improve our service."
+  },
+  {
+    "id": 24,
+    "word": "efficient",
+    "meaning": "効率的な",
+    "example": "This system is very efficient."
+  },
+  {
+    "id": 25,
+    "word": "flexible",
+    "meaning": "柔軟な",
+    "example": "Our schedule is flexible this week."
+  },
+  {
+    "id": 26,
+    "word": "responsible",
+    "meaning": "責任がある",
+    "example": "He is responsible for the project."
+  },
+  {
+    "id": 27,
+    "word": "staff",
+    "meaning": "職員、スタッフ",
+    "example": "The staff are very helpful."
+  },
+  {
+    "id": 28,
+    "word": "meeting",
+    "meaning": "会議、面会",
+    "example": "We have a meeting at 10 a.m."
+  },
+  {
+    "id": 29,
+    "word": "schedule",
+    "meaning": "予定、スケジュール",
+    "example": "The schedule has changed."
+  },
+  {
+    "id": 30,
+    "word": "contract",
+    "meaning": "契約",
+    "example": "They signed a new contract."
+  },
+  {
+    "id": 31,
+    "word": "department",
+    "meaning": "部署、部門",
+    "example": "She works in the sales department."
+  },
+  {
+    "id": 32,
+    "word": "conference",
+    "meaning": "会議、大会",
+    "example": "The conference will be held in June."
+  },
+  {
+    "id": 33,
+    "word": "deadline",
+    "meaning": "締め切り",
+    "example": "The deadline is next Friday."
+  },
+  {
+    "id": 34,
+    "word": "document",
+    "meaning": "書類、文書",
+    "example": "Please attach the document."
+  },
+  {
+    "id": 35,
+    "word": "budget",
+    "meaning": "予算",
+    "example": "The budget for this project is limited."
+  },
+  {
+    "id": 36,
+    "word": "candidate",
+    "meaning": "候補者",
+    "example": "The candidate answered the question clearly."
+  },
+  {
+    "id": 37,
+    "word": "operate",
+    "meaning": "操作する、運営する",
+    "example": "This machine is easy to operate."
+  },
+  {
+    "id": 38,
+    "word": "promote",
+    "meaning": "促進する、昇進させる",
+    "example": "The company wants to promote its new product."
+  },
+  {
+    "id": 39,
+    "word": "available",
+    "meaning": "利用可能な、空いている",
+    "example": "Is this room available now?"
+  },
+  {
+    "id": 40,
+    "word": "complain",
+    "meaning": "苦情を言う",
+    "example": "Customers complained about the delay."
+  },
+  {
+    "id": 41,
+    "word": "assist",
+    "meaning": "手伝う、支援する",
+    "example": "A staff member will assist you."
+  },
+  {
+    "id": 42,
+    "word": "deliver",
+    "meaning": "配達する、提供する",
+    "example": "We will deliver the package tomorrow."
+  },
+  {
+    "id": 43,
+    "word": "industry",
+    "meaning": "産業、業界",
+    "example": "He has experience in the travel industry."
+  },
+  {
+    "id": 44,
+    "word": "profit",
+    "meaning": "利益",
+    "example": "The company made a large profit."
+  },
+  {
+    "id": 45,
+    "word": "expense",
+    "meaning": "費用、経費",
+    "example": "Travel expenses must be reported."
+  },
+  {
+    "id": 46,
+    "word": "offer",
+    "meaning": "提供する、申し出",
+    "example": "They offer free shipping."
+  },
+  {
+    "id": 47,
+    "word": "announce",
+    "meaning": "発表する",
+    "example": "The company announced a new policy."
+  },
+  {
+    "id": 48,
+    "word": "return",
+    "meaning": "返す、戻る、返品",
+    "example": "You can return the item within 30 days."
+  },
+  {
+    "id": 49,
+    "word": "appoint",
+    "meaning": "任命する、指名する",
+    "example": "She was appointed as team leader."
+  },
+  {
+    "id": 50,
+    "word": "responsibility",
+    "meaning": "責任、役割",
+    "example": "It is your responsibility to check the report."
+  }
+]

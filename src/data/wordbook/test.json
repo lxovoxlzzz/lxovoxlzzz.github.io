@@ -1,0 +1,218 @@
+[
+  {
+    "id": 1,
+    "word": "curious",
+    "meaning": "好奇心が強い、知りたがりの",
+    "example": "She is curious about how things work."
+  },
+  {
+    "id": 2,
+    "word": "resilient",
+    "meaning": "立ち直りが早い、弾力性のある",
+    "example": "He stayed resilient after the difficult exam."
+  },
+  {
+    "id": 3,
+    "word": "vivid",
+    "meaning": "鮮やかな、いきいきした",
+    "example": "I have a vivid memory of that summer day."
+  },
+  {
+    "id": 4,
+    "word": "ubiquitous",
+    "meaning": "至る所にある、偏在する",
+    "example": "Smartphones have become ubiquitous in modern society."
+  },
+  {
+    "id": 5,
+    "word": "benevolent",
+    "meaning": "慈悲深い、親切な",
+    "example": "The benevolent queen was loved by her people."
+  },
+  {
+    "id": 6,
+    "word": "ephemeral",
+    "meaning": "束の間の、つかの間の",
+    "example": "The beauty of the cherry blossoms is ephemeral."
+  },
+  {
+    "id": 7,
+    "word": "diligent",
+    "meaning": "勤勉な、熱心な",
+    "example": "She is a diligent student who always finishes her homework."
+  },
+  {
+    "id": 8,
+    "word": "nostalgic",
+    "meaning": "郷愁を感じる、懐かしい",
+    "example": "Listening to old songs makes me feel nostalgic."
+  },
+  {
+    "id": 9,
+    "word": "vibrant",
+    "meaning": "活気に満ちた、鮮やかな",
+    "example": "The city has a vibrant culture and nightlife."
+  },
+  {
+    "id": 10,
+    "word": "meticulous",
+    "meaning": "細部にわたる、非常に注意深い",
+    "example": "He is meticulous about his work and never makes mistakes."
+  },
+  {
+    "id": 11,
+    "word": "cacophony",
+    "meaning": "不協和音、耳障りな音の組み合わせ",
+    "example": "The construction site was filled with a cacophony of noises."
+  },
+  {
+    "id": 12,
+    "word": "serendipity",
+    "meaning": "偶然の幸運、思いがけない発見",
+    "example": "Finding that rare book in a used bookstore was pure serendipity."
+  },
+  {
+    "id": 13,
+    "word": "melancholy",
+    "meaning": "憂鬱、もの悲しさ",
+    "example": "A sense of melancholy washed over him as he looked at the old photos."
+  },
+  {
+    "id": 14,
+    "word": "juxtaposition",
+    "meaning": "並置、対照的なものの接近",
+    "example": "The photograph uses the juxtaposition of light and shadow to create drama."
+  },
+  {
+    "id": 15,
+    "word": "eloquent",
+    "meaning": "雄弁な、説得力のある",
+    "example": "She gave an eloquent speech that moved the audience."
+  },
+  {
+    "id": 16,
+    "word": "placid",
+    "meaning": "穏やかな、落ち着いた",
+    "example": "The placid lake reflected the clear blue sky."
+  },
+  {
+    "id": 17,
+    "word": "epiphany",
+    "meaning": "突然の悟り、ひらめき",
+    "example": "I had an epiphany about my career path while meditating."
+  },
+  {
+    "id": 18,
+    "word": "querulous",
+    "meaning": "不平を言う、不機嫌な",
+    "example": "He is always querulous about the quality of the food."
+  },
+  {
+    "id": 19,
+    "word": "sonorous",
+    "meaning": "深みのある響き、重厚な",
+    "example": "The church bells had a sonorous tone that echoed through the valley."
+  },
+  {
+    "id": 20,
+    "word": "petrichor",
+    "meaning": "雨が降った後の土の匂い",
+    "example": "I love the earthy smell of petrichor after a summer rain."
+  },
+  {
+    "id": 21,
+    "word": "lament",
+    "meaning": "（〜を）嘆く、深く悲しむ",
+    "example": "She lamented the loss of her beloved pet."
+  },
+  {
+    "id": 22,
+    "word": "obfuscate",
+    "meaning": "（意図的に）わかりにくくする、ごまかす",
+    "example": "The politician tried to obfuscate the issue with vague statements."
+  },
+  {
+    "id": 23,
+    "word": "peruse",
+    "meaning": "熟読する、注意深く読む",
+    "example": "He perused the contract carefully before signing it."
+  },
+  {
+    "id": 24,
+    "word": "ostentatious",
+    "meaning": "見せびらかしの、派手な",
+    "example": "He drove an ostentatious sports car to show off his wealth."
+  },
+  {
+    "id": 25,
+    "word": "vacillate",
+    "meaning": "揺れ動く、ためらう",
+    "example": "She vacillated between accepting the job offer and staying at her current company."
+  },
+  {
+    "id": 26,
+    "word": "solitude",
+    "meaning": "孤独、一人でいること",
+    "example": "He enjoys the solitude of the countryside."
+  },
+  {
+    "id": 27,
+    "word": "effervescent",
+    "meaning": "活気のある、活発な",
+    "example": "Her effervescent personality made her popular with everyone."
+  },
+  {
+    "id": 28,
+    "word": "quaint",
+    "meaning": "古風で趣のある、かわいらしい",
+    "example": "They stayed in a quaint little cottage by the sea."
+  },
+  {
+    "id": 29,
+    "word": "zeal",
+    "meaning": "熱意、熱心さ",
+    "example": "He pursued his research with great zeal."
+  },
+  {
+    "id": 30,
+    "word": "ambiguous",
+    "meaning": "曖昧な、解釈の余地のある",
+    "example": "His answer was ambiguous, so I wasn't sure what he meant."
+  },
+  {
+    "id": 31,
+    "word": "evoke",
+    "meaning": "（感情や記憶を）呼び起こす",
+    "example": "The song evoked memories of my childhood."
+  },
+  {
+    "id": 32,
+    "word": "serene",
+    "meaning": "穏やかな、静かな",
+    "example": "She had a serene expression on her face."
+  },
+  {
+    "id": 33,
+    "word": "pertinent",
+    "meaning": "関連のある、適切な",
+    "example": "Please only provide pertinent information."
+  },
+  {
+    "id": 34,
+    "word": "juxtapose",
+    "meaning": "（対照的に）並べる",
+    "example": "The artist juxtaposed bright colors with dark ones."
+  },
+  {
+    "id": 35,
+    "word": "eloquence",
+    "meaning": "雄弁さ、説得力のある話し方",
+    "example": "Her eloquence moved the audience."
+  },
+  {
+    "id": 36,
+    "word": "wistful",
+    "meaning": "もの悲しげな、懐かしむような",
+    "example": "He gave a wistful smile as he remembered his childhood."
+  }
+]

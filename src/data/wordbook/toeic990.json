@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "word": "abbreviate",
+    "meaning": "省略する",
+    "example": "The name is abbreviated as USA."
+  },
+  {
+    "id": 2,
+    "word": "abolish",
+    "meaning": "廃止する",
+    "example": "The tax was abolished last year."
+  },
+  {
+    "id": 3,
+    "word": "abrupt",
+    "meaning": "突然の",
+    "example": "There was an abrupt change in the weather."
+  },
+  {
+    "id": 4,
+    "word": "absorb",
+    "meaning": "吸収する",
+    "example": "The sponge absorbs water well."
+  },
+  {
+    "id": 5,
+    "word": "abstain",
+    "meaning": "控える",
+    "example": "Please abstain from smoking here."
+  },
+  {
+    "id": 6,
+    "word": "absurd",
+    "meaning": "ばかげた",
+    "example": "That is an absurd idea."
+  },
+  {
+    "id": 7,
+    "word": "abundant",
+    "meaning": "豊富な",
+    "example": "The area has abundant natural resources."
+  },
+  {
+    "id": 8,
+    "word": "acclaim",
+    "meaning": "絶賛する",
+    "example": "The movie was critically acclaimed."
+  },
+  {
+    "id": 9,
+    "word": "accommodate",
+    "meaning": "収容する",
+    "example": "The hall can accommodate 1,000 people."
+  },
+  {
+    "id": 10,
+    "word": "accord",
+    "meaning": "一致",
+    "example": "The two sides reached an accord."
+  },
+  {
+    "id": 11,
+    "word": "accountable",
+    "meaning": "責任がある",
+    "example": "You will be held accountable for your actions."
+  },
+  {
+    "id": 12,
+    "word": "accumulate",
+    "meaning": "蓄積する",
+    "example": "He has accumulated a lot of wealth."
+  },
+  {
+    "id": 13,
+    "word": "accustom",
+    "meaning": "慣れさせる",
+    "example": "I am accustomed to hard work."
+  },
+  {
+    "id": 14,
+    "word": "acknowledge",
+    "meaning": "認める",
+    "example": "He acknowledged his mistake."
+  },
+  {
+    "id": 15,
+    "word": "acquaint",
+    "meaning": "知らせる",
+    "example": "Please acquaint yourself with the rules."
+  },
+  {
+    "id": 16,
+    "word": "acquire",
+    "meaning": "獲得する",
+    "example": "The company acquired a new subsidiary."
+  },
+  {
+    "id": 17,
+    "word": "acquit",
+    "meaning": "無罪とする",
+    "example": "The jury acquitted him of the crime."
+  },
+  {
+    "id": 18,
+    "word": "acute",
+    "meaning": "鋭い",
+    "example": "He has an acute sense of hearing."
+  },
+  {
+    "id": 19,
+    "word": "adamant",
+    "meaning": "断固とした",
+    "example": "She was adamant that she would not change her mind."
+  },
+  {
+    "id": 20,
+    "word": "adequate",
+    "meaning": "十分な",
+    "example": "Is the salary adequate for your needs?"
+  },
+  {
+    "id": 21,
+    "word": "adhere",
+    "meaning": "固守する",
+    "example": "You must adhere to the rules."
+  },
+  {
+    "id": 22,
+    "word": "adjacent",
+    "meaning": "隣接した",
+    "example": "The two rooms are adjacent to each other."
+  },
+  {
+    "id": 23,
+    "word": "adjourn",
+    "meaning": "休会する",
+    "example": "The meeting was adjourned until tomorrow."
+  },
+  {
+    "id": 24,
+    "word": "administer",
+    "meaning": "管理する",
+    "example": "The fund is administered by a trust."
+  },
+  {
+    "id": 25,
+    "word": "adolescent",
+    "meaning": "青年期の",
+    "example": "He teaches adolescent boys."
+  },
+  {
+    "id": 26,
+    "word": "adverse",
+    "meaning": "不利な",
+    "example": "The drug has some adverse side effects."
+  },
+  {
+    "id": 27,
+    "word": "advocate",
+    "meaning": "主唱者",
+    "example": "He is an advocate for human rights."
+  },
+  {
+    "id": 28,
+    "word": "aesthetic",
+    "meaning": "美的な",
+    "example": "The building has a modern aesthetic."
+  },
+  {
+    "id": 29,
+    "word": "affiliate",
+    "meaning": "提携する",
+    "example": "Our company is affiliated with a larger corporation."
+  },
+  {
+    "id": 30,
+    "word": "affirm",
+    "meaning": "断言する",
+    "example": "He affirmed his loyalty to the country."
+  },
+  {
+    "id": 31,
+    "word": "affluent",
+    "meaning": "裕福な",
+    "example": "They live in an affluent neighborhood."
+  },
+  {
+    "id": 32,
+    "word": "aggravate",
+    "meaning": "悪化させる",
+    "example": "His comments only aggravated the situation."
+  },
+  {
+    "id": 33,
+    "word": "aggregate",
+    "meaning": "総計",
+    "example": "The aggregate cost was $1 million."
+  },
+  {
+    "id": 34,
+    "word": "agitate",
+    "meaning": "扇動する",
+    "example": "The crowd was agitated by the speech."
+  },
+  {
+    "id": 35,
+    "word": "allege",
+    "meaning": "断言する",
+    "example": "He is alleged to have stolen the money."
+  },
+  {
+    "id": 36,
+    "word": "alleviate",
+    "meaning": "和らげる",
+    "example": "The medicine will alleviate the pain."
+  },
+  {
+    "id": 37,
+    "word": "allocate",
+    "meaning": "割り当てる",
+    "example": "We need to allocate more resources to this project."
+  },
+  {
+    "id": 38,
+    "word": "allowance",
+    "meaning": "手当",
+    "example": "He receives a monthly allowance."
+  },
+  {
+    "id": 39,
+    "word": "alter",
+    "meaning": "変更する",
+    "example": "We had to alter our plans slightly."
+  },
+  {
+    "id": 40,
+    "word": "alternate",
+    "meaning": "交互の",
+    "example": "We work on alternate days."
+  },
+  {
+    "id": 41,
+    "word": "amateur",
+    "meaning": "素人",
+    "example": "He is an amateur photographer."
+  },
+  {
+    "id": 42,
+    "word": "ambiguous",
+    "meaning": "曖昧な",
+    "example": "The instructions were ambiguous."
+  },
+  {
+    "id": 43,
+    "word": "amend",
+    "meaning": "修正する",
+    "example": "The constitution was amended in 1920."
+  },
+  {
+    "id": 44,
+    "word": "ample",
+    "meaning": "十分な",
+    "example": "There is ample time to finish the work."
+  },
+  {
+    "id": 45,
+    "word": "amplify",
+    "meaning": "増幅する",
+    "example": "The microphone amplifies the sound."
+  },
+  {
+    "id": 46,
+    "word": "analogy",
+    "meaning": "類推",
+    "example": "He drew an analogy between the brain and a computer."
+  },
+  {
+    "id": 47,
+    "word": "anecdote",
+    "meaning": "逸話",
+    "example": "He told an amusing anecdote about his childhood."
+  },
+  {
+    "id": 48,
+    "word": "annihilate",
+    "meaning": "全滅させる",
+    "example": "The town was annihilated by the bomb."
+  },
+  {
+    "id": 49,
+    "word": "anonymous",
+    "meaning": "匿名の",
+    "example": "The author of the book is anonymous."
+  },
+  {
+    "id": 50,
+    "word": "antagonize",
+    "meaning": "敵に回す",
+    "example": "You shouldn't antagonize the boss."
+  },
+  {
+    "id": 51,
+    "word": "anticipate",
+    "meaning": "予期する",
+    "example": "We don't anticipate any problems."
+  },
+  {
+    "id": 52,
+    "word": "apathy",
+    "meaning": "無関心",
+    "example": "There is a widespread apathy among voters."
+  },
+  {
+    "id": 53,
+    "word": "appall",
+    "meaning": "ぞっとさせる",
+    "example": "I was appalled by the news."
+  },
+  {
+    "id": 54,
+    "word": "apparatus",
+    "meaning": "器具",
+    "example": "They use a special apparatus for the experiment."
+  },
+  {
+    "id": 55,
+    "word": "appease",
+    "meaning": "なだめる",
+    "example": "They tried to appease the angry crowd."
+  },
+  {
+    "id": 56,
+    "word": "appraise",
+    "meaning": "評価する",
+    "example": "The ring was appraised at $5,000."
+  },
+  {
+    "id": 57,
+    "word": "apprehend",
+    "meaning": "逮捕する",
+    "example": "The suspect was apprehended by the police."
+  },
+  {
+    "id": 58,
+    "word": "apprentice",
+    "meaning": "見習い",
+    "example": "He worked as an apprentice carpenter."
+  },
+  {
+    "id": 59,
+    "word": "apt",
+    "meaning": "適切な",
+    "example": "That is an apt description."
+  },
+  {
+    "id": 60,
+    "word": "arbitrary",
+    "meaning": "任意の",
+    "example": "The choice was completely arbitrary."
+  },
+  {
+    "id": 61,
+    "word": "archipelago",
+    "meaning": "群島",
+    "example": "Japan is an archipelago."
+  },
+  {
+    "id": 62,
+    "word": "arduous",
+    "meaning": "困難な",
+    "example": "It was an arduous journey."
+  },
+  {
+    "id": 63,
+    "word": "arid",
+    "meaning": "乾燥した",
+    "example": "The region is very arid."
+  },
+  {
+    "id": 64,
+    "word": "arouse",
+    "meaning": "引き起こす",
+    "example": "His speech aroused strong emotions."
+  },
+  {
+    "id": 65,
+    "word": "array",
+    "meaning": "配列",
+    "example": "There is a vast array of choices."
+  },
+  {
+    "id": 66,
+    "word": "articulate",
+    "meaning": "はっきり述べる",
+    "example": "She articulated her views clearly."
+  },
+  {
+    "id": 67,
+    "word": "ascertain",
+    "meaning": "確かめる",
+    "example": "We must ascertain the facts."
+  },
+  {
+    "id": 68,
+    "word": "ascribe",
+    "meaning": "〜のせいにする",
+    "example": "He ascribed his success to luck."
+  },
+  {
+    "id": 69,
+    "word": "aspire",
+    "meaning": "熱望する",
+    "example": "He aspires to be a doctor."
+  },
+  {
+    "id": 70,
+    "word": "assault",
+    "meaning": "襲撃",
+    "example": "He was charged with assault."
+  },
+  {
+    "id": 71,
+    "word": "assemble",
+    "meaning": "集める",
+    "example": "We assembled the team for a meeting."
+  },
+  {
+    "id": 72,
+    "word": "assent",
+    "meaning": "同意",
+    "example": "He gave his nod of assent."
+  },
+  {
+    "id": 73,
+    "word": "assert",
+    "meaning": "主張する",
+    "example": "He asserted his innocence."
+  },
+  {
+    "id": 74,
+    "word": "assess",
+    "meaning": "評価する",
+    "example": "We need to assess the situation."
+  },
+  {
+    "id": 75,
+    "word": "asset",
+    "meaning": "資産",
+    "example": "Health is your greatest asset."
+  },
+  {
+    "id": 76,
+    "word": "assimilate",
+    "meaning": "同化する",
+    "example": "Immigrants assimilate into the culture."
+  },
+  {
+    "id": 77,
+    "word": "assuage",
+    "meaning": "和らげる",
+    "example": "Nothing could assuage her grief."
+  },
+  {
+    "id": 78,
+    "word": "asthma",
+    "meaning": "喘息",
+    "example": "He suffers from severe asthma."
+  },
+  {
+    "id": 79,
+    "word": "astound",
+    "meaning": "びっくりさせる",
+    "example": "The news astounded us all."
+  },
+  {
+    "id": 80,
+    "word": "asylum",
+    "meaning": "保護",
+    "example": "He applied for political asylum."
+  },
+  {
+    "id": 81,
+    "word": "atrocity",
+    "meaning": "残虐行為",
+    "example": "Many atrocities were committed during the war."
+  },
+  {
+    "id": 82,
+    "word": "attain",
+    "meaning": "達成する",
+    "example": "He attained his long-term goal."
+  },
+  {
+    "id": 83,
+    "word": "attest",
+    "meaning": "証明する",
+    "example": "These documents attest to his identity."
+  },
+  {
+    "id": 84,
+    "word": "attribute",
+    "meaning": "属性",
+    "example": "Patience is an important attribute for a teacher."
+  },
+  {
+    "id": 85,
+    "word": "auction",
+    "meaning": "オークション",
+    "example": "The painting was sold at auction."
+  },
+  {
+    "id": 86,
+    "word": "audacious",
+    "meaning": "大胆な",
+    "example": "It was an audacious plan."
+  },
+  {
+    "id": 87,
+    "word": "augment",
+    "meaning": "増やす",
+    "example": "He works part-time to augment his income."
+  },
+  {
+    "id": 88,
+    "word": "authentic",
+    "meaning": "本物の",
+    "example": "Is this an authentic Picasso painting?"
+  },
+  {
+    "id": 89,
+    "word": "authorize",
+    "meaning": "権限を与える",
+    "example": "I am not authorized to do that."
+  },
+  {
+    "id": 90,
+    "word": "autonomy",
+    "meaning": "自治",
+    "example": "The region wants greater autonomy."
+  },
+  {
+    "id": 91,
+    "word": "avail",
+    "meaning": "役立つ",
+    "example": "His efforts were of no avail."
+  },
+  {
+    "id": 92,
+    "word": "avert",
+    "meaning": "避ける",
+    "example": "We managed to avert a crisis."
+  },
+  {
+    "id": 93,
+    "word": "aviator",
+    "meaning": "飛行士",
+    "example": "He was a pioneer aviator."
+  },
+  {
+    "id": 94,
+    "word": "avid",
+    "meaning": "熱心な",
+    "example": "She is an avid reader."
+  },
+  {
+    "id": 95,
+    "word": "awkward",
+    "meaning": "気まずい",
+    "example": "There was an awkward silence."
+  },
+  {
+    "id": 96,
+    "word": "bachelor",
+    "meaning": "独身男性",
+    "example": "He is a confirmed bachelor."
+  },
+  {
+    "id": 97,
+    "word": "baffle",
+    "meaning": "困惑させる",
+    "example": "The question baffled me."
+  },
+  {
+    "id": 98,
+    "word": "bail",
+    "meaning": "保釈金",
+    "example": "He was released on bail."
+  },
+  {
+    "id": 99,
+    "word": "bait",
+    "meaning": "エサ",
+    "example": "We used worms as bait."
+  },
+  {
+    "id": 100,
+    "word": "ballot",
+    "meaning": "投票用紙",
+    "example": "He cast his ballot."
+  }
+]

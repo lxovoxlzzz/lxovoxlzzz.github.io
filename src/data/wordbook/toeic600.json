@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "word": "accept",
+    "meaning": "受け入れる",
+    "example": "They accepted our offer."
+  },
+  {
+    "id": 2,
+    "word": "access",
+    "meaning": "アクセス、近づく",
+    "example": "You need a password to access the file."
+  },
+  {
+    "id": 3,
+    "word": "account",
+    "meaning": "口座、説明",
+    "example": "I opened a new bank account."
+  },
+  {
+    "id": 4,
+    "word": "achieve",
+    "meaning": "達成する",
+    "example": "We achieved our sales target."
+  },
+  {
+    "id": 5,
+    "word": "action",
+    "meaning": "行動",
+    "example": "We need to take immediate action."
+  },
+  {
+    "id": 6,
+    "word": "add",
+    "meaning": "加える",
+    "example": "Please add your name to the list."
+  },
+  {
+    "id": 7,
+    "word": "address",
+    "meaning": "住所、演説する",
+    "example": "What is your email address?"
+  },
+  {
+    "id": 8,
+    "word": "advance",
+    "meaning": "前進、事前の",
+    "example": "Thank you in advance for your help."
+  },
+  {
+    "id": 9,
+    "word": "advantage",
+    "meaning": "利点",
+    "example": "This software has many advantages."
+  },
+  {
+    "id": 10,
+    "word": "advertise",
+    "meaning": "宣伝する",
+    "example": "They advertised the new product on TV."
+  },
+  {
+    "id": 11,
+    "word": "advice",
+    "meaning": "助言",
+    "example": "Can you give me some advice?"
+  },
+  {
+    "id": 12,
+    "word": "affect",
+    "meaning": "影響する",
+    "example": "The bad weather affected our plans."
+  },
+  {
+    "id": 13,
+    "word": "agreement",
+    "meaning": "合意、契約",
+    "example": "We signed the agreement yesterday."
+  },
+  {
+    "id": 14,
+    "word": "allow",
+    "meaning": "許可する",
+    "example": "Smoking is not allowed here."
+  },
+  {
+    "id": 15,
+    "word": "amount",
+    "meaning": "量、金額",
+    "example": "The total amount is $50."
+  },
+  {
+    "id": 16,
+    "word": "announce",
+    "meaning": "発表する",
+    "example": "They announced the new policy."
+  },
+  {
+    "id": 17,
+    "word": "apologize",
+    "meaning": "謝罪する",
+    "example": "I apologize for the delay."
+  },
+  {
+    "id": 18,
+    "word": "appear",
+    "meaning": "現れる、〜のように見える",
+    "example": "He didn't appear at the meeting."
+  },
+  {
+    "id": 19,
+    "word": "apply",
+    "meaning": "応募する、適用する",
+    "example": "I applied for the job."
+  },
+  {
+    "id": 20,
+    "word": "appoint",
+    "meaning": "指名する",
+    "example": "She was appointed as the new manager."
+  },
+  {
+    "id": 21,
+    "word": "approve",
+    "meaning": "承認する",
+    "example": "The board approved the budget."
+  },
+  {
+    "id": 22,
+    "word": "arrange",
+    "meaning": "手配する",
+    "example": "I'll arrange a meeting for next week."
+  },
+  {
+    "id": 23,
+    "word": "arrive",
+    "meaning": "到着する",
+    "example": "The train arrived on time."
+  },
+  {
+    "id": 24,
+    "word": "article",
+    "meaning": "記事",
+    "example": "I read an interesting article today."
+  },
+  {
+    "id": 25,
+    "word": "assist",
+    "meaning": "手伝う",
+    "example": "She assisted me with the project."
+  },
+  {
+    "id": 26,
+    "word": "attach",
+    "meaning": "添付する",
+    "example": "Please see the attached file."
+  },
+  {
+    "id": 27,
+    "word": "attend",
+    "meaning": "出席する",
+    "example": "I will attend the conference."
+  },
+  {
+    "id": 28,
+    "word": "attention",
+    "meaning": "注意",
+    "example": "Please pay attention to the instructions."
+  },
+  {
+    "id": 29,
+    "word": "attract",
+    "meaning": "惹きつける",
+    "example": "The store attracts many customers."
+  },
+  {
+    "id": 30,
+    "word": "available",
+    "meaning": "利用できる",
+    "example": "Are you available tomorrow?"
+  },
+  {
+    "id": 31,
+    "word": "avoid",
+    "meaning": "避ける",
+    "example": "Try to avoid making mistakes."
+  },
+  {
+    "id": 32,
+    "word": "base",
+    "meaning": "基礎を置く",
+    "example": "Our company is based in Tokyo."
+  },
+  {
+    "id": 33,
+    "word": "benefit",
+    "meaning": "利益",
+    "example": "The new system has many benefits."
+  },
+  {
+    "id": 34,
+    "word": "bill",
+    "meaning": "請求書",
+    "example": "Could you bring the bill, please?"
+  },
+  {
+    "id": 35,
+    "word": "board",
+    "meaning": "委員会、搭乗する",
+    "example": "The board of directors met yesterday."
+  },
+  {
+    "id": 36,
+    "word": "book",
+    "meaning": "予約する",
+    "example": "I booked a flight to London."
+  },
+  {
+    "id": 37,
+    "word": "branch",
+    "meaning": "支店",
+    "example": "We opened a new branch in Osaka."
+  },
+  {
+    "id": 38,
+    "word": "budget",
+    "meaning": "予算",
+    "example": "We have a limited budget."
+  },
+  {
+    "id": 39,
+    "word": "cancel",
+    "meaning": "取り消す",
+    "example": "I need to cancel my reservation."
+  },
+  {
+    "id": 40,
+    "word": "candidate",
+    "meaning": "候補者",
+    "example": "He is a good candidate for the job."
+  },
+  {
+    "id": 41,
+    "word": "capacity",
+    "meaning": "容量、能力",
+    "example": "The room has a seating capacity of 50."
+  },
+  {
+    "id": 42,
+    "word": "cause",
+    "meaning": "原因、引き起こす",
+    "example": "What caused the problem?"
+  },
+  {
+    "id": 43,
+    "word": "charge",
+    "meaning": "料金、請求する",
+    "example": "Is there a charge for delivery?"
+  },
+  {
+    "id": 44,
+    "word": "check",
+    "meaning": "確認する",
+    "example": "Please check your spelling."
+  },
+  {
+    "id": 45,
+    "word": "choose",
+    "meaning": "選ぶ",
+    "example": "You can choose any color you like."
+  },
+  {
+    "id": 46,
+    "word": "claim",
+    "meaning": "主張する、要求する",
+    "example": "He claimed that he was innocent."
+  },
+  {
+    "id": 47,
+    "word": "client",
+    "meaning": "顧客",
+    "example": "We have an important meeting with a client."
+  },
+  {
+    "id": 48,
+    "word": "collect",
+    "meaning": "集める",
+    "example": "Please collect the documents."
+  },
+  {
+    "id": 49,
+    "word": "comfortable",
+    "meaning": "快適な",
+    "example": "This chair is very comfortable."
+  },
+  {
+    "id": 50,
+    "word": "committee",
+    "meaning": "委員会",
+    "example": "The committee approved the proposal."
+  },
+  {
+    "id": 51,
+    "word": "compare",
+    "meaning": "比較する",
+    "example": "Let's compare the two options."
+  },
+  {
+    "id": 52,
+    "word": "complain",
+    "meaning": "苦情を言う",
+    "example": "The customer complained about the service."
+  },
+  {
+    "id": 53,
+    "word": "complete",
+    "meaning": "完了する、完全な",
+    "example": "Please complete this form."
+  },
+  {
+    "id": 54,
+    "word": "concern",
+    "meaning": "懸念、関心事",
+    "example": "This is a matter of great concern."
+  },
+  {
+    "id": 55,
+    "word": "condition",
+    "meaning": "条件、状態",
+    "example": "The car is in good condition."
+  },
+  {
+    "id": 56,
+    "word": "confirm",
+    "meaning": "確認する",
+    "example": "Please confirm your flight details."
+  },
+  {
+    "id": 57,
+    "word": "connect",
+    "meaning": "つなぐ",
+    "example": "Connect the cable to the computer."
+  },
+  {
+    "id": 58,
+    "word": "consider",
+    "meaning": "検討する",
+    "example": "We will consider your request."
+  },
+  {
+    "id": 59,
+    "word": "contact",
+    "meaning": "連絡する",
+    "example": "Please contact me if you have any questions."
+  },
+  {
+    "id": 60,
+    "word": "contain",
+    "meaning": "含む",
+    "example": "This box contains books."
+  },
+  {
+    "id": 61,
+    "word": "continue",
+    "meaning": "続ける",
+    "example": "The meeting will continue after lunch."
+  },
+  {
+    "id": 62,
+    "word": "contract",
+    "meaning": "契約",
+    "example": "We signed a new contract."
+  },
+  {
+    "id": 63,
+    "word": "control",
+    "meaning": "管理する",
+    "example": "We need to control our expenses."
+  },
+  {
+    "id": 64,
+    "word": "convenient",
+    "meaning": "便利な",
+    "example": "Is 10 a.m. convenient for you?"
+  },
+  {
+    "id": 65,
+    "word": "copy",
+    "meaning": "コピー、コピーする",
+    "example": "Can I have a copy of the report?"
+  },
+  {
+    "id": 66,
+    "word": "cost",
+    "meaning": "費用、費用がかかる",
+    "example": "How much does it cost?"
+  },
+  {
+    "id": 67,
+    "word": "cover",
+    "meaning": "覆う、含む",
+    "example": "Does this price cover travel expenses?"
+  },
+  {
+    "id": 68,
+    "word": "create",
+    "meaning": "作り出す",
+    "example": "We need to create a new design."
+  },
+  {
+    "id": 69,
+    "word": "current",
+    "meaning": "現在の",
+    "example": "What is your current address?"
+  },
+  {
+    "id": 70,
+    "word": "customer",
+    "meaning": "顧客",
+    "example": "Our goal is customer satisfaction."
+  },
+  {
+    "id": 71,
+    "word": "damage",
+    "meaning": "損害",
+    "example": "The storm caused a lot of damage."
+  },
+  {
+    "id": 72,
+    "word": "deal",
+    "meaning": "扱う、取引",
+    "example": "We deal with many clients."
+  },
+  {
+    "id": 73,
+    "word": "decide",
+    "meaning": "決定する",
+    "example": "We decided to postpone the meeting."
+  },
+  {
+    "id": 74,
+    "word": "decrease",
+    "meaning": "減る、減らす",
+    "example": "Sales decreased this month."
+  },
+  {
+    "id": 75,
+    "word": "delay",
+    "meaning": "遅れる",
+    "example": "The flight was delayed due to snow."
+  },
+  {
+    "id": 76,
+    "word": "deliver",
+    "meaning": "配達する",
+    "example": "We will deliver the package tomorrow."
+  },
+  {
+    "id": 77,
+    "word": "demand",
+    "meaning": "要求",
+    "example": "There is a high demand for this product."
+  },
+  {
+    "id": 78,
+    "word": "department",
+    "meaning": "部門",
+    "example": "She works in the sales department."
+  },
+  {
+    "id": 79,
+    "word": "depend",
+    "meaning": "頼る、次第である",
+    "example": "It depends on the weather."
+  },
+  {
+    "id": 80,
+    "word": "describe",
+    "meaning": "説明する",
+    "example": "Can you describe the problem?"
+  },
+  {
+    "id": 81,
+    "word": "design",
+    "meaning": "設計する",
+    "example": "She designed the new logo."
+  },
+  {
+    "id": 82,
+    "word": "detail",
+    "meaning": "詳細",
+    "example": "Please give me more details."
+  },
+  {
+    "id": 83,
+    "word": "develop",
+    "meaning": "開発する",
+    "example": "We are developing a new app."
+  },
+  {
+    "id": 84,
+    "word": "difference",
+    "meaning": "違い",
+    "example": "What is the difference between the two?"
+  },
+  {
+    "id": 85,
+    "word": "direct",
+    "meaning": "直接の",
+    "example": "This is a direct flight to New York."
+  },
+  {
+    "id": 86,
+    "word": "discount",
+    "meaning": "割引",
+    "example": "We offer a 10% discount to students."
+  },
+  {
+    "id": 87,
+    "word": "discuss",
+    "meaning": "話し合う",
+    "example": "We need to discuss this issue."
+  },
+  {
+    "id": 88,
+    "word": "display",
+    "meaning": "展示する",
+    "example": "The new models are on display."
+  },
+  {
+    "id": 89,
+    "word": "divide",
+    "meaning": "分ける",
+    "example": "The team is divided into three groups."
+  },
+  {
+    "id": 90,
+    "word": "document",
+    "meaning": "書類",
+    "example": "Please sign this document."
+  },
+  {
+    "id": 91,
+    "word": "draw",
+    "meaning": "描く、引く",
+    "example": "Please draw a map to your house."
+  },
+  {
+    "id": 92,
+    "word": "due",
+    "meaning": "期限が来て",
+    "example": "The report is due on Friday."
+  },
+  {
+    "id": 93,
+    "word": "duty",
+    "meaning": "義務",
+    "example": "It is my duty to help you."
+  },
+  {
+    "id": 94,
+    "word": "earn",
+    "meaning": "稼ぐ",
+    "example": "He earns a good salary."
+  },
+  {
+    "id": 95,
+    "word": "effect",
+    "meaning": "効果",
+    "example": "The medicine had a quick effect."
+  },
+  {
+    "id": 96,
+    "word": "efficient",
+    "meaning": "効率的な",
+    "example": "He is an efficient worker."
+  },
+  {
+    "id": 97,
+    "word": "effort",
+    "meaning": "努力",
+    "example": "We made every effort to succeed."
+  },
+  {
+    "id": 98,
+    "word": "employ",
+    "meaning": "雇う",
+    "example": "The company employs 500 people."
+  },
+  {
+    "id": 99,
+    "word": "empty",
+    "meaning": "空の",
+    "example": "The room was empty."
+  },
+  {
+    "id": 100,
+    "word": "enclose",
+    "meaning": "同封する",
+    "example": "I have enclosed a copy of my resume."
+  }
+]

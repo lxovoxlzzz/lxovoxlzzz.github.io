@@ -1,3 +1,5 @@
+import { HiArrowUturnRight } from 'react-icons/hi2'
+
 interface Word {
   id: number
   word: string
@@ -64,9 +66,9 @@ export default function Flashcard({
           <button
             type="button"
             onClick={onFlip}
-            className="px-8 pt-3 pb-2 bg-sky-900 hover:bg-sky-800 text-white rounded-full font-medium transition-colors shadow-lg active:scale-95 transform duration-150 cursor-pointer"
+            className="flex items-center gap-4 px-8 pt-3 pb-2 bg-sky-600 hover:bg-sky-800 text-white rounded-full font-medium transition-colors shadow-lg active:scale-95 transform duration-150 cursor-pointer"
           >
-            めくる
+            Flip Card <HiArrowUturnRight size={18} className="mt-[-4px]" />
           </button>
         ) : (
           <button
@@ -75,24 +77,9 @@ export default function Flashcard({
               e.stopPropagation()
               onNext()
             }}
-            className="px-8 pt-3 pb-2 bg-sky-900 hover:bg-sky-800 text-white rounded-full font-medium transition-colors shadow-lg active:scale-95 transform duration-150 flex items-center gap-2 cursor-pointer"
+            className="flex items-center gap-4 px-8 pt-3 pb-2 bg-sky-600 hover:bg-sky-800 text-white rounded-full font-medium transition-colors shadow-lg active:scale-95 transform duration-150 flex items-center gap-2 cursor-pointer"
           >
-            次の単語へ
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              aria-label="Next Word"
-              className="w-4 h-4"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-              />
-            </svg>
+            Next Word <HiArrowUturnRight size={18} className="mt-[-4px]" />
           </button>
         )}
       </div>

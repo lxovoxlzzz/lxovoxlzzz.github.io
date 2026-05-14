@@ -53,7 +53,7 @@ export default function About() {
               }),
             ).map((item: IntroductionType) => (
               <React.Fragment key={item.title}>
-                <dt className="font-bold mt-6">
+                <dt className="font-bold mt-10">
                   {item.title}
                   {colon}
                 </dt>
@@ -68,6 +68,11 @@ export default function About() {
                       )
                     })}
                   </ul>
+                  {item.note && (
+                    <p className="text-sm text-neutral-400 mt-2 italic">
+                      &gt;&gt; {item.note}
+                    </p>
+                  )}
                 </dd>
               </React.Fragment>
             ))}

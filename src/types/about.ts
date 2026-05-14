@@ -1,3 +1,7 @@
-type JsonType = string | { [key: string]: string };
+type JsonType = string | { [key: string]: string }
 
-export type IntroductionType = { title: string; list: JsonType[] };
+export type IntroductionType = {
+  title: string
+  list: JsonType[]
+  note?: string
+}

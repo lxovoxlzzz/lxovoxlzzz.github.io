@@ -41,6 +41,16 @@
       }
     },
     "introduction": {
+      "qualifications": {
+        "title": "Qualifications",
+        "list": {
+          "1": "AWS Certified Cloud Practitioner",
+          "2": "Fundamental Information Technology Engineer Examination",
+          "3": "Information Security Management Examination",
+          "4": "Behavioral Psychologist"
+        },
+        "note": "I only started acquiring qualifications in 2026, so I don't have many yet, but I plan to increase them in the future."
+      },
       "expertise": {
         "title": "Expertise",
         "list": {

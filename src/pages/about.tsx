@@ -4,6 +4,7 @@ import funny from '@/assets/funnyface.png'
 import normal from '@/assets/normalface.png'
 import { SITE_NAME } from '@/const/globals'
 import type { IntroductionType } from '@/types/about'
+import { BiGame } from 'react-icons/bi'
 
 export default function About() {
   const { t, i18n } = useTranslation()
@@ -69,8 +70,11 @@ export default function About() {
                     })}
                   </ul>
                   {item.note && (
-                    <p className="text-sm text-neutral-400 mt-2 italic">
-                      &gt;&gt; {item.note}
+                    <p className="flex items-center gap-1 mt-2 text-sm text-neutral-400">
+                      <span className="shrink-0">
+                        <BiGame />
+                      </span>
+                      {item.note}
                     </p>
                   )}
                 </dd>

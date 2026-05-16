@@ -41,13 +41,14 @@
       }
     },
     "introduction": {
-      "qualifications": {
+      "certifications": {
         "title": "資格",
         "list": {
-          "1": "AWS Certified Cloud Practitioner",
-          "2": "基本情報技術者試験",
-          "3": "情報セキュリティマネジメント試験",
-          "4": "行動心理士"
+          "1": "AWS Certified AI Practitioner",
+          "2": "AWS Certified Cloud Practitioner",
+          "3": "基本情報技術者試験",
+          "4": "情報セキュリティマネジメント試験",
+          "5": "行動心理士"
         },
         "note": "2026年から資格を取り始めたのでまだ少ないですが、今後も増やしていきます。"
       },

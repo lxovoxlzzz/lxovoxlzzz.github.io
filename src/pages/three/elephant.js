@@ -2,6 +2,8 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import starsTexture from '@/assets/three/textures/stars.jpg'
+import elephantModel from '@/assets/three/models/elephant.glb?url'
+
 
 export default function elephant() {
   const canvas = document.querySelector('.elephant')
@@ -55,8 +57,7 @@ export default function elephant() {
 
   {
     const gltfLoader = new GLTFLoader()
-    const url = '/src/assets/three/models/elephant.glb'
-    gltfLoader.load(url, (gltf) => {
+    gltfLoader.load(elephantModel, (gltf) => {
       const root = gltf.scene
       root.scale.set(30, 30, 30) // object size
       scene.add(root)

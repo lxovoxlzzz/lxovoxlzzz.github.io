@@ -56,7 +56,7 @@ export default function Contact() {
       ref={sectionRef}
       className="py-32 md:py-44 text-zinc-900 bg-neutral-300"
     >
-      <div className="w-full max-w-4xl px-6 place-self-center">
+      <div className="w-full max-w-4xl px-6 mx-auto">
         <h1 className="mb-8 text-4xl font-bold">Contact</h1>
         <p className="mb-8 whitespace-pre-wrap">{t('contact.message')}</p>
         <Button

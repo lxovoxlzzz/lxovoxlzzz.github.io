@@ -13,7 +13,7 @@ export default function About() {
 
   return (
     <section className="py-32 md:py-44 text-neutral-300 bg-neutral-800">
-      <div className="w-full max-w-4xl px-6 place-self-center">
+      <div className="w-full max-w-4xl px-6 mx-auto">
         <h1 className="mb-16 text-4xl font-bold">About Me</h1>
         <img
           className="face"

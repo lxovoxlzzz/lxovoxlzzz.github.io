@@ -12,6 +12,8 @@ interface FlashcardProps {
   isFlipped: boolean
   onFlip: () => void
   onNext: () => void
+  isCurrentWordMemorized: boolean
+  handleMemorizeChange: (e: React.ChangeEvent<HTMLInputElement>) => void
 }
 
 export default function Flashcard({
@@ -19,6 +21,8 @@ export default function Flashcard({
   isFlipped,
   onFlip,
   onNext,
+  isCurrentWordMemorized,
+  handleMemorizeChange,
 }: FlashcardProps) {
   return (
     <div className="flex flex-col items-center w-full">
@@ -27,8 +31,8 @@ export default function Flashcard({
           className={`relative w-full h-full transition-all duration-500 [transform-style:preserve-3d] ${isFlipped ? '[transform:rotateY(180deg)]' : ''}`}
         >
           {/* Front */}
-          <div className="absolute w-full h-full bg-slate-50 border-2 border-slate-200 rounded-2xl shadow-xl flex flex-col items-center justify-center p-8 [backface-visibility:hidden]">
-            <h2 className="text-4xl font-bold text-slate-800 tracking-tight">
+          <div className="absolute w-full h-full bg-slate-800 rounded-2xl shadow-xl flex flex-col items-center justify-center p-8 [backface-visibility:hidden]">
+            <h2 className="text-4xl font-bold text-white tracking-tight">
               {word.word}
             </h2>
           </div>
@@ -55,13 +59,27 @@ export default function Flashcard({
                   "{word.example}"
                 </p>
               </div>
+              {/* Memorized Toggle Checkbox */}
+              <div className="flex items-center justify-center">
+                <label className="flex items-center gap-2 px-6 py-3 rounded-2xl border border-slate-800 bg-slate-850/60 backdrop-blur-sm cursor-pointer select-none text-slate-300 hover:text-white hover:border-slate-700 transition-all">
+                  <input
+                    type="checkbox"
+                    checked={isCurrentWordMemorized}
+                    onChange={handleMemorizeChange}
+                    className="w-4 h-4 mt-[-3px] rounded border-slate-700 text-sky-600 focus:ring-sky-500 focus:ring-offset-slate-900 bg-slate-800 cursor-pointer"
+                  />
+                  <span className="text-slate-400 text-xs font-semibold tracking-wide">
+                    I've memorized this word
+                  </span>
+                </label>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
       {/* Controls */}
-      <div className="mt-8 h-16 w-full flex items-center justify-center">
+      <div className="mt-4 h-16 w-full flex items-center justify-center">
         {!isFlipped ? (
           <button
             type="button"

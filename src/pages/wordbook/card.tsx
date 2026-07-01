@@ -73,7 +73,7 @@ export default function CardScreen({ level, mode, onFinish }: CardScreenProps) {
     if (!currentWord) return
     const checked = e.target.checked
     toggleMemorized(currentWord.id, checked)
-    
+
     // Update local map state
     setMemorizedMap((prev) => {
       const next = { ...prev }
@@ -89,23 +89,16 @@ export default function CardScreen({ level, mode, onFinish }: CardScreenProps) {
     })
   }
 
-  const isCurrentWordMemorized = currentWord ? !!memorizedMap[currentWord.id] : false
+  const isCurrentWordMemorized = currentWord
+    ? !!memorizedMap[currentWord.id]
+    : false
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-4 bg-slate-900 pt-32 sm:pt-24 pb-20">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-900 pt-32 sm:pt-24">
       <header className="fixed top-0 left-0 w-full p-6 flex justify-between items-center bg-slate-900/90 backdrop-blur-sm z-10 gap-4">
-        <div className="flex items-center gap-4">
-          <button
-            type="button"
-            onClick={onFinish}
-            className="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-full text-xs font-semibold transition-colors cursor-pointer"
-          >
-            終了
-          </button>
-          <h1 className="font-semibold tracking-wide text-xs uppercase text-slate-400">
-            Wordbook ({level.toUpperCase()})
-          </h1>
-        </div>
+        <h1 className="font-semibold tracking-wide text-xs uppercase text-slate-400">
+          Wordbook ({level.toUpperCase()})
+        </h1>
 
         {words.length > 0 && (
           <div className="font-mono text-sm text-slate-400">
@@ -118,7 +111,7 @@ export default function CardScreen({ level, mode, onFinish }: CardScreenProps) {
         )}
       </header>
 
-      <main className="flex-1 flex flex-col items-center justify-center w-full max-w-md mt-4 sm:mt-0">
+      <main className="flex-1 flex flex-col items-center justify-center w-full max-w-md mt-4 sm:mt-0 p-8 md:p-4">
         {words.length === 0 ? (
           <div className="flex flex-col items-center gap-4 text-slate-400">
             <p className="text-center text-sm">
@@ -141,25 +134,21 @@ export default function CardScreen({ level, mode, onFinish }: CardScreenProps) {
               isFlipped={isFlipped}
               onFlip={handleFlip}
               onNext={handleNext}
+              isCurrentWordMemorized={isCurrentWordMemorized}
+              handleMemorizeChange={handleMemorizeChange}
             />
-
-            {/* Memorized Toggle Checkbox */}
-            <div className="mt-8 flex items-center justify-center">
-              <label className="flex items-center gap-3 px-6 py-3 rounded-2xl border border-slate-800 bg-slate-850/60 backdrop-blur-sm cursor-pointer select-none text-slate-300 hover:text-white hover:border-slate-700 transition-all">
-                <input
-                  type="checkbox"
-                  checked={isCurrentWordMemorized}
-                  onChange={handleMemorizeChange}
-                  className="w-5 h-5 rounded border-slate-700 text-sky-600 focus:ring-sky-500 focus:ring-offset-slate-900 bg-slate-800 cursor-pointer"
-                />
-                <span className="text-sm font-semibold tracking-wide">覚えた</span>
-              </label>
-            </div>
+            <button
+              type="button"
+              onClick={onFinish}
+              className="mt-6 px-4 pt-2 pb-1 bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white rounded-full text-xs font-semibold transition-colors cursor-pointer"
+            >
+              FINISH
+            </button>
           </>
         )}
       </main>
 
-      <footer className="fixed bottom-0 w-full p-6 text-center text-slate-400 text-xs bg-slate-900/90 backdrop-blur-sm">
+      <footer className="w-full mt-8 p-6 text-center text-slate-400 text-xs bg-slate-900/90 border-t border-slate-800">
         <p>
           &copy; {new Date().getFullYear()} {SITE_NAME}
         </p>

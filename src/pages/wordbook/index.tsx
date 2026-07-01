@@ -72,17 +72,9 @@ export default function WordbookIndex() {
   return (
     <>
       {view === 'dashboard' ? (
-        <Dashboard
-          stats={stats}
-          onStart={handleStart}
-          onReset={handleReset}
-        />
+        <Dashboard stats={stats} onStart={handleStart} onReset={handleReset} />
       ) : (
-        <CardScreen
-          level={level}
-          mode={mode}
-          onFinish={handleFinish}
-        />
+        <CardScreen level={level} mode={mode} onFinish={handleFinish} />
       )}
     </>
   )

@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import Wordbook from '@/pages/wordbook/index'
-import './index.css'
+import '@/index.css'
 
 const rootElement = document.getElementById('root')
 

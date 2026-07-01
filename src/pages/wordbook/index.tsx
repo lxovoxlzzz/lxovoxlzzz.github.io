@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
-import Dashboard from './dashboard'
-import CardScreen from './card'
+import Dashboard from '@/pages/wordbook/dashboard'
+import CardScreen from '@/pages/wordbook/card'
 import {
   getTodayStr,
   getMemorizedData,

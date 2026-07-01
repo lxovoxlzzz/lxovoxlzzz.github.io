@@ -8,7 +8,7 @@ import {
   type ChartOptions,
 } from 'chart.js'
 import { SITE_NAME } from '@/const/globals'
-import type { Level, Mode } from './index'
+import type { Level, Mode } from '@/pages/wordbook'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 

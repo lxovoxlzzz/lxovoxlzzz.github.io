@@ -1,600 +1,600 @@
 [
   {
-    "id": 1,
+    "id": 8001,
     "word": "abundant",
     "meaning": "豊富な",
     "example": "There is an abundant supply of water."
   },
   {
-    "id": 2,
+    "id": 8002,
     "word": "accelerate",
     "meaning": "加速する",
     "example": "We need to accelerate the project."
   },
   {
-    "id": 3,
+    "id": 8003,
     "word": "accommodate",
     "meaning": "収容する、便宜を図る",
     "example": "The hotel can accommodate 500 guests."
   },
   {
-    "id": 4,
+    "id": 8004,
     "word": "accomplish",
     "meaning": "成し遂げる",
     "example": "We accomplished a lot today."
   },
   {
-    "id": 5,
+    "id": 8005,
     "word": "accumulate",
     "meaning": "蓄積する",
     "example": "Dust had accumulated on the desk."
   },
   {
-    "id": 6,
+    "id": 8006,
     "word": "accurate",
     "meaning": "正確な",
     "example": "The figures are not accurate."
   },
   {
-    "id": 7,
+    "id": 8007,
     "word": "acknowledge",
     "meaning": "認める",
     "example": "Please acknowledge receipt of this email."
   },
   {
-    "id": 8,
+    "id": 8008,
     "word": "acquire",
     "meaning": "習得する、買収する",
     "example": "The company acquired a smaller firm."
   },
   {
-    "id": 9,
+    "id": 8009,
     "word": "adapt",
     "meaning": "適応する",
     "example": "We must adapt to changing markets."
   },
   {
-    "id": 10,
+    "id": 8010,
     "word": "adequate",
     "meaning": "十分な",
     "example": "The training was not adequate."
   },
   {
-    "id": 11,
+    "id": 8011,
     "word": "adjust",
     "meaning": "調整する",
     "example": "You can adjust the height of the chair."
   },
   {
-    "id": 12,
+    "id": 8012,
     "word": "administer",
     "meaning": "管理する",
     "example": "He administers the company's network."
   },
   {
-    "id": 13,
+    "id": 8013,
     "word": "adopt",
     "meaning": "採用する",
     "example": "We adopted a new policy."
   },
   {
-    "id": 14,
+    "id": 8014,
     "word": "advocate",
     "meaning": "提唱する",
     "example": "She advocates for equal rights."
   },
   {
-    "id": 15,
+    "id": 8015,
     "word": "allocate",
     "meaning": "割り当てる",
     "example": "Funds have been allocated for the project."
   },
   {
-    "id": 16,
+    "id": 8016,
     "word": "alter",
     "meaning": "変更する",
     "example": "We had to alter our plans."
   },
   {
-    "id": 17,
+    "id": 8017,
     "word": "alternative",
     "meaning": "代わりの",
     "example": "We need to find an alternative solution."
   },
   {
-    "id": 18,
+    "id": 8018,
     "word": "ambitious",
     "meaning": "野心的な",
     "example": "It is an ambitious project."
   },
   {
-    "id": 19,
+    "id": 8019,
     "word": "analyze",
     "meaning": "分析する",
     "example": "We need to analyze the data."
   },
   {
-    "id": 20,
+    "id": 8020,
     "word": "anticipate",
     "meaning": "予期する",
     "example": "We anticipate a drop in sales."
   },
   {
-    "id": 21,
+    "id": 8021,
     "word": "apparent",
     "meaning": "明白な",
     "example": "It was apparent that he was lying."
   },
   {
-    "id": 22,
+    "id": 8022,
     "word": "appreciate",
     "meaning": "感謝する",
     "example": "I appreciate your help."
   },
   {
-    "id": 23,
+    "id": 8023,
     "word": "approach",
     "meaning": "接近する、やり方",
     "example": "We need a new approach to this problem."
   },
   {
-    "id": 24,
+    "id": 8024,
     "word": "appropriate",
     "meaning": "適切な",
     "example": "This dress is not appropriate for work."
   },
   {
-    "id": 25,
+    "id": 8025,
     "word": "approve",
     "meaning": "承認する",
     "example": "The manager approved my vacation request."
   },
   {
-    "id": 26,
+    "id": 8026,
     "word": "arise",
     "meaning": "生じる",
     "example": "Problems may arise during the project."
   },
   {
-    "id": 27,
+    "id": 8027,
     "word": "aspect",
     "meaning": "側面",
     "example": "We considered every aspect of the problem."
   },
   {
-    "id": 28,
+    "id": 8028,
     "word": "assemble",
     "meaning": "組み立てる",
     "example": "The shelves are easy to assemble."
   },
   {
-    "id": 29,
+    "id": 8029,
     "word": "assess",
     "meaning": "評価する",
     "example": "We need to assess the damage."
   },
   {
-    "id": 30,
+    "id": 8030,
     "word": "assign",
     "meaning": "割り当てる",
     "example": "He was assigned to a new project."
   },
   {
-    "id": 31,
+    "id": 8031,
     "word": "assume",
     "meaning": "仮定する",
     "example": "I assumed you were coming."
   },
   {
-    "id": 32,
+    "id": 8032,
     "word": "assure",
     "meaning": "保証する",
     "example": "I assure you that it is safe."
   },
   {
-    "id": 33,
+    "id": 8033,
     "word": "attach",
     "meaning": "添付する",
     "example": "Please attach a photo to your application."
   },
   {
-    "id": 34,
+    "id": 8034,
     "word": "attain",
     "meaning": "達成する",
     "example": "She attained her goal."
   },
   {
-    "id": 35,
+    "id": 8035,
     "word": "attempt",
     "meaning": "試みる",
     "example": "He attempted to escape."
   },
   {
-    "id": 36,
+    "id": 8036,
     "word": "attribute",
     "meaning": "〜のおかげとする",
     "example": "He attributes his success to hard work."
   },
   {
-    "id": 37,
+    "id": 8037,
     "word": "authorize",
     "meaning": "権限を与える",
     "example": "Only authorized personnel can enter."
   },
   {
-    "id": 38,
+    "id": 8038,
     "word": "brief",
     "meaning": "簡潔な",
     "example": "Please give me a brief summary."
   },
   {
-    "id": 39,
+    "id": 8039,
     "word": "calculate",
     "meaning": "計算する",
     "example": "Can you calculate the total cost?"
   },
   {
-    "id": 40,
+    "id": 8040,
     "word": "capable",
     "meaning": "能力がある",
     "example": "She is capable of handling the job."
   },
   {
-    "id": 41,
+    "id": 8041,
     "word": "capacity",
     "meaning": "収容能力",
     "example": "The stadium was filled to capacity."
   },
   {
-    "id": 42,
+    "id": 8042,
     "word": "category",
     "meaning": "範疇",
     "example": "These books fall into a different category."
   },
   {
-    "id": 43,
+    "id": 8043,
     "word": "cease",
     "meaning": "やめる",
     "example": "The company ceased operations last year."
   },
   {
-    "id": 44,
+    "id": 8044,
     "word": "circumstance",
     "meaning": "状況",
     "example": "Under the circumstances, we cannot accept it."
   },
   {
-    "id": 45,
+    "id": 8045,
     "word": "cite",
     "meaning": "引用する",
     "example": "He cited several examples."
   },
   {
-    "id": 46,
+    "id": 8046,
     "word": "clarify",
     "meaning": "明確にする",
     "example": "Could you clarify that point?"
   },
   {
-    "id": 47,
+    "id": 8047,
     "word": "collaborate",
     "meaning": "協力する",
     "example": "We collaborated on the project."
   },
   {
-    "id": 48,
+    "id": 8048,
     "word": "collapse",
     "meaning": "崩壊する",
     "example": "The building collapsed during the earthquake."
   },
   {
-    "id": 49,
+    "id": 8049,
     "word": "colleague",
     "meaning": "同僚",
     "example": "I discussed it with my colleagues."
   },
   {
-    "id": 50,
+    "id": 8050,
     "word": "commence",
     "meaning": "始まる",
     "example": "The meeting will commence at 10 a.m."
   },
   {
-    "id": 51,
+    "id": 8051,
     "word": "commit",
     "meaning": "委ねる、約束する",
     "example": "We are committed to providing quality service."
   },
   {
-    "id": 52,
+    "id": 8052,
     "word": "communicate",
     "meaning": "伝える",
     "example": "We communicate by email."
   },
   {
-    "id": 53,
+    "id": 8053,
     "word": "compel",
     "meaning": "強いる",
     "example": "He felt compelled to tell the truth."
   },
   {
-    "id": 54,
+    "id": 8054,
     "word": "compensate",
     "meaning": "補償する",
     "example": "We will compensate you for your time."
   },
   {
-    "id": 55,
+    "id": 8055,
     "word": "compete",
     "meaning": "競争する",
     "example": "We have to compete with larger companies."
   },
   {
-    "id": 56,
+    "id": 8056,
     "word": "compile",
     "meaning": "まとめる",
     "example": "She compiled a list of names."
   },
   {
-    "id": 57,
+    "id": 8057,
     "word": "comply",
     "meaning": "従う",
     "example": "All businesses must comply with the law."
   },
   {
-    "id": 58,
+    "id": 8058,
     "word": "component",
     "meaning": "構成要素",
     "example": "This is an important component of the system."
   },
   {
-    "id": 59,
+    "id": 8059,
     "word": "compose",
     "meaning": "構成する",
     "example": "The committee is composed of five members."
   },
   {
-    "id": 60,
+    "id": 8060,
     "word": "comprehensive",
     "meaning": "包括的な",
     "example": "We offer a comprehensive training program."
   },
   {
-    "id": 61,
+    "id": 8061,
     "word": "comprise",
     "meaning": "構成される",
     "example": "The committee comprises 10 members."
   },
   {
-    "id": 62,
+    "id": 8062,
     "word": "conceal",
     "meaning": "隠す",
     "example": "He tried to conceal his identity."
   },
   {
-    "id": 63,
+    "id": 8063,
     "word": "concede",
     "meaning": "譲歩する",
     "example": "He finally conceded defeat."
   },
   {
-    "id": 64,
+    "id": 8064,
     "word": "conceive",
     "meaning": "思いつく",
     "example": "He conceived the idea for the novel."
   },
   {
-    "id": 65,
+    "id": 8065,
     "word": "concentrate",
     "meaning": "集中する",
     "example": "I can't concentrate on my work."
   },
   {
-    "id": 66,
+    "id": 8066,
     "word": "concept",
     "meaning": "概念",
     "example": "I don't understand the concept."
   },
   {
-    "id": 67,
+    "id": 8067,
     "word": "conclude",
     "meaning": "結論づける",
     "example": "The report concludes that the system is safe."
   },
   {
-    "id": 68,
+    "id": 8068,
     "word": "concrete",
     "meaning": "具体的な",
     "example": "Do you have any concrete evidence?"
   },
   {
-    "id": 69,
+    "id": 8069,
     "word": "conduct",
     "meaning": "実施する",
     "example": "We conducted a survey."
   },
   {
-    "id": 70,
+    "id": 8070,
     "word": "confer",
     "meaning": "相談する",
     "example": "I need to confer with my lawyer."
   },
   {
-    "id": 71,
+    "id": 8071,
     "word": "confine",
     "meaning": "制限する",
     "example": "Please confine your remarks to the subject."
   },
   {
-    "id": 72,
+    "id": 8072,
     "word": "conflict",
     "meaning": "対立",
     "example": "There is a conflict of interest."
   },
   {
-    "id": 73,
+    "id": 8073,
     "word": "conform",
     "meaning": "従う",
     "example": "The building must conform to safety regulations."
   },
   {
-    "id": 74,
+    "id": 8074,
     "word": "confront",
     "meaning": "直面する",
     "example": "She confronted him with the evidence."
   },
   {
-    "id": 75,
+    "id": 8075,
     "word": "consequence",
     "meaning": "結果",
     "example": "You must accept the consequences of your actions."
   },
   {
-    "id": 76,
+    "id": 8076,
     "word": "conservative",
     "meaning": "保守的な",
     "example": "He has conservative views."
   },
   {
-    "id": 77,
+    "id": 8077,
     "word": "considerable",
     "meaning": "かなりの",
     "example": "We spent a considerable amount of time on this."
   },
   {
-    "id": 78,
+    "id": 8078,
     "word": "consist",
     "meaning": "〜から成る",
     "example": "The team consists of four members."
   },
   {
-    "id": 79,
+    "id": 8079,
     "word": "consistent",
     "meaning": "一貫した",
     "example": "We need a consistent approach."
   },
   {
-    "id": 80,
+    "id": 8080,
     "word": "constitute",
     "meaning": "構成する",
     "example": "Women constitute 40% of the workforce."
   },
   {
-    "id": 81,
+    "id": 8081,
     "word": "constrain",
     "meaning": "強いる",
     "example": "We are constrained by our budget."
   },
   {
-    "id": 82,
+    "id": 8082,
     "word": "construct",
     "meaning": "建設する",
     "example": "The bridge was constructed in 1990."
   },
   {
-    "id": 83,
+    "id": 8083,
     "word": "consult",
     "meaning": "相談する",
     "example": "You should consult a doctor."
   },
   {
-    "id": 84,
+    "id": 8084,
     "word": "consume",
     "meaning": "消費する",
     "example": "This car consumes a lot of gas."
   },
   {
-    "id": 85,
+    "id": 8085,
     "word": "contemporary",
     "meaning": "現代の",
     "example": "She studies contemporary art."
   },
   {
-    "id": 86,
+    "id": 8086,
     "word": "context",
     "meaning": "文脈",
     "example": "You have to consider the context."
   },
   {
-    "id": 87,
+    "id": 8087,
     "word": "contradict",
     "meaning": "矛盾する",
     "example": "His statement contradicts the evidence."
   },
   {
-    "id": 88,
+    "id": 8088,
     "word": "contrary",
     "meaning": "反対の",
     "example": "Contrary to popular belief, it is safe."
   },
   {
-    "id": 89,
+    "id": 8089,
     "word": "contrast",
     "meaning": "対照",
     "example": "There is a sharp contrast between the two."
   },
   {
-    "id": 90,
+    "id": 8090,
     "word": "contribute",
     "meaning": "貢献する",
     "example": "We all contributed to the project."
   },
   {
-    "id": 91,
+    "id": 8091,
     "word": "controversy",
     "meaning": "論争",
     "example": "The decision caused a lot of controversy."
   },
   {
-    "id": 92,
+    "id": 8092,
     "word": "convene",
     "meaning": "召集する",
     "example": "The committee will convene tomorrow."
   },
   {
-    "id": 93,
+    "id": 8093,
     "word": "convert",
     "meaning": "変える",
     "example": "We converted the garage into an office."
   },
   {
-    "id": 94,
+    "id": 8094,
     "word": "convey",
     "meaning": "伝える",
     "example": "Please convey my apologies to him."
   },
   {
-    "id": 95,
+    "id": 8095,
     "word": "convince",
     "meaning": "納得させる",
     "example": "I convinced her to go with me."
   },
   {
-    "id": 96,
+    "id": 8096,
     "word": "cooperate",
     "meaning": "協力する",
     "example": "We need everyone to cooperate."
   },
   {
-    "id": 97,
+    "id": 8097,
     "word": "coordinate",
     "meaning": "調整する",
     "example": "She coordinated the entire event."
   },
   {
-    "id": 98,
+    "id": 8098,
     "word": "cope",
     "meaning": "うまく処理する",
     "example": "How do you cope with stress?"
   },
   {
-    "id": 99,
+    "id": 8099,
     "word": "core",
     "meaning": "中心",
     "example": "This is the core of the problem."
   },
   {
-    "id": 100,
+    "id": 8100,
     "word": "corporate",
     "meaning": "企業の",
     "example": "He works for a large corporate law firm."

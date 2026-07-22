@@ -7,8 +7,9 @@ import {
   Legend,
   type ChartOptions,
 } from 'chart.js'
-import { SITE_NAME } from '@/const/globals'
 import type { MODE, LEVEL } from '@/pages/wordbook/const'
+import Header from '@/pages/wordbook/ui/header'
+import Footer from '@/pages/wordbook/ui/footer'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -84,12 +85,8 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-950 pt-16 md:pt-28 text-slate-100">
-      <header className="fixed top-0 left-0 w-full px-6 pt-6 pb-5 bg-slate-950/80 backdrop-blur-md z-10 border-b border-slate-800">
-        <h1 className="font-bold tracking-wider text-sm uppercase text-slate-200">
-          Wordbook Dashboard
-        </h1>
-      </header>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-950 text-slate-100">
+      <Header title={'Wordbook Dashboard'} border />
 
       <main className="flex-1 w-full max-w-4xl flex flex-col gap-8 mt-4 sm:mt-0 p-4 md:p-0">
         {/* グラフセクション */}
@@ -295,11 +292,7 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
         </div>
       </main>
 
-      <footer className="w-full mt-8 p-6 text-center text-slate-500 text-xs bg-slate-950/80 backdrop-blur-md border-t border-slate-800">
-        <p>
-          &copy; {new Date().getFullYear()} {SITE_NAME}
-        </p>
-      </footer>
+      <Footer />
     </div>
   )
 }

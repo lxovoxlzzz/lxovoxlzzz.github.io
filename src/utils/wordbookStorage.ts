@@ -1,5 +1,4 @@
-const KEY_MEMORIZED = 'wordbook_memorized_at'
-const KEY_FLIPPED = 'wordbook_flipped_count'
+import { KEY_FLIPPED, KEY_MEMORIZED } from '@/pages/wordbook/const'
 
 export interface MemorizedData {
   [wordId: number]: string // wordId -> date string ("YYYY-MM-DD")

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
-import { SITE_NAME } from '@/const/globals'
-import WordbookCard from '@/components/wordbookCard'
+import WordbookCard from '@/pages/wordbook/wordbookCard'
 import toeic600Data from '@/data/wordbook/toeic600.json'
 import toeic800Data from '@/data/wordbook/toeic800.json'
 import toeic990Data from '@/data/wordbook/toeic990.json'
@@ -10,13 +9,9 @@ import {
   incrementTodayFlipped,
 } from '@/utils/wordbookStorage'
 import type { MODE, LEVEL } from '@/pages/wordbook/const'
-
-interface Word {
-  id: number
-  word: string
-  meaning: string
-  example: string
-}
+import type { Word } from '@/pages/wordbook/types'
+import Header from '@/pages/wordbook/ui/header'
+import Footer from '@/pages/wordbook/ui/footer'
 
 const dataMap: Record<LEVEL, Word[]> = {
   600: toeic600Data,
@@ -94,24 +89,23 @@ export default function CardScreen({ level, mode, onFinish }: CardScreenProps) {
     : false
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-900 pt-32 sm:pt-24">
-      <header className="fixed top-0 left-0 w-full p-6 flex justify-between items-center bg-slate-900/90 backdrop-blur-sm z-10 gap-4">
-        <h1 className="font-semibold tracking-wide text-xs uppercase text-slate-400">
-          Wordbook (TOEIC {level.toUpperCase()})
-        </h1>
+    <div className="min-h-screen flex flex-col items-center justify-center bg-slate-950">
+      <Header
+        title={`Wordbook (TOEIC ${level})`}
+        rightContent={
+          words.length > 0 && (
+            <div className="font-mono text-sm text-slate-400">
+              <span className="text-sky-300 font-bold text-xl">
+                {currentIndex + 1}
+              </span>
+              <span className="mx-1">/</span>
+              {words.length}
+            </div>
+          )
+        }
+      />
 
-        {words.length > 0 && (
-          <div className="font-mono text-sm text-slate-400">
-            <span className="text-sky-300 font-bold text-xl">
-              {currentIndex + 1}
-            </span>
-            <span className="mx-1">/</span>
-            {words.length}
-          </div>
-        )}
-      </header>
-
-      <main className="flex-1 flex flex-col items-center justify-center w-full max-w-md mt-4 sm:mt-0 p-8 md:p-4">
+      <main className="flex-1 flex flex-col items-center justify-center w-full mt-18 max-w-md p-6">
         {words.length === 0 ? (
           <div className="flex flex-col items-center gap-4 text-slate-400">
             <p className="text-center text-sm">
@@ -148,11 +142,7 @@ export default function CardScreen({ level, mode, onFinish }: CardScreenProps) {
         )}
       </main>
 
-      <footer className="w-full mt-8 p-6 text-center text-slate-400 text-xs bg-slate-900/90 border-t border-slate-800">
-        <p>
-          &copy; {new Date().getFullYear()} {SITE_NAME}
-        </p>
-      </footer>
+      <Footer />
     </div>
   )
 }

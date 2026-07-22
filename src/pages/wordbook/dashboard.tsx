@@ -8,7 +8,7 @@ import {
   type ChartOptions,
 } from 'chart.js'
 import { SITE_NAME } from '@/const/globals'
-import type { Level, Mode } from '@/pages/wordbook'
+import type { MODE, LEVEL } from '@/pages/wordbook/const'
 
 ChartJS.register(ArcElement, Tooltip, Legend)
 
@@ -19,13 +19,13 @@ interface DashboardProps {
     memorizedTotal: number
     totalWords: number
   }
-  onStart: (level: Level, mode: Mode) => void
+  onStart: (level: LEVEL, mode: MODE) => void
   onReset: () => void
 }
 
 export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
-  const [level, setLevel] = useState<Level>('toeic600')
-  const [mode, setMode] = useState<Mode>('all')
+  const [level, setLevel] = useState<LEVEL>('600')
+  const [mode, setMode] = useState<MODE>('ALL')
 
   const createChartData = (value: number, total: number, color: string) => {
     const clampedValue = Math.min(value, total)
@@ -194,7 +194,7 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
               単語レベル
             </span>
             <div className="grid grid-cols-3 gap-2">
-              {(['toeic600', 'toeic800', 'toeic990'] as Level[]).map((l) => (
+              {(['600', '800', '990'] as LEVEL[]).map((l) => (
                 <button
                   type="button"
                   key={l}
@@ -205,7 +205,7 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
                       : 'bg-slate-850 text-slate-400 hover:bg-slate-800 border border-slate-800'
                   }`}
                 >
-                  {l.toUpperCase()}
+                  TOEIC {l}
                 </button>
               ))}
             </div>
@@ -218,8 +218,7 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
             </span>
             <div className="grid grid-cols-2 gap-4">
               <label
-                className={`flex items-center justify-between p-4 rounded-xl border transition-all cursor-pointer ${
-                  mode === 'all'
+                  mode === 'ALL'
                     ? 'border-sky-500 bg-sky-950/20 text-sky-200'
                     : 'border-slate-800 bg-slate-900/20 text-slate-400 hover:bg-slate-900/50'
                 }`}
@@ -228,25 +227,24 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
                 <input
                   type="radio"
                   name="mode"
-                  value="all"
-                  checked={mode === 'all'}
-                  onChange={() => setMode('all')}
+                  value="ALL"
+                  checked={mode === 'ALL'}
+                  onChange={() => setMode('ALL')}
                   className="hidden"
                 />
                 <div
                   className={`w-4 h-4 rounded-full border flex items-center justify-center ${
-                    mode === 'all' ? 'border-sky-500' : 'border-slate-600'
+                    mode === 'ALL' ? 'border-sky-500' : 'border-slate-600'
                   }`}
                 >
-                  {mode === 'all' && (
+                  {mode === 'ALL' && (
                     <div className="w-2 h-2 rounded-full bg-sky-500" />
                   )}
                 </div>
               </label>
 
               <label
-                className={`flex items-center justify-between p-4 rounded-xl border transition-all cursor-pointer ${
-                  mode === 'unmemorized'
+                  mode === 'UNMEMORIZED'
                     ? 'border-sky-500 bg-sky-950/20 text-sky-200'
                     : 'border-slate-800 bg-slate-900/20 text-slate-400 hover:bg-slate-900/50'
                 }`}
@@ -255,19 +253,19 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
                 <input
                   type="radio"
                   name="mode"
-                  value="unmemorized"
-                  checked={mode === 'unmemorized'}
-                  onChange={() => setMode('unmemorized')}
+                  value="UNMEMORIZED"
+                  checked={mode === 'UNMEMORIZED'}
+                  onChange={() => setMode('UNMEMORIZED')}
                   className="hidden"
                 />
                 <div
                   className={`w-4 h-4 rounded-full border flex items-center justify-center ${
-                    mode === 'unmemorized'
+                    mode === 'UNMEMORIZED'
                       ? 'border-sky-500'
                       : 'border-slate-600'
                   }`}
                 >
-                  {mode === 'unmemorized' && (
+                  {mode === 'UNMEMORIZED' && (
                     <div className="w-2 h-2 rounded-full bg-sky-500" />
                   )}
                 </div>

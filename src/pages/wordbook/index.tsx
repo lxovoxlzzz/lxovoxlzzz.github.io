@@ -10,14 +10,12 @@ import {
 import toeic600Data from '@/data/wordbook/toeic600.json'
 import toeic800Data from '@/data/wordbook/toeic800.json'
 import toeic990Data from '@/data/wordbook/toeic990.json'
-
-export type Level = 'toeic600' | 'toeic800' | 'toeic990'
-export type Mode = 'all' | 'unmemorized'
+import type { VIEW, MODE, LEVEL } from '@/pages/wordbook/const'
 
 export default function WordbookIndex() {
-  const [view, setView] = useState<'dashboard' | 'card'>('dashboard')
-  const [level, setLevel] = useState<Level>('toeic600')
-  const [mode, setMode] = useState<Mode>('all')
+  const [view, setView] = useState<VIEW>('DASHBOARD')
+  const [level, setLevel] = useState<LEVEL>('600')
+  const [mode, setMode] = useState<MODE>('ALL')
 
   const [stats, setStats] = useState({
     flippedToday: 0,
@@ -49,19 +47,19 @@ export default function WordbookIndex() {
   }, [])
 
   useEffect(() => {
-    if (view === 'dashboard') {
+    if (view === 'DASHBOARD') {
       loadStats()
     }
   }, [view, loadStats]) // Re-load when view switches back to dashboard
 
-  const handleStart = (selectedLevel: Level, selectedMode: Mode) => {
+  const handleStart = (selectedLevel: LEVEL, selectedMode: MODE) => {
     setLevel(selectedLevel)
     setMode(selectedMode)
-    setView('card')
+    setView('CARD')
   }
 
   const handleFinish = () => {
-    setView('dashboard')
+    setView('DASHBOARD')
   }
 
   const handleReset = () => {
@@ -71,7 +69,7 @@ export default function WordbookIndex() {
 
   return (
     <>
-      {view === 'dashboard' ? (
+      {view === 'DASHBOARD' ? (
         <Dashboard stats={stats} onStart={handleStart} onReset={handleReset} />
       ) : (
         <CardScreen level={level} mode={mode} onFinish={handleFinish} />

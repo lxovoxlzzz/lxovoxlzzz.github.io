@@ -9,7 +9,7 @@ import {
   toggleMemorized,
   incrementTodayFlipped,
 } from '@/utils/wordbookStorage'
-import type { Level, Mode } from './index'
+import type { MODE, LEVEL } from '@/pages/wordbook/const'
 
 interface Word {
   id: number
@@ -18,15 +18,15 @@ interface Word {
   example: string
 }
 
-const dataMap: Record<Level, Word[]> = {
-  toeic600: toeic600Data,
-  toeic800: toeic800Data,
-  toeic990: toeic990Data,
+const dataMap: Record<LEVEL, Word[]> = {
+  600: toeic600Data,
+  800: toeic800Data,
+  990: toeic990Data,
 }
 
 interface CardScreenProps {
-  level: Level
-  mode: Mode
+  level: LEVEL
+  mode: MODE
   onFinish: () => void
 }
 
@@ -42,7 +42,7 @@ export default function CardScreen({ level, mode, onFinish }: CardScreenProps) {
 
     // Filter words based on mode
     let filtered = [...dataMap[level]]
-    if (mode === 'unmemorized') {
+    if (mode === 'UNMEMORIZED') {
       filtered = filtered.filter((w) => !memorized[w.id])
     }
 
@@ -97,7 +97,7 @@ export default function CardScreen({ level, mode, onFinish }: CardScreenProps) {
     <div className="min-h-screen flex flex-col items-center justify-center bg-slate-900 pt-32 sm:pt-24">
       <header className="fixed top-0 left-0 w-full p-6 flex justify-between items-center bg-slate-900/90 backdrop-blur-sm z-10 gap-4">
         <h1 className="font-semibold tracking-wide text-xs uppercase text-slate-400">
-          Wordbook ({level.toUpperCase()})
+          Wordbook (TOEIC {level.toUpperCase()})
         </h1>
 
         {words.length > 0 && (
@@ -115,7 +115,7 @@ export default function CardScreen({ level, mode, onFinish }: CardScreenProps) {
         {words.length === 0 ? (
           <div className="flex flex-col items-center gap-4 text-slate-400">
             <p className="text-center text-sm">
-              {mode === 'unmemorized'
+              {mode === 'UNMEMORIZED'
                 ? 'このレベルのすべての単語を覚えました！'
                 : '単語が登録されていません。'}
             </p>

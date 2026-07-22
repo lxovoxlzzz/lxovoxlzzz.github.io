@@ -88,7 +88,7 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
     <div className="min-h-screen flex flex-col items-center justify-center bg-slate-950 text-slate-100">
       <Header title={'Wordbook Dashboard'} border />
 
-      <main className="flex-1 w-full max-w-4xl flex flex-col gap-8 mt-4 sm:mt-0 p-4 md:p-0">
+      <main className="flex-1 w-full max-w-4xl flex flex-col gap-8 mt-18 p-6">
         {/* グラフセクション */}
         <section className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {/* 今日めくった数 */}
@@ -116,7 +116,7 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
                 {stats.flippedToday}
               </span>
               <span className="text-slate-500 mx-1">/</span>
-              {stats.totalWords} 単語
+              {stats.totalWords}
             </p>
           </div>
 
@@ -145,7 +145,7 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
                 {stats.memorizedToday}
               </span>
               <span className="text-slate-500 mx-1">/</span>
-              {stats.totalWords} 単語
+              {stats.totalWords}
             </p>
           </div>
 
@@ -174,13 +174,13 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
                 {stats.memorizedTotal}
               </span>
               <span className="text-slate-500 mx-1">/</span>
-              {stats.totalWords} 単語
+              {stats.totalWords}
             </p>
           </div>
         </section>
 
         {/* 設定・スタートセクション */}
-        <section className="flex flex-col items-center p-8 rounded-2xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm max-w-xl mx-auto w-full gap-6">
+        <section className="flex flex-col items-center px-4 py-6 md:p-8 rounded-2xl bg-slate-900/40 border border-slate-800/80 backdrop-blur-sm max-w-xl mx-auto w-full gap-6">
           <h2 className="text-base font-semibold tracking-wide text-slate-300 uppercase">
             Learning Settings
           </h2>
@@ -213,15 +213,17 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
             <span className="text-xs font-semibold text-slate-500 uppercase tracking-wider">
               出題対象
             </span>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-2">
               <label
-                className={`flex items-center justify-between p-4 pb-3 rounded-xl border transition-all cursor-pointer ${
+                className={`flex items-center justify-between p-3 pb-2 rounded-xl border transition-all cursor-pointer ${
                   mode === 'ALL'
                     ? 'border-sky-500 bg-sky-950/20 text-sky-200'
-                    : 'border-slate-800 bg-slate-900/20 text-slate-400 hover:bg-slate-900/50'
+                    : 'border-slate-800 bg-slate-900/20 text-slate-400 hover:bg-slate-800'
                 }`}
               >
-                <span className="text-sm font-medium">全ての単語</span>
+                <span className="text-xs md:text-sm font-medium">
+                  全ての単語
+                </span>
                 <input
                   type="radio"
                   name="mode"
@@ -242,13 +244,15 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
               </label>
 
               <label
-                className={`flex items-center justify-between p-4 pb-3 rounded-xl border transition-all cursor-pointer ${
+                className={`flex items-center justify-between p-3 pb-2 rounded-xl border transition-all cursor-pointer ${
                   mode === 'UNMEMORIZED'
                     ? 'border-sky-500 bg-sky-950/20 text-sky-200'
-                    : 'border-slate-800 bg-slate-900/20 text-slate-400 hover:bg-slate-900/50'
+                    : 'border-slate-800 bg-slate-900/20 text-slate-400 hover:bg-slate-800'
                 }`}
               >
-                <span className="text-sm font-medium">覚えた単語以外</span>
+                <span className="text-xs md:text-sm font-medium">
+                  覚えた単語以外
+                </span>
                 <input
                   type="radio"
                   name="mode"

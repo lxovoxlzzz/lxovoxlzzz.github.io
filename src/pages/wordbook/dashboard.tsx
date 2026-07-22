@@ -199,7 +199,7 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
                   type="button"
                   key={l}
                   onClick={() => setLevel(l)}
-                  className={`py-3 rounded-xl text-xs font-semibold tracking-wider transition-all cursor-pointer ${
+                  className={`pt-3 pb-2 rounded-xl text-xs font-semibold tracking-wider transition-all cursor-pointer ${
                     level === l
                       ? 'bg-sky-600 text-white shadow-lg shadow-sky-900/20'
                       : 'bg-slate-850 text-slate-400 hover:bg-slate-800 border border-slate-800'
@@ -218,6 +218,7 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
             </span>
             <div className="grid grid-cols-2 gap-4">
               <label
+                className={`flex items-center justify-between p-4 pb-3 rounded-xl border transition-all cursor-pointer ${
                   mode === 'ALL'
                     ? 'border-sky-500 bg-sky-950/20 text-sky-200'
                     : 'border-slate-800 bg-slate-900/20 text-slate-400 hover:bg-slate-900/50'
@@ -244,6 +245,7 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
               </label>
 
               <label
+                className={`flex items-center justify-between p-4 pb-3 rounded-xl border transition-all cursor-pointer ${
                   mode === 'UNMEMORIZED'
                     ? 'border-sky-500 bg-sky-950/20 text-sky-200'
                     : 'border-slate-800 bg-slate-900/20 text-slate-400 hover:bg-slate-900/50'
@@ -277,7 +279,7 @@ export default function Dashboard({ stats, onStart, onReset }: DashboardProps) {
           <button
             type="button"
             onClick={handleStart}
-            className="w-full mt-4 py-4 rounded-xl text-sm font-bold bg-emerald-600 text-white hover:bg-emerald-500 shadow-lg shadow-emerald-900/20 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
+            className="w-full mt-4 pt-4 pb-3 rounded-xl text-sm font-bold bg-emerald-600 text-white hover:bg-emerald-500 shadow-lg shadow-emerald-900/20 transition-all cursor-pointer hover:-translate-y-0.5 active:translate-y-0"
           >
             Start
           </button>
